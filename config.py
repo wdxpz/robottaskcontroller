@@ -54,4 +54,7 @@ Inspection_Status_Codes ={
     'ERR_INSPECTION_STILL_RUNNING': 230
 }
 #Inspection Status Update Entrypoint
-Inspection_Status_Endpoint= 'http://www.bestfly.ml:8000/inspection/'
+Inspection_Status_Endpoint='http://www.bestfly.ml:8000/inspection/'
+
+#MSG center entrypoint
+Msg_Center_Endpoint='http://127.0.0.1:8000/tasks/'

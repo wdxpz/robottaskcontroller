@@ -6,7 +6,7 @@ from nav_utils.turtlebot_launch import Turtlebot_Launcher
 from nav_utils.turltlebot_cruise import runRoute
 from nav_utils.turtlebot_robot_status import setRobotWorking, setRobotIdel, isRobotWorking, isInspectionRunning, isInspectionRepeated
 from utils.ros_utils import killNavProcess, initROSNode, checkMapFile
-from utils.inspectionstatus import addTaskIntoMsgQueue, getTasksFromMsgQueue, updateInspection
+from utils.inspection_utils import getTasksFromMsgQueue, updateInspection
 
 from utils.logger import getLogger
 logger = getLogger('main')
@@ -14,8 +14,10 @@ logger.propagate = False
 
 def execTaskLoop():
     while True:
-        tasks = getTasksFromMsgQueue()
-        task_data = tasks.get_nowait()
+        task_data = getTasksFromMsgQueue()
+        if task_data is None:
+            continue
+            
         inspection_id = int(task_data['inspection_id'])
         task_name = 'inpsection: {}'.format(inspection_id)
         task = threading.Thread(name=task_name, target=execTask, args=(task_data,))
