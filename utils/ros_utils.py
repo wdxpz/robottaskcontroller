@@ -86,7 +86,7 @@ def checkMapFile(siteid):
             yaml.dump(all_data, file)
             file.close()
         except Exception as e:
-            logger.error("error to correct site's map yaml file!")
+            logger.error("error to correct site's map yaml file! " + str(e))
             return False
 
     return True

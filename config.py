@@ -7,10 +7,10 @@ DEBUG = False
 PI = 3.1415926535897
 
 #logger
-log_file = os.path.join(BASE_DIR, 'robot_task_controller.log')
+log_file = os.path.join(os.path.dirname(BASE_DIR), 'robot_task_controller.log')
 
 #map service
-Map_Dir = os.path.join(BASE_DIR, 'map')
+Map_Dir = os.path.join(os.path.dirname(BASE_DIR), 'map')
 Create_Site_Endoint = 'http://www.bestfly.ml:8000/site/'
 Delete_Site_Endpoint = 'http://www.bestfly.ml:8000/site/'
 
