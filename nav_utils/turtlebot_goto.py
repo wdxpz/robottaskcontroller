@@ -26,7 +26,7 @@ from actionlib_msgs.msg import *
 from geometry_msgs.msg import Pose, Point, Quaternion
 
 from config import Wait_For_GoToPose_Time, DEBUG
-from utils.logger2 import getLogger
+from utils.logger import getLogger
 logger = getLogger('GoToPose')
 
 class GoToPose():

@@ -8,7 +8,7 @@ import rospy
 from subprocess import Popen, PIPE, check_output, CalledProcessError
 from config import Nav_Pickle_File, Map_Dir
 
-from utils.logger2 import getLogger
+from utils.logger import getLogger
 logger = getLogger('utils.turtlebot')
 logger.propagate = False
 

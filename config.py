@@ -1,6 +1,6 @@
 
 import os
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 DEBUG = False
 
@@ -57,4 +57,4 @@ Inspection_Status_Codes ={
 Inspection_Status_Endpoint='http://www.bestfly.ml:8000/inspection/'
 
 #MSG center entrypoint
-Msg_Center_Endpoint='http://127.0.0.1:8000/tasks/'
+Msg_Center_Endpoint='http://127.0.0.1:8001/tasks/'

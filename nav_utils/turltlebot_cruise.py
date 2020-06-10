@@ -39,8 +39,8 @@ from nav_math import distance, radiou2dgree
 from turtlebot_robot_status import setRobotIdel, setRobotWorking, isRobotWorking
 
 
-from utils.logger2 import getLogger
-from utils.turtlebot import checkRobotNode, shell_cmd, killNavProcess
+from utils.logger import getLogger
+from utils.ros_utils import checkRobotNode, shell_cmd, killNavProcess
 logger = getLogger('turtlebot_cruise')
 logger.propagate = False
 

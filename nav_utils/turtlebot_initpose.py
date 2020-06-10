@@ -8,7 +8,7 @@ from random import sample
 
 
 from config import Trial_Set_Pose_Count
-from utils.logger2 import getLogger
+from utils.logger import getLogger
 logger = getLogger('turtlebot_initpose')
 logger.propagate = False
 

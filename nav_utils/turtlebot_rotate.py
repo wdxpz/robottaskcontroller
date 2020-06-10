@@ -1,7 +1,7 @@
 import rospy
 from geometry_msgs.msg import Twist
 
-from utils.logger2 import getLogger
+from utils.logger import getLogger
 logger = getLogger('RotateController')
 logger.propagate = False
 

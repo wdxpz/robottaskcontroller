@@ -3,7 +3,7 @@ import datetime
 from influxdb import InfluxDBClient
 
 import config
-from utils.logger2 import getLogger
+from utils.logger import getLogger
 
 logger = getLogger('utils-tsdb')
 

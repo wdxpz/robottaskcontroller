@@ -9,10 +9,10 @@ import rospy
 import tf
 
 from config import ROS_Launch_File, Map_Dir, Launch_Max_Try, Nav_Pickle_File, DEBUG
-from utils.turtlebot import checkRobotNode, shell_open
+from utils.ros_utils import checkRobotNode, shell_open
 
 #from utils.logger import logger
-from utils.logger2 import getLogger
+from utils.logger import getLogger
 logger = getLogger('Turtlebot_Launcher')
 logger.propagate = False
 
