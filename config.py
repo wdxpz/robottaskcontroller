@@ -1,10 +1,14 @@
 
 import os
+import threading
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 DEBUG = False
 
 PI = 3.1415926535897
+
+
 
 #logger
 log_file = os.path.join(os.path.dirname(BASE_DIR), 'robot_task_controller.log')
@@ -32,8 +36,11 @@ Holding_Time = Holding_Step_Time+360/Rotate_Speed+Holding_Time_Variance
 ##time interval to upload to tsdb
 Pos_Collect_Interval = 0.2
 Upload_Interval = 2
+
 ##navigation prcocess pickle file
-Nav_Pickle_File = os.path.join(BASE_DIR, 'nav_process.pkl')
+Nav_Process_Pool = {}
+
+
 #tsdb
 upload_URL = 'www.bestfly.ml'
 upload_PORT = 8086
@@ -41,6 +48,12 @@ upload_DB = 'robot'
 Table_Name_Robot_Pos = 'robot_poss'
 Table_Name_Robot_Event = 'robot_event'
 
+#Task Types:
+Task_Type = {
+    "Task_Inspection": 0,
+    "Task_KillAllNavProcess": 10,
+    "Task_SaveMap": 20
+}
 
 #Inspection Status Codes
 Inspection_Status_Codes ={
@@ -57,4 +70,4 @@ Inspection_Status_Codes ={
 Inspection_Status_Endpoint='http://www.bestfly.ml:8000/inspection/'
 
 #MSG center entrypoint
-Msg_Center_Endpoint='http://127.0.0.1:8001/tasks/'
+Msg_Center_Endpoint='http://192.168.27.1:8000/tasks/'

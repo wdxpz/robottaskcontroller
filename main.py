@@ -1,6 +1,8 @@
 import threading
+import time
 
-from config import Nav_Pickle_File, Inspection_Status_Codes
+
+from config import Task_Type, Inspection_Status_Codes
 
 from nav_utils.turtlebot_launch import Turtlebot_Launcher
 from nav_utils.turltlebot_cruise import runRoute
@@ -13,18 +15,28 @@ logger = getLogger('main')
 logger.propagate = False
 
 def execTaskLoop():
+    #init ROS node
+    logger.info('Init ROS Node')
+    initROSNode()
+
     while True:
-        task_data = getTasksFromMsgQueue()
-        if task_data is None:
+        task = getTasksFromMsgQueue()
+        if task is None:
+            time.sleep(1)
             continue
-            
-        inspection_id = int(task_data['inspection_id'])
-        task_name = 'inpsection: {}'.format(inspection_id)
-        task = threading.Thread(name=task_name, target=execTask, args=(task_data,))
-        task.start()
+        task_type, task_data = task[0], task[1]
+        if task_type == Task_Type["Task_Inspection"]:   
+            inspection_id = int(task_data['inspection_id'])
+            task_name = 'inpsection: {}'.format(inspection_id)
+            logger.info('start inspection task: {}'.format(task_name))
+            task = threading.Thread(name=task_name, target=execNavigation, args=(task_data,))
+            task.start()
+        elif task_type == Task_Type["Tyep_KillAllNavProcess"]:
+            logger.info('start to kill all existing navigation process!')
+            killNavProcess()
 
 
-def execTask(data):
+def execNavigation(data):
     try: 
         inspection_id = int(data['inspection_id'])
         site_id = str(data['site_id'])
@@ -34,12 +46,21 @@ def execTask(data):
         logger.error("Error! command parameters error. " + str(e))
         updateInspection(inspection_id, Inspection_Status_Codes['ERR_CMD_PARAMETERS'])
         return
-        
+    
     if not checkMapFile(site_id):
         logger.error("Error!, map parameters error, exit!")
         updateInspection(inspection_id, Inspection_Status_Codes['ERR_CMD_PARAMETERS'])
         return
 
+    if isInspectionRepeated(inspection_id):
+        logger.error("Error! simultaneous same insepction_id, discard the later!")
+        return
+
+#    if isInspectionRunning():
+#        logger.error("Error! An inspection is in running, exit!")
+#        #updateInspection(inspection_id, Inspection_Status_Codes['ERR_INSPECTION_STILL_RUNNING'])
+ #       return
+        
     working_robots = []
     for id in robot_ids:
         if isRobotWorking(id):
@@ -49,29 +70,22 @@ def execTask(data):
         updateInspection(inspection_id, Inspection_Status_Codes['ERR_ROBOT_OCCUPIED'])
         return
 
-    if isInspectionRepeated(inspection_id):
-        logger.error("Error! simultaneous insepction_id, exit the later!")
-        return
-
-    if isInspectionRunning():
-        logger.error("Error! An inspection is in running, exit!")
-        updateInspection(inspection_id, Inspection_Status_Codes['ERR_INSPECTION_STILL_RUNNING'])
-        return
-
     for id in robot_ids:
         setRobotWorking(id, inspection_id)
 
-    logger.info('try to kill existed navigation process before start!')
+    #logger.info('try to kill existed navigation process before start!')
     #TODO: this process can will kill all of current running nav processes, it is a BUG!
     #TODO: modify it and remove isInspectionRunning() check
-    killNavProcess()
-
-    #init ROS node
-    logger.info('Init ROS Node')
-    initROSNode()
+    ####################################################################################
+    #killNavProcess has been changed:
+    #  1. kill corresponding nav process with specific inspection_ids, or 
+    #  2. kill all existed nav inspections
+    #so we should not kill any nav process at the beginning of an inpsection
+    
+    #killNavProcess()
         
     logger.info('[launch_nav] launch robot with inspection id: {}, robots: {}'.format(inspection_id, robots))
-    bot_launcher =Turtlebot_Launcher(site_id, robots)
+    bot_launcher =Turtlebot_Launcher(inspection_id, site_id, robots)
     try:
         #launch navigation mode for multi-robots
         bot_launcher.launch()
@@ -116,7 +130,7 @@ def execTask(data):
         logger.info('try to kill existed navigation process after failed start!')
         for id in robot_ids:
             setRobotIdel(id)
-        killNavProcess()
+        killNavProcess([inspection_id])
         return 
 
 if __name__ == "__main__":

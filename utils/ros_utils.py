@@ -6,7 +6,7 @@ import yaml
 
 import rospy
 from subprocess import Popen, PIPE, check_output, CalledProcessError
-from config import Nav_Pickle_File, Map_Dir
+from config import Nav_Process_Pool, Map_Dir
 
 from utils.logger import getLogger
 logger = getLogger('utils.turtlebot')
@@ -47,16 +47,14 @@ def checkRobotNode(name='map_server', trytimes=1):
 
     return False
 
-def killNavProcess():
-    if os.path.exists(Nav_Pickle_File):
-        logger.info('found nav process, try to kill!')
-        try:
-            with open(Nav_Pickle_File, 'rb') as f:
-                proc = pickle.load(f)
-                proc.terminate()
-        except OSError as e:
-            logger.info(str(e))
-        os.remove(Nav_Pickle_File)
+def killNavProcess(inspection_ids=None):
+    for id in Nav_Process_Pool.keys():
+        if inspection_ids is None or id in inspection_ids:
+            logger.info('killed process {} of inspection {}'.format(Nav_Process_Pool[id], id))
+            Nav_Process_Pool[id].terminate()
+            Nav_Process_Pool.pop(id, None)
+            
+        
 
 def initROSNode():
     # Initialize
@@ -64,6 +62,7 @@ def initROSNode():
     nodename = 'robotmaster'
     if not checkRobotNode('/'+nodename, trytimes=1):
         logger.info('init node: /'+nodename)
+        #disable_signals=True otherwise the main thread will be killed after killNavProcess
         rospy.init_node(nodename, anonymous=False, disable_signals=True)  
 
 

@@ -8,7 +8,7 @@ from os.path import expanduser
 import rospy
 import tf
 
-from config import ROS_Launch_File, Map_Dir, Launch_Max_Try, Nav_Pickle_File, DEBUG
+from config import ROS_Launch_File, Map_Dir, Launch_Max_Try, Nav_Process_Pool, DEBUG
 from utils.ros_utils import checkRobotNode, shell_open
 
 #from utils.logger import logger
@@ -18,9 +18,10 @@ logger.propagate = False
 
 
 class Turtlebot_Launcher():
-    def __init__(self, siteid, robots):
+    def __init__(self, inspection_id, siteid, robots):
         self.robots = robots
         self.siteid = siteid
+        self.inspection_id = inspection_id
 
     def launch(self):
         
@@ -138,13 +139,19 @@ class Turtlebot_Launcher():
 
         ret_code, ret_pro = shell_open(command)
         if ret_code != 0:
-            msg = 'launch navigation failed, command [{}] not wokr!'.format(command)
+            msg = 'launch navigation failed, command [{}] not work!'.format(command)
             logger.error(msg)
-            raise Exception(msg)
+            raise Exception(msg)        
         else:
-            with open(Nav_Pickle_File, 'wb') as f:
-                pickle.dump(ret_pro, f, pickle.HIGHEST_PROTOCOL)
-            
+            if self.inspection_id in Nav_Process_Pool.keys():
+                ret_pro.terminate()
+                msg = "Found same and not finished inspection_id is running nav process, nav terminated!"
+                logger.error(msg)
+                raise Exception("Found same and not finished inspection_id is running nav process, nav terminated!")
+  
+            Nav_Process_Pool[self.inspection_id] = ret_pro
+
+
     def buildLaunchFile(self):
         org_launch_file = os.path.join(expanduser("~"), ROS_Launch_File)
 

@@ -34,8 +34,9 @@ def getTasksFromMsgQueue():
             is_error = True
         if response.content is None or len(response.content) == 0:
             return None 
-        data = json.loads(response.content)['data']
-        task_data = json.loads(data)
+        data = json.loads(response.content)
+        task_type = int(data.keys()[0])
+        task_data = json.loads(data[data.keys()[0]])
     except Exception as e:
         logger.error(str(e))
         is_error = True
@@ -47,5 +48,5 @@ def getTasksFromMsgQueue():
     
 
     logger.info("Succeeded to get new task data from MSG center!")
-    return task_data
+    return task_type, task_data
 

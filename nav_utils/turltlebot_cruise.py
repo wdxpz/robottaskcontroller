@@ -254,7 +254,7 @@ def clearTasks(paras, scheduler):
             break
     if all_tasks_over:
         logger.info('all nav taks finished, trying to kill navigation process at runRoute quit!')
-        killNavProcess()
+        killNavProcess([paras['inspection_id']])
 
 def setInReturn(paras, scheduler):
     paras['flag_in_returning'] = True
