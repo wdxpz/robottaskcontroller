@@ -53,7 +53,7 @@ Table_Name_Robot_Event = 'robot_event'
 Inspection_Status_Endpoint='http://www.bestfly.ml:8000/inspection/'
 
 #MSG center entrypoint
-Msg_Center_Endpoint='http://192.168.27.1:8000/tasks/'
+Msg_Center_Endpoint='http://192.168.27.1:8100/tasks/'
 
 #load constant varibles
 constants_yaml = os.path.join(os.path.dirname(BASE_DIR), 'constants.yml')

@@ -15,8 +15,9 @@ def updateInspection(id, status_code):
     }
     is_error = False
     try:
-        response = requests.put(Inspection_Status_Endpoint, body)
+        response = requests.put(Inspection_Status_Endpoint, data=json.dumps(body))
         if response.status_code != 200:
+            print(response.status_code)
             is_error = True
     except Exception as e:
         logger.error(str(e))
