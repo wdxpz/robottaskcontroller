@@ -37,6 +37,7 @@ from turtlebot_initpose import PoseIniter
 from tsdb import DBHelper
 from nav_math import distance, radiou2dgree
 from turtlebot_robot_status import setRobotIdel, setRobotWorking, isRobotWorking
+from turtlebot_launch import Turtlebot_Launcher
 
 
 from utils.logger import getLogger
@@ -337,7 +338,15 @@ def runRoute(inspectionid, robotid, route, org_pose, nav_tasks_over):
 
             if rospy.is_shutdown():
                 clearTasks(paras, scheduler)
-                logger.info(paras['msg_head'] + 'runRoute quit for rospy shutdown')
+                logger.error(paras['msg_head'] + 'runRoute quit for rospy shutdown')
+                break
+
+            #to check if robot is still online
+            try:
+                Turtlebot_Launcher.checkRobotOnline(paras['robot_id'])
+            except Exception as e:
+                clearTasks(paras, scheduler)
+                logger.error("robot {} not online anymore! Terminate its navigation routine!")
                 break
 
             pt_num = pt['point_no']
@@ -383,7 +392,6 @@ def runRoute(inspectionid, robotid, route, org_pose, nav_tasks_over):
                     logger.info(paras['msg_head'] + 'runRoute: rotate step {}, rotate angle: {}'.format(i, step_angle))
                     rotate_ctl.rotate(angle=step_angle)
                     rospy.sleep(config.Holding_Step_Time/config.Circle_Rotate_Steps)
-
 
             #this guarantee to send the parameters out
             rospy.sleep(0.5)

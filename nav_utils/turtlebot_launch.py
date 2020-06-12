@@ -31,11 +31,9 @@ class Turtlebot_Launcher():
             try:
                 self.checkRobotsOn()
                 self.startNavigation()
-                #time.sleep(3)
                 rospy.sleep(5)
-                self.checkRobotsNav()
-                #time.sleep(3)
-                rospy.sleep(3)
+                #self.checkRobotsNav()
+                #rospy.sleep(3)
                 self.checkRobotsBaselink()
                 launched = True
                 break
@@ -102,8 +100,8 @@ class Turtlebot_Launcher():
             logger.error(msg)
             raise Exception(msg)
 
-
-    def checkRobotOnline(self, robot_id):
+    @staticmethod
+    def checkRobotOnline(robot_id):
         robot_core_node = '/{}/turtlebot3_core'.format(robot_id)
         logger.info('start to check robot {} by ping rosnode {}'.format(robot_id, robot_core_node))
         if not checkRobotNode(robot_core_node, trytimes=1):
@@ -112,7 +110,8 @@ class Turtlebot_Launcher():
             raise Exception(msg)
         logger.info('robot {} is online!'.format(robot_id))
 
-    def checkRobotNavOK(self, robot_id):
+    @staticmethod
+    def checkRobotNavOK(robot_id):
         robot_movebase_node = '/{}/move_base'.format(robot_id)
         logger.info('start to check robot {} by ping rosnode {}'.format(robot_id, robot_movebase_node))
         if not checkRobotNode(robot_movebase_node, trytimes=1):
@@ -121,7 +120,8 @@ class Turtlebot_Launcher():
             raise Exception(msg)
         logger.info('robot {} navigation is ready!'.format(robot_id))
 
-    def checkRobotBaselinkOK(self, robot_id):
+    @staticmethod
+    def checkRobotBaselinkOK(robot_id):
         logger.info('start to check robot {} ready for map location by listen to /{}/baselink.'.format(robot_id, robot_id))
         listener = tf.TransformListener()
         try:
