@@ -69,7 +69,17 @@ def execInspection(data):
     try:
         #launch navigation mode for multi-robots
         bot_launcher.launch()
+    except Exception as e:
+        logger.error("Error!, failed to start robots, exit!")
+        updateInspection(inspection_id, Inspection_Status_Codes['ERR_ROBOT_START'])
+        logger.info('try to kill existed navigation process after failed start!')
+        for id in robot_ids:
+            setRobotIdel(id)
+        killNavProcess([inspection_id])
+        return 
 
+    #start navigation
+    try:
         #navigate robot
         nav_tasks = []
         nav_tasks_over = {}
@@ -105,9 +115,9 @@ def execInspection(data):
         return
 
     except Exception as e:
-        logger.error("Error!, failed to start robots, exit!")
-        updateInspection(inspection_id, Inspection_Status_Codes['ERR_ROBOT_START'])
-        logger.info('try to kill existed navigation process after failed start!')
+        logger.error("Error!, navigation failed, exit!")
+        updateInspection(inspection_id, Inspection_Status_Codes['ERR_INSPECTION_FAILED'])
+        logger.info('try to kill existed navigation process after failed navigation!')
         for id in robot_ids:
             setRobotIdel(id)
         killNavProcess([inspection_id])

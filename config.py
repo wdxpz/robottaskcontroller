@@ -56,8 +56,8 @@ Inspection_Status_Endpoint='http://www.bestfly.ml:8000/inspection/'
 Msg_Center_Endpoint='http://192.168.27.1:8000/tasks/'
 
 #load constant varibles
-constants_yaml = log_file = os.path.join(os.path.dirname(BASE_DIR), 'constants.yml')
+constants_yaml = os.path.join(os.path.dirname(BASE_DIR), 'constants.yml')
 with open(constants_yaml, "rb") as f:
     constants_data = yaml.load(f)
     Task_Type = constants_data['Task_Type']
-    Inspection_Status_Codes = ['Inspection_Status_Codes']
+    Inspection_Status_Codes = constants_data['Inspection_Status_Codes']
