@@ -28,6 +28,7 @@ def updateInspection(id, status_code):
 
 
 def getTasksFromMsgQueue():
+    logger.info(Msg_Center_Endpoint)
     is_error = False
     try:
         response = requests.get(Msg_Center_Endpoint)

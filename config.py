@@ -53,7 +53,10 @@ Table_Name_Robot_Event = 'robot_event'
 Inspection_Status_Endpoint='http://www.bestfly.ml:8000/inspection/'
 
 #MSG center entrypoint
-Msg_Center_Endpoint='http://192.168.27.1:8100/tasks/'
+Robotmaster_Service_Port=8100
+if 'Robotmaster_Service_Port' in os.environ.keys():
+    Robotmaster_Service_Port = os.environ['Robotmaster_Service_Port']
+Msg_Center_Endpoint='http://127.0.0.1:' + str(Robotmaster_Service_Port) + '/tasks/'
 
 #load constant varibles
 constants_yaml = os.path.join(os.path.dirname(BASE_DIR), 'constants.yml')

@@ -16,6 +16,8 @@ def execTaskLoop():
     logger.info('Init ROS Node')
     initROSNode()
 
+    logger.info('start msg loop!')
+
     while True:
         task = getTasksFromMsgQueue()
         if task is None:
