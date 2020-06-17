@@ -30,7 +30,7 @@ def execTaskLoop():
             logger.info('start inspection task: {}'.format(task_name))
             task = threading.Thread(name=task_name, target=execInspection, args=(task_data,))
             task.start()
-        elif task_type == Task_Type["Tyep_KillAllNavProcess"]:
+        elif task_type == Task_Type["Task_KillAllNavProcess"]:
             logger.info('start to kill all existing navigation process!')
             killNavProcess()
 
