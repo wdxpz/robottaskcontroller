@@ -177,6 +177,7 @@ class Turtlebot_Launcher():
             newnode.getchildren()[2].attrib['value'] = str(self.robots[id]['org_pos'][1])
             newnode.getchildren()[3].attrib['name'] = id + "_init_a"
             newnode.getchildren()[3].attrib['value'] = '0.0'
+            newnode.getchildren()[4].attrib['value'] = str(self.robots[id]['model'])
             root.append(newnode)
         #delete the template robot node
         root.remove(root[1])
