@@ -21,6 +21,8 @@ Delete_Site_Endpoint = 'http://www.bestfly.ml:8000/site/'
 
 #robot launch configuration
 ROS_Launch_File = 'catkin_ws/src/multirobot_nv/launch/startall.launch'
+Template_Turtlebot_Launch = 'catkin_ws/src/multirobot_nv/launch/template_start_turtlebot.launch'
+Template_Rosbot_Launch = 'catkin_ws/src/multirobot_nv/launch/template_start_rosbot.launch'
 Launch_Max_Try = 3
 
 #robot pose initialization configration
@@ -58,6 +60,7 @@ with open(constants_yaml, "rb") as f:
     constants_data = yaml.load(f)
     Task_Type = constants_data['Task_Type']
     Inspection_Status_Codes = constants_data['Inspection_Status_Codes']
+    Robot_Model = constants_data['Robot_Model']
     Msg_Center_Url = constants_data['Msg_Center']
 
 #MSG center entrypoint
