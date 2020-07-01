@@ -103,7 +103,7 @@ def execInspection(data):
             org_pose = robots[id]['org_pos']
             task_name = 'robot: {} of inpsection: {}'.format(id, inspection_id)
             task = threading.Thread(name=task_name, target=runRoute, \
-                args=(inspection_id, id, route, org_pose, nav_tasks_over,))
+                args=(inspection_id, site_id, id, route, org_pose, nav_tasks_over,))
             nav_tasks.append(task)
         for t in nav_tasks:
             logger.info("Start inspection subtask thread: {}.".format(t.getName()))

@@ -13,6 +13,7 @@ body_pos = {
     'tags': {
         'robot_id': 0,
         'inspection_id': 0,
+        'site_id': 0,
     },
     'fields':{
         'pos_x': 0,
@@ -27,6 +28,7 @@ body_event = {
     'tags': {
         'robot_id': 0,
         'inspection_id': 0,
+        'site_id': 0,
         'waypoint_no': 0
     },
     'fields':{
@@ -39,7 +41,7 @@ class DBHelper():
     def __init__(self, db_url=config.upload_URL, port=config.upload_PORT, dbname=config.upload_DB):
         self.client = InfluxDBClient(host=db_url, port=port, database=dbname)
 
-    def writePosRecord(self, inspection_id, robot_id, pos_records):
+    def writePosRecord(self, inspection_id, site_id, robot_id, pos_records):
         records = []
         if len(pos_records) == 0:
             return
@@ -50,6 +52,7 @@ class DBHelper():
 
             body['time'] = timestamp
             body['tags']['robot_id'] = robot_id
+            body['tags']['site_id'] = site_id
             body['tags']['inspection_id'] = inspection_id
             body['fields']['pos_x'] = x
             body['fields']['pos_y'] = y
@@ -60,7 +63,7 @@ class DBHelper():
         try:
             self.client.write_points(records)
         except Exception as e:
-            logger.error('[nav_utils] DB operation: write robot position record error!', e)
+            logger.error('[nav_utils] DB operation: write robot position record error! ' + str(e))
     
     def emptyPos(self):
         self.client.query("delete from {};".format(config.Table_Name_Robot_Pos))
@@ -70,7 +73,7 @@ class DBHelper():
         resutls = self.client.query('select * from {};'.format(config.Table_Name_Robot_Pos))
         return resutls
 
-    def writeEventRecord(self, inspection_id, robot_id, event_records):
+    def writeEventRecord(self, inspection_id, site_id, robot_id, event_records):
         records = []
         if len(event_records) == 0:
             return
@@ -81,6 +84,7 @@ class DBHelper():
             body['time'] = leave_time
             body['tags']['robot_id'] = robot_id
             body['tags']['inspection_id'] = inspection_id
+            body['tags']['site_id'] = site_id
             body['tags']['waypoint_no'] = waypoint_no
             body['fields']['enter_time'] = enter_time
             body['fields']['leave_time'] = leave_time
@@ -91,12 +95,13 @@ class DBHelper():
         except:
             logger.error('[nav_utils] DB operation: write robot position record error!')
 
-    def writeMissPointEvent(self, inspection_id, robot_id, time, waypoint_no):
+    def writeMissPointEvent(self, inspection_id, site_id, robot_id, time, waypoint_no):
         records = []
         body = copy.deepcopy(body_event)
         body['time'] = time
         body['tags']['robot_id'] = robot_id
         body['tags']['inspection_id'] = inspection_id
+        body['tags']['site_id'] = site_id
         body['tags']['waypoint_no'] = waypoint_no
         body['fields']['enter_time'] = -1
         body['fields']['leave_time'] = -1
@@ -113,13 +118,13 @@ class DBHelper():
         resutls = self.client.query('select * from {};'.format(config.Table_Name_Robot_Event))
         return resutls
 
-    def upload(self, inspection_id, robot_id, pos_records, event_records):
+    def upload(self, inspection_id, site_id, robot_id, pos_records, event_records):
         if len(pos_records)>0:
             logger.info('[nav_utils] DBHelper: sent {} pos records'.format(len(pos_records)))
-            self.writePosRecord(inspection_id, robot_id, pos_records)
+            self.writePosRecord(inspection_id, site_id, robot_id, pos_records)
         if len(event_records):
             logger.info('[nav_utils] DBHelper: sent {} event records'.format(len(event_records)))
-            self.writeEventRecord(inspection_id, robot_id, event_records)
+            self.writeEventRecord(inspection_id, site_id, robot_id, event_records)
         
 
 

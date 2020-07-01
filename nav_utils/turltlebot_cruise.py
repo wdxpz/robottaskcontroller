@@ -203,7 +203,7 @@ def uploadCacheData(paras):
         else:
             event_records.append(rec[1:])
 
-    t = threading.Thread(target=paras['dbhelper'].upload, args=(paras['inspection_id'], paras['robot_id'], pos_records, event_records))
+    t = threading.Thread(target=paras['dbhelper'].upload, args=(paras['inspection_id'], paras['site_id'], paras['robot_id'], pos_records, event_records))
     t.setDaemon(True)
     t.start()
 
@@ -263,11 +263,12 @@ def setInReturn(paras, scheduler):
     if scheduler.running:
         scheduler.shutdown()
     
-def runRoute(inspectionid, robotid, route, org_pose, nav_tasks_over):
+def runRoute(inspectionid, siteid, robotid, route, org_pose, nav_tasks_over):
     paras = initParas()
 
     #reset global variables
     paras['inspection_id'] = inspectionid 
+    paras['site_id'] = siteid
     paras['robot_id'] = robotid
     paras['msg_head'] = paras['msg_head'].format(inspectionid,robotid)
     paras['original_pose'] = None
@@ -360,7 +361,7 @@ def runRoute(inspectionid, robotid, route, org_pose, nav_tasks_over):
                 #send miss event to tsdb
                 if index <= route_len:
                     cur_time =  datetime.datetime.utcnow()
-                    paras['dbhelper'].writeMissPointEvent(paras['inspection_id'], paras['robot_id'], cur_time, pt_num)
+                    paras['dbhelper'].writeMissPointEvent(paras['inspection_id'], paras['site_id'], paras['robot_id'], cur_time, pt_num)
                 if index == route_len:
                     setInReturn(paras, scheduler)
                 continue
