@@ -2,11 +2,12 @@ import threading
 import time
 
 
-from config import Inspection_Status_Codes
+from config import Inspection_Status_Codes, Enable_Influx
 
 from nav_utils.turtlebot_launch import Turtlebot_Launcher
 from nav_utils.turltlebot_cruise import runRoute
 from nav_utils.turtlebot_robot_status import setRobotWorking, setRobotIdel, isRobotWorking, isInspectionRunning, isInspectionRepeated
+from nav_utils.kafka import sendTaskStatusMsg
 from utils.ros_utils import killNavProcess, checkMapFile
 from utils.inspection_utils import updateInspection
 
@@ -23,12 +24,20 @@ def execInspection(data):
         robot_ids = robots.keys()
     except Exception as e:
         logger.error("Error! command parameters error. " + str(e))
-        updateInspection(inspection_id, Inspection_Status_Codes['ERR_CMD_PARAMETERS'])
+        sendTaskStatusMsg(inspection_id, site_id, 
+                    Inspection_Status_Codes['ERR_CMD_PARAMETERS'],
+                    str(int(time.time())))
+        if Enable_Influx:
+            updateInspection(inspection_id, Inspection_Status_Codes['ERR_CMD_PARAMETERS'])
         return
     
     if not checkMapFile(site_id):
         logger.error("Error!, map parameters error, exit!")
-        updateInspection(inspection_id, Inspection_Status_Codes['ERR_CMD_PARAMETERS'])
+        sendTaskStatusMsg(inspection_id, site_id, 
+                    Inspection_Status_Codes['ERR_CMD_PARAMETERS'],
+                    str(int(time.time())))
+        if Enable_Influx:
+            updateInspection(inspection_id, Inspection_Status_Codes['ERR_CMD_PARAMETERS'])
         return
 
     if isInspectionRepeated(inspection_id):
@@ -47,7 +56,11 @@ def execInspection(data):
             working_robots.append(id)
     if len(working_robots) > 0:
         logger.error("Error!, required robot occupied, exit!")
-        updateInspection(inspection_id, Inspection_Status_Codes['ERR_ROBOT_OCCUPIED'])
+        sendTaskStatusMsg(inspection_id, site_id, 
+                    Inspection_Status_Codes['ERR_ROBOT_OCCUPIED'],
+                    str(int(time.time())))
+        if Enable_Influx:
+            updateInspection(inspection_id, Inspection_Status_Codes['ERR_ROBOT_OCCUPIED'])
         return
 
     for id in robot_ids:
@@ -71,7 +84,11 @@ def execInspection(data):
         bot_launcher.launch()
     except Exception as e:
         logger.error("Error!, failed to start robots, exit!")
-        updateInspection(inspection_id, Inspection_Status_Codes['ERR_ROBOT_START'])
+        sendTaskStatusMsg(inspection_id, site_id, 
+                    Inspection_Status_Codes['ERR_ROBOT_START'],
+                    str(int(time.time())))
+        if Enable_Influx:
+            updateInspection(inspection_id, Inspection_Status_Codes['ERR_ROBOT_START'])
         logger.info('try to kill existed navigation process after failed start!')
         for id in robot_ids:
             setRobotIdel(id)
@@ -111,12 +128,20 @@ def execInspection(data):
             t.start()
         msg = 'Inspection {} by robots {} started sucessfully!'.format(inspection_id, robot_ids)
         logger.info(msg)
-        updateInspection(inspection_id, Inspection_Status_Codes['INSPECTION_STARTED'])
+        sendTaskStatusMsg(inspection_id, site_id, 
+                    Inspection_Status_Codes['INSPECTION_STARTED'],
+                    str(int(time.time())))
+        if Enable_Influx:
+            updateInspection(inspection_id, Inspection_Status_Codes['INSPECTION_STARTED'])
         return
 
     except Exception as e:
         logger.error("Error!, navigation failed, exit!")
-        updateInspection(inspection_id, Inspection_Status_Codes['ERR_INSPECTION_FAILED'])
+        sendTaskStatusMsg(inspection_id, site_id, 
+                    Inspection_Status_Codes['ERR_INSPECTION_FAILED'],
+                    str(int(time.time())))
+        if Enable_Influx:
+            updateInspection(inspection_id, Inspection_Status_Codes['ERR_INSPECTION_FAILED'])
         logger.info('try to kill existed navigation process after failed navigation!')
         for id in robot_ids:
             setRobotIdel(id)

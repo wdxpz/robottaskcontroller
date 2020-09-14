@@ -1,0 +1,36 @@
+Task_Type:
+  Task_Inspection: 0
+  Task_KillAllNavProcess: 10
+  Task_SaveMap: 20
+
+Inspection_Status_Codes:
+  CMD_SENT: 100
+  CDM_ACCEPTED: 110
+  INSPECTION_STARTED: 130 
+  INSPECTION_FINISHED: 140
+  INSPECTION_TERMINATED: 150
+  INSPECTION_TERMINATED_WITH_ERROR: 160
+  ERR_CMD_PARAMETERS: 200
+  ERR_ROBOT_OCCUPIED: 210
+  ERR_ROBOT_START: 220
+  ERR_INSPECTION_STILL_RUNNING: 230
+  ERR_INSPECTION_FAILED: 240
+
+Robot_Model:
+  - waffle_pi
+  - waffle
+  - burger
+  - rosbot2
+  - rosbot2_pro
+  
+
+Msg_Center: 
+  - "192.168.12.146:9092"
+
+Task_Topic: "task"
+
+Task_Status_Topic: "task_status"
+
+Robot_Position_Topic: "robot_position"
+
+Enable_Influx: 1

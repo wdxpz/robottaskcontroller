@@ -55,16 +55,20 @@ Table_Name_Robot_Event = 'robot_event'
 Inspection_Status_Endpoint='http://www.bestfly.ml:8000/inspection/'
 
 #load constant varibles
-constants_yaml = os.path.join(os.path.dirname(BASE_DIR), 'constants.yml')
+constants_yaml = os.path.join(BASE_DIR, 'constants.yml')
 with open(constants_yaml, "rb") as f:
     constants_data = yaml.load(f)
     Task_Type = constants_data['Task_Type']
     Inspection_Status_Codes = constants_data['Inspection_Status_Codes']
     Robot_Model = constants_data['Robot_Model']
     Msg_Center_Url = constants_data['Msg_Center']
+    Task_Topic = constants_data['Task_Topic']
+    Task_Status_Topic = constants_data['Task_Status_Topic']
+    Robot_Position_Topic = constants_data['Robot_Position_Topic']
+    Enable_Influx = constants_data['Enable_Influx']
 
 #MSG center entrypoint
-Robotmaster_Service_Port=8100
-if 'Robotmaster_Service_Port' in os.environ.keys():
-    Robotmaster_Service_Port = os.environ['Robotmaster_Service_Port']
-Msg_Center_Endpoint=Msg_Center_Url + str(Robotmaster_Service_Port) + '/tasks/'
+# Robotmaster_Service_Port=8100
+# if 'Robotmaster_Service_Port' in os.environ.keys():
+#     Robotmaster_Service_Port = os.environ['Robotmaster_Service_Port']
+# Msg_Center_Endpoint=Msg_Center_Url + str(Robotmaster_Service_Port) + '/tasks/'
