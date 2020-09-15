@@ -4,10 +4,10 @@ import time
 
 from config import Inspection_Status_Codes, Enable_Influx
 
-from nav_utils.turtlebot_launch import Turtlebot_Launcher
-from nav_utils.turltlebot_cruise import runRoute
-from nav_utils.turtlebot_robot_status import setRobotWorking, setRobotIdel, isRobotWorking, isInspectionRunning, isInspectionRepeated
-from nav_utils.kafka import sendTaskStatusMsg
+from navigation.turtlebot_launch import Turtlebot_Launcher
+from navigation.turltlebot_cruise import runRoute
+from navigation.turtlebot_robot_status import setRobotWorking, setRobotIdel, isRobotWorking, isInspectionRunning, isInspectionRepeated
+from utils.kafka import sendTaskStatusMsg
 from utils.ros_utils import killNavProcess, checkMapFile
 from utils.inspection_utils import updateInspection
 
@@ -27,8 +27,6 @@ def execInspection(data):
         sendTaskStatusMsg(inspection_id, site_id, 
                     Inspection_Status_Codes['ERR_CMD_PARAMETERS'],
                     str(int(time.time())))
-        if Enable_Influx:
-            updateInspection(inspection_id, Inspection_Status_Codes['ERR_CMD_PARAMETERS'])
         return
     
     if not checkMapFile(site_id):
@@ -36,8 +34,6 @@ def execInspection(data):
         sendTaskStatusMsg(inspection_id, site_id, 
                     Inspection_Status_Codes['ERR_CMD_PARAMETERS'],
                     str(int(time.time())))
-        if Enable_Influx:
-            updateInspection(inspection_id, Inspection_Status_Codes['ERR_CMD_PARAMETERS'])
         return
 
     if isInspectionRepeated(inspection_id):
@@ -59,8 +55,6 @@ def execInspection(data):
         sendTaskStatusMsg(inspection_id, site_id, 
                     Inspection_Status_Codes['ERR_ROBOT_OCCUPIED'],
                     str(int(time.time())))
-        if Enable_Influx:
-            updateInspection(inspection_id, Inspection_Status_Codes['ERR_ROBOT_OCCUPIED'])
         return
 
     for id in robot_ids:
@@ -87,8 +81,6 @@ def execInspection(data):
         sendTaskStatusMsg(inspection_id, site_id, 
                     Inspection_Status_Codes['ERR_ROBOT_START'],
                     str(int(time.time())))
-        if Enable_Influx:
-            updateInspection(inspection_id, Inspection_Status_Codes['ERR_ROBOT_START'])
         logger.info('try to kill existed navigation process after failed start!')
         for id in robot_ids:
             setRobotIdel(id)
@@ -98,11 +90,11 @@ def execInspection(data):
     #start navigation
     try:
         #navigate robot
-        nav_tasks = []
-        nav_tasks_over = {}
+        nav_subtasks = []
+        nav_subtasks_over = {}
         for id in robot_ids:
             task_name = 'robot: {} of inpsection: {}'.format(id, inspection_id)
-            nav_tasks_over[task_name] = False
+            nav_subtasks_over[task_name] = False
         for id in robot_ids:
             #prepare cruising data
             route = []
@@ -120,9 +112,9 @@ def execInspection(data):
             org_pose = robots[id]['org_pos']
             task_name = 'robot: {} of inpsection: {}'.format(id, inspection_id)
             task = threading.Thread(name=task_name, target=runRoute, \
-                args=(inspection_id, site_id, id, route, org_pose, nav_tasks_over,))
-            nav_tasks.append(task)
-        for t in nav_tasks:
+                args=(inspection_id, site_id, id, robot_ids, route, org_pose, nav_subtasks_over,))
+            nav_subtasks.append(task)
+        for t in nav_subtasks:
             logger.info("Start inspection subtask thread: {}.".format(t.getName()))
             t.setDaemon(True)
             t.start()
@@ -131,17 +123,12 @@ def execInspection(data):
         sendTaskStatusMsg(inspection_id, site_id, 
                     Inspection_Status_Codes['INSPECTION_STARTED'],
                     str(int(time.time())))
-        if Enable_Influx:
-            updateInspection(inspection_id, Inspection_Status_Codes['INSPECTION_STARTED'])
         return
-
     except Exception as e:
         logger.error("Error!, navigation failed, exit!")
         sendTaskStatusMsg(inspection_id, site_id, 
                     Inspection_Status_Codes['ERR_INSPECTION_FAILED'],
                     str(int(time.time())))
-        if Enable_Influx:
-            updateInspection(inspection_id, Inspection_Status_Codes['ERR_INSPECTION_FAILED'])
         logger.info('try to kill existed navigation process after failed navigation!')
         for id in robot_ids:
             setRobotIdel(id)

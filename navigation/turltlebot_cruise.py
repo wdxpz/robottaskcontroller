@@ -34,7 +34,6 @@ import config
 from turtlebot_goto import GoToPose
 from turtlebot_rotate import RotateController, PI
 from turtlebot_initpose import PoseIniter
-from tsdb import DBHelper
 from nav_math import distance, radiou2dgree
 from turtlebot_robot_status import setRobotIdel, setRobotWorking, isRobotWorking
 from turtlebot_launch import Turtlebot_Launcher
@@ -44,13 +43,14 @@ from utils.logger import getLogger
 from utils.ros_utils import checkRobotNode, shell_cmd, killNavProcess
 from utils.inspection_utils import updateInspection
 from utils.time_utils import dt2timestamp
-from nav_utils.kafka import sendTaskStatusMsg, sendRobotPosMsg
+from utils.kafka import sendTaskStatusMsg, sendRobotPosMsg
+from utils.tsdb import DBHelper
 
 logger = getLogger('turtlebot_cruise')
 logger.propagate = False
 
 def initParas():
-    dababody = {
+    databody = {
         'inspection_id': 0,
         'site_id': 0,
         'robot_id': 0,
@@ -78,13 +78,13 @@ def initParas():
         'post_pose_queue': Queue(maxsize =0),
         'dbhelper': DBHelper(),
         'lock': threading.Lock(),
-        'running_flag': threading.Event(),
+        'flag_in_inspection': threading.Event(),
         'msg_head': 'inspection:{} robot: {}: '
     }
-    return dababody
+    return databody
     
 
-def resetRbotStatus(paras, waypoint_no=None):
+def resetRobotStatus(paras, waypoint_no=None):
 
     paras['robot_status']['id'] = paras['robot_id'] 
     paras['robot_status']['route_point_no'] = waypoint_no
@@ -97,7 +97,7 @@ def getMapLocation(paras):
     listener = tf.TransformListener()
     try:
         listener.waitForTransform("/map", "/{}/base_link".format(paras['robot_id']), rospy.Time(0), rospy.Duration(10.0))
-        while paras['running_flag'].isSet():
+        while paras['flag_in_inspection'].isSet():
             paras['cur_time'] =  datetime.datetime.utcnow()
 
             trans, rot = listener.lookupTransform("/map", "/{}/base_link".format(paras['robot_id']), rospy.Time(0))
@@ -114,7 +114,7 @@ def getMapLocation(paras):
             paras['pose_queue'].put((pose_pos, paras['cur_time']))   
             paras['pre_time'] = paras['cur_time']
 
-            time.sleep(0.5)
+            rospy.sleep(config.Pos_Collect_Interval)
 
     except Exception as e:
         logger.error('getMapLocation Error of robot: {}'.format(paras['robot_id']))
@@ -123,7 +123,7 @@ def getMapLocation(paras):
 
 def analyzePose(paras):
   
-    while paras['running_flag'].isSet():
+    while paras['flag_in_inspection'].isSet():
         if paras['pose_queue'] is None:
             logger.info(paras['msg_head'] + 'analyzePose: exit for main process terminates')
             return
@@ -148,7 +148,7 @@ def analyzePose(paras):
         paras['cur_theta'] = radiou2dgree(paras['cur_theta'])
         # rospy.loginfo("current position: x-{}, y-{}, theta-{}".format(cur_x, cur_y, cur_theta))
         
-        sendRobotPosMsg(paras['inspection_id'], paras['site_id'], str(int(time.time())), 
+        sendRobotPosMsg(paras['inspection_id'], paras['site_id'], str(int(dt2timestamp(pose_time))), 
                     robot_id=paras['robot_id'], 
                     pos_x=paras['cur_x'], 
                     pos_y=paras['cur_x'], 
@@ -181,7 +181,7 @@ def analyzePose(paras):
             if paras['flag_arrive_last_checkpoint']:
                 logger.info(paras['msg_head'] + 'set in returning flag at leaving the last checkpoint')
                 paras['flag_in_returning'] = True
-            resetRbotStatus(paras)
+            resetRobotStatus(paras)
             paras['lock'].release()
             continue
 
@@ -233,36 +233,40 @@ def writeEnterEvent(paras, pt_num, pt):
 def clearTasks(paras, scheduler):
     #set the task over flag
     task_name = 'robot: {} of inpsection: {}'.format(paras['robot_id'], paras['inspection_id'])
-    paras['nav_tasks_over'][task_name] = True
+    paras['nav_subtasks_over'][task_name] = True
     
-    paras['running_flag'].clear()
+    paras['flag_in_inspection'].clear()
     if scheduler is not None and scheduler.running:
         scheduler.shutdown()
 
     setRobotIdel(paras['robot_id'])
 
     all_tasks_over = True
-    for _, over_flag in paras['nav_tasks_over'].items():
+    for _, over_flag in paras['nav_subtasks_over'].items():
         if not over_flag:
             all_tasks_over = False
             break
     if all_tasks_over:
         logger.info('all nav taks finished, trying to kill navigation process at runRoute quit!')
+        sendTaskStatusMsg(paras['inspection_id'], paras['site_id'], 
+            config.Inspection_Status_Codes["INSPECTION_FINISHED"], 
+            str(int(time.time())))
         killNavProcess([paras['inspection_id']])
 
 def setInReturn(paras, scheduler):
     paras['flag_in_returning'] = True
-    paras['running_flag'].clear()
-    if scheduler.running:
+    paras['flag_in_inspection'].clear()
+    if scheduler is not None and scheduler.running:
         scheduler.shutdown()
     
-def runRoute(inspectionid, siteid, robotid, route, org_pose, nav_tasks_over):
+def runRoute(inspectionid, siteid, robotid, robot_ids, route, org_pose, nav_subtasks_over):
     paras = initParas()
 
     #reset global variables
     paras['inspection_id'] = inspectionid 
     paras['site_id'] = siteid
     paras['robot_id'] = robotid
+    paras['all_robot_ids'] = robot_ids
     paras['msg_head'] = paras['msg_head'].format(inspectionid,robotid)
     paras['original_pose'] = None
     paras['cur_x'], paras['cur_y'], paras['cur_theta'] = 0, 0, 0
@@ -271,8 +275,8 @@ def runRoute(inspectionid, siteid, robotid, route, org_pose, nav_tasks_over):
     paras['flag_in_returning'] = False
     paras['pose_queue'].empty()
     paras['post_pose_queue'].empty()
-    paras['nav_tasks_over'] = nav_tasks_over
-    resetRbotStatus(paras)
+    paras['nav_subtasks_over'] = nav_subtasks_over
+    resetRobotStatus(paras)
     
 
     if type(route) != list:
@@ -281,10 +285,11 @@ def runRoute(inspectionid, siteid, robotid, route, org_pose, nav_tasks_over):
         raise TypeError(msg)
 
     if len(route) == 0:
-        msg = paras['msg_head'] + 'route point list is empty, return!'
+        msg = paras['msg_head'] + 'route point list is empty!'
         logger.info(msg)
+
     try:
-        paras['running_flag'].set()
+        paras['flag_in_inspection'].set()
         
         # # Initialize
         # threadname = 'inspeciton_{}_robot_{}'.format(inspection_id, robot_id) 
@@ -332,30 +337,36 @@ def runRoute(inspectionid, siteid, robotid, route, org_pose, nav_tasks_over):
 
             if rospy.is_shutdown():
                 clearTasks(paras, scheduler)
+                ts = time.time()
+                for id in para['all_robot_ids']:
+                    sendRobotPosMsg(paras['inspection_id'], paras['site_id'], str(int(ts)), 
+                                robot_id=id, 
+                                pos_x=None, pos_y=None, pos_a=None)
                 sendTaskStatusMsg(paras['inspection_id'], paras['site_id'], 
                     config.Inspection_Status_Codes["INSPECTION_TERMINATED_WITH_ERROR"], 
-                    str(int(time.time())))
+                    str(int(ts)))
                 logger.error(paras['msg_head'] + 'runRoute quit for rospy shutdown')
                 break
 
+            pt_num = pt['point_no']
+            
             #to check if robot is still online
             try:
                 Turtlebot_Launcher.checkRobotOnline(paras['robot_id'])
             except Exception as e:
                 clearTasks(paras, scheduler)
-                sendRobotPosMsg(paras['inspection_id'], paras['site_id'], str(int(time.time())), 
+                ts = time.time()
+                sendRobotPosMsg(paras['inspection_id'], paras['site_id'], str(int(ts)), 
                     robot_id=paras['robot_id'], 
                     pos_x=None, pos_y=None, pos_a=None)
                 sendTaskStatusMsg(paras['inspection_id'], paras['site_id'], 
                     config.Inspection_Status_Codes["INSPECTION_STARTED"], 
-                    str(int(time.time())), 
+                    str(int(ts)), 
                     robot_id=paras['robot_id'], 
-                    checkpoint_no=pt['point_no'], 
+                    checkpoint_no=pt_num, 
                     robot_status=3)
                 logger.error("robot {} not online anymore! Terminate its navigation routine!")
                 break
-
-            pt_num = pt['point_no']
 
             # Navigation
             logger.info(paras['msg_head'] + "Go to No. {} pose".format(pt_num))
@@ -372,15 +383,14 @@ def runRoute(inspectionid, siteid, robotid, route, org_pose, nav_tasks_over):
                         checkpoint_no=pt_num, 
                         robot_status=2)
                     if config.Enable_Influx:
-                        cur_time =  datetime.datetime.utcnow()
-                        paras['dbhelper'].writeMissPointEvent(paras['inspection_id'], paras['site_id'], paras['robot_id'], cur_time, pt_num)
+                        paras['dbhelper'].writeMissPointEvent(paras['inspection_id'], paras['site_id'], paras['robot_id'], datetime.datetime.utcnow(), pt_num)
                 if index == route_len:
                     setInReturn(paras, scheduler)
                 continue
             logger.info(paras['msg_head'] + "Reached No. {} pose".format(pt_num))
             sendTaskStatusMsg(paras['inspection_id'], paras['site_id'], 
                     config.Inspection_Status_Codes["INSPECTION_STARTED"], 
-                    str(int(dt2timestamp(pose_time))), 
+                    str(int(time.time())), 
                     robot_id=paras['robot_id'], 
                     checkpoint_no=paras['robot_status']['route_point_no'], 
                     robot_status=0)
@@ -395,31 +405,31 @@ def runRoute(inspectionid, siteid, robotid, route, org_pose, nav_tasks_over):
                     logger.info(paras['msg_head'] + 'set in returning flag at first returning point')
                 setInReturn(paras, scheduler)
                 continue  
-
-            if paras['robot_status']['route_point_no'] is not None:
-                # or the route point was reached already
-                continue   
+            
+            # will never happer
+            # if paras['robot_status']['route_point_no'] is not None:
+            #     # or the route point was reached already
+            #     continue   
  
             #write point enter information
             
             writeEnterEvent(paras, pt_num, pt)
 
-            if not config.DEBUG:
-                #commend to robot to rotate 360 degree at current place
-                step_angle = 360*1.0 / config.Circle_Rotate_Steps
-                for i in range(1, config.Circle_Rotate_Steps+1):
-                    logger.info(paras['msg_head'] + 'runRoute: rotate step {}, rotate angle: {}'.format(i, step_angle))
-                    rotate_ctl.rotate(angle=step_angle)
-                    rospy.sleep(config.Holding_Step_Time/config.Circle_Rotate_Steps)
+            #commend to robot to rotate 360 degree at current place
+            step_angle = 360*1.0 / config.Circle_Rotate_Steps
+            for i in range(1, config.Circle_Rotate_Steps+1):
+                logger.info(paras['msg_head'] + 'runRoute: rotate step {}, rotate angle: {}'.format(i, step_angle))
+                rotate_ctl.rotate(angle=step_angle)
+                rospy.sleep(config.Holding_Step_Time/config.Circle_Rotate_Steps)
 
             #this guarantee to send the parameters out
             rospy.sleep(0.5)
 
         #to make the analyzePose thread finished after unsubscribe the odom topic
         clearTasks(paras, scheduler)
-        sendTaskStatusMsg(paras['inspection_id'], paras['site_id'], 
-                    config.Inspection_Status_Codes["INSPECTION_FINISHED"], 
-                    str(int(time.time())))
+        sendRobotPosMsg(paras['inspection_id'], paras['site_id'], str(int(ts)), 
+                    robot_id=paras['robot_id'], 
+                    pos_x=None, pos_y=None, pos_a=None)
         logger.info(paras['msg_head'] + 'runRoute: finished route, unregister topic odom!')
 
     except rospy.ROSInterruptException:
@@ -428,9 +438,6 @@ def runRoute(inspectionid, siteid, robotid, route, org_pose, nav_tasks_over):
                     config.Inspection_Status_Codes["INSPECTION_TERMINATED"], 
                     str(int(time.time())))
         logger.info(paras['msg_head'] + "runRoute quit for Ctrl-C caught")
-
-
-
 
 
 if __name__ == '__main__':

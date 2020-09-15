@@ -66,6 +66,7 @@ with open(constants_yaml, "rb") as f:
     Task_Status_Topic = constants_data['Task_Status_Topic']
     Robot_Position_Topic = constants_data['Robot_Position_Topic']
     Enable_Influx = constants_data['Enable_Influx']
+    Kafka_Blocking_time = constants_data['Kafka_Blocking_time']
 
 #MSG center entrypoint
 # Robotmaster_Service_Port=8100

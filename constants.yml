@@ -33,4 +33,6 @@ Task_Status_Topic: "task_status"
 
 Robot_Position_Topic: "robot_position"
 
+Kafka_Blocking_time: 1
+
 Enable_Influx: 1
