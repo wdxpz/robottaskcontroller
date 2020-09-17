@@ -10,11 +10,13 @@ from navigation.turtlebot_robot_status import setRobotWorking, setRobotIdel, isR
 from utils.kafka import sendTaskStatusMsg
 from utils.ros_utils import killNavProcess, checkMapFile
 from utils.inspection_utils import updateInspection
+from monitor import InspectionMonitor
 
 from utils.logger import getLogger
 logger = getLogger('execInspection')
 logger.propagate = False
 
+monitor = InspectionMonitor.getInspectionMonitor()
 
 def execInspection(data):
     try: 
@@ -36,7 +38,7 @@ def execInspection(data):
                     str(int(time.time())))
         return
 
-    if isInspectionRepeated(inspection_id):
+    if monitor.isTaskRepeated(inspection_id):
         logger.error("Error! simultaneous same insepction_id, discard the later!")
         return
 
@@ -48,7 +50,7 @@ def execInspection(data):
         
     working_robots = []
     for id in robot_ids:
-        if isRobotWorking(id):
+        if monitor.isRobotWorking(id):
             working_robots.append(id)
     if len(working_robots) > 0:
         logger.error("Error!, required robot occupied, exit!")
@@ -56,9 +58,6 @@ def execInspection(data):
                     Inspection_Status_Codes['ERR_ROBOT_OCCUPIED'],
                     str(int(time.time())))
         return
-
-    for id in robot_ids:
-        setRobotWorking(id, inspection_id)
 
     #logger.info('try to kill existed navigation process before start!')
     #TODO: this process can will kill all of current running nav processes, it is a BUG!
@@ -82,8 +81,6 @@ def execInspection(data):
                     Inspection_Status_Codes['ERR_ROBOT_START'],
                     str(int(time.time())))
         logger.info('try to kill existed navigation process after failed start!')
-        for id in robot_ids:
-            setRobotIdel(id)
         killNavProcess([inspection_id])
         return 
 
@@ -120,17 +117,17 @@ def execInspection(data):
             t.start()
         msg = 'Inspection {} by robots {} started sucessfully!'.format(inspection_id, robot_ids)
         logger.info(msg)
+        monitor.addTask(inspection_id, site_id, robot_ids)
         sendTaskStatusMsg(inspection_id, site_id, 
                     Inspection_Status_Codes['INSPECTION_STARTED'],
                     str(int(time.time())))
         return
     except Exception as e:
         logger.error("Error!, navigation failed, exit!")
+        monitor.rmTask(inspection_id)
         sendTaskStatusMsg(inspection_id, site_id, 
                     Inspection_Status_Codes['ERR_INSPECTION_FAILED'],
                     str(int(time.time())))
         logger.info('try to kill existed navigation process after failed navigation!')
-        for id in robot_ids:
-            setRobotIdel(id)
         killNavProcess([inspection_id])
         return 

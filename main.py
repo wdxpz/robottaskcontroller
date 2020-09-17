@@ -47,14 +47,14 @@ if __name__ == "__main__":
     
     for task in task_subscriber:
         logger.info('get task: {}'.format(task))
-        if 'task_type' is not in task.keys():
+        if 'task_type' not in task.keys():
             logger.info('error task data, ignored!')
             continue
         if task['task_type'] == Task_Type["Task_Inspection"]:   
-            inspection_id = int(task_data['inspection_id'])
+            inspection_id = int(task['inspection_id'])
             task_name = 'inpsection: {}'.format(inspection_id)
             logger.info('start inspection task: {}'.format(task_name))
-            task = threading.Thread(name=task_name, target=execInspection, args=(task_data,))
+            task = threading.Thread(name=task_name, target=execInspection, args=(task,))
             task.start()
         elif task['task_type'] == Task_Type["Task_KillAllNavProcess"]:
             logger.info('start to kill all existing navigation process!')

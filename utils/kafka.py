@@ -24,11 +24,11 @@ task_status_payload = {
     'status': 0 #0:"started", 1:"finished", 2:"terminated"
 }
 
-robot_status_payload = {
+robot_position_payload = {
     "timestamp": 1599033481,
     "robot_id": 0,
     "inspection_id": 0,
-    "site_id": 0
+    "site_id": 0,
     "location": '0-0-0'
 }
 
@@ -53,7 +53,7 @@ def sendTaskStatusMsg(inspection_id, site_id, task_status, timestamp, robot_id=N
         logger.error('Kafka operation : send task status msg error! ' +  str(e))
 
 def sendRobotPosMsg(inspection_id, site_id, timestamp, robot_id, pos_x, pos_y, pos_a):
-    body = copy.deepcopy(task_status_payload)
+    body = copy.deepcopy(robot_position_payload)
     body['inspection_id'] = inspection_id
     body['site_id'] = site_id
     body['timestamp'] = timestamp

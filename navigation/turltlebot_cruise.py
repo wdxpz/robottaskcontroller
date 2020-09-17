@@ -46,6 +46,9 @@ from utils.time_utils import dt2timestamp
 from utils.kafka import sendTaskStatusMsg, sendRobotPosMsg
 from utils.tsdb import DBHelper
 
+from tasks.monitor import InspectionMonitor
+inspection_monitor = InspectionMonitor.getInspectionMonitor()
+
 logger = getLogger('turtlebot_cruise')
 logger.propagate = False
 
@@ -101,7 +104,6 @@ def getMapLocation(paras):
             paras['cur_time'] =  datetime.datetime.utcnow()
 
             trans, rot = listener.lookupTransform("/map", "/{}/base_link".format(paras['robot_id']), rospy.Time(0))
-            robot_x, robot_y = trans[0], trans[1]
 
             if paras['original_pose'] is None:
                 paras['original_pose'] = (trans, rot)
@@ -148,11 +150,13 @@ def analyzePose(paras):
         paras['cur_theta'] = radiou2dgree(paras['cur_theta'])
         # rospy.loginfo("current position: x-{}, y-{}, theta-{}".format(cur_x, cur_y, cur_theta))
         
+        if inspection_monitor.isRobotWorking(paras['robot_id'], paras['inspection_id']):
+            x, y, a = paras['cur_x'], paras['cur_y'], paras['cur_theta']
+        else:
+            x, y, a = None, None, None
         sendRobotPosMsg(paras['inspection_id'], paras['site_id'], str(int(dt2timestamp(pose_time))), 
                     robot_id=paras['robot_id'], 
-                    pos_x=paras['cur_x'], 
-                    pos_y=paras['cur_x'], 
-                    pos_a=paras['cur_theta'])
+                    pos_x=x, pos_y=y, pos_a=a)
         #put into post_pose_cache for uploading
         #value at index [0] is to indicate: 0--pos record, 1--event record
         if config.Enable_Influx:
@@ -178,6 +182,7 @@ def analyzePose(paras):
             #influx
             if config.Enable_Influx:
                 paras['post_pose_queue'].put((1, paras['robot_status']['route_point_no'], paras['robot_status']['enter'][1].isoformat("T"), paras['robot_status']['leave'][1].isoformat("T")))
+            
             if paras['flag_arrive_last_checkpoint']:
                 logger.info(paras['msg_head'] + 'set in returning flag at leaving the last checkpoint')
                 paras['flag_in_returning'] = True
@@ -230,7 +235,7 @@ def writeEnterEvent(paras, pt_num, pt):
     logger.info(paras['msg_head'] + 'runRoute: arrive at a waypoint,  the record of current waypoint is: \n {}'.format(paras['robot_status']))
     paras['lock'].release()
 
-def clearTasks(paras, scheduler):
+def clearTasks(paras, scheduler, ts=time.time(), task_status=config.Inspection_Status_Codes["INSPECTION_STARTED"]):
     #set the task over flag
     task_name = 'robot: {} of inpsection: {}'.format(paras['robot_id'], paras['inspection_id'])
     paras['nav_subtasks_over'][task_name] = True
@@ -239,19 +244,47 @@ def clearTasks(paras, scheduler):
     if scheduler is not None and scheduler.running:
         scheduler.shutdown()
 
-    setRobotIdel(paras['robot_id'])
+    if task_status == config.Inspection_Status_Codes["INSPECTION_TERMINATED"] or \
+        task_status == config.Inspection_Status_Codes["INSPECTION_TERMINATED_WITH_ERROR"]:
+        for id in paras['all_robot_ids']:
+            inspection_monitor.setRobotFailed(paras['inspection_id'], id)
+            sendRobotPosMsg(paras['inspection_id'], paras['site_id'], str(int(ts)), 
+                            robot_id=id, 
+                            pos_x=None, pos_y=None, pos_a=None)
+        sendTaskStatusMsg(paras['inspection_id'], paras['site_id'], 
+            config.Inspection_Status_Codes["INSPECTION_TERMINATED_WITH_ERROR"], str(int(ts)))
+        logger.info('all nav taks terminated with code {}, trying to kill navigation process at runRoute quit!'.format(task_status))
+        killNavProcess([paras['inspection_id']])
+        inspection_monitor.rmTask(paras['inspection_id'])
+    else:
+        #config.Inspection_Status_Codes["INSPECTION_STARTED_WITH_ERROR"]
+        #config.Inspection_Status_Codes["INSPECTION_STARTED"]
+        setRobotIdel(paras['robot_id'])
+        all_subtasks_over = True
+        for _, over_flag in paras['nav_subtasks_over'].items():
+            if not over_flag:
+                all_subtasks_over = False
+                break
+        if not all_subtasks_over:
+            sendRobotPosMsg(paras['inspection_id'], paras['site_id'], str(int(ts)), 
+                robot_id=paras['robot_id'], 
+                pos_x=None, pos_y=None, pos_a=None)
+            if task_status == config.Inspection_Status_Codes["INSPECTION_STARTED_WITH_ERROR"]:
+                sendTaskStatusMsg(paras['inspection_id'], paras['site_id'], 
+                    config.Inspection_Status_Codes["INSPECTION_STARTED_WITH_ERROR"], 
+                    str(int(ts)), 
+                    robot_id=paras['robot_id'], 
+                    checkpoint_no=None, 
+                    robot_status=3)
 
-    all_tasks_over = True
-    for _, over_flag in paras['nav_subtasks_over'].items():
-        if not over_flag:
-            all_tasks_over = False
-            break
-    if all_tasks_over:
+
+        
+    if all_subtasks_over:
         logger.info('all nav taks finished, trying to kill navigation process at runRoute quit!')
+        killNavProcess([paras['inspection_id']])
         sendTaskStatusMsg(paras['inspection_id'], paras['site_id'], 
             config.Inspection_Status_Codes["INSPECTION_FINISHED"], 
             str(int(time.time())))
-        killNavProcess([paras['inspection_id']])
 
 def setInReturn(paras, scheduler):
     paras['flag_in_returning'] = True
@@ -338,7 +371,7 @@ def runRoute(inspectionid, siteid, robotid, robot_ids, route, org_pose, nav_subt
             if rospy.is_shutdown():
                 clearTasks(paras, scheduler)
                 ts = time.time()
-                for id in para['all_robot_ids']:
+                for id in paras['all_robot_ids']:
                     sendRobotPosMsg(paras['inspection_id'], paras['site_id'], str(int(ts)), 
                                 robot_id=id, 
                                 pos_x=None, pos_y=None, pos_a=None)
@@ -360,7 +393,7 @@ def runRoute(inspectionid, siteid, robotid, robot_ids, route, org_pose, nav_subt
                     robot_id=paras['robot_id'], 
                     pos_x=None, pos_y=None, pos_a=None)
                 sendTaskStatusMsg(paras['inspection_id'], paras['site_id'], 
-                    config.Inspection_Status_Codes["INSPECTION_STARTED"], 
+                    config.Inspection_Status_Codes["INSPECTION_STARTED_WITH_ERROR"], 
                     str(int(ts)), 
                     robot_id=paras['robot_id'], 
                     checkpoint_no=pt_num, 
@@ -445,4 +478,4 @@ if __name__ == '__main__':
     with open("route.yaml", 'r') as stream:
         dataMap = yaml.load(stream)
 
-    runRoute(0, 'no3_0', dataMap)
+    # runRoute(0, 'no3_0', dataMap)
