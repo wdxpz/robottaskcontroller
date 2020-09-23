@@ -26,15 +26,4 @@ Robot_Model:
   - rosbot2_pro
   
 
-Msg_Center: 
-  - "192.168.12.146:9092"
 
-Task_Topic: "task"
-
-Task_Status_Topic: "task_status"
-
-Robot_Position_Topic: "robot_position"
-
-Kafka_Blocking_time: 1
-
-Enable_Influx: 1

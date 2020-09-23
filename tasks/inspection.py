@@ -9,14 +9,13 @@ from navigation.turltlebot_cruise import runRoute
 from navigation.turtlebot_robot_status import setRobotWorking, setRobotIdel, isRobotWorking, isInspectionRunning, isInspectionRepeated
 from utils.kafka import sendTaskStatusMsg
 from utils.ros_utils import killNavProcess, checkMapFile
-from utils.inspection_utils import updateInspection
 from monitor import InspectionMonitor
 
 from utils.logger import getLogger
 logger = getLogger('execInspection')
 logger.propagate = False
 
-monitor = InspectionMonitor.getInspectionMonitor()
+inspection_monitor = InspectionMonitor.getInspectionMonitor()
 
 def execInspection(data):
     try: 
@@ -38,19 +37,14 @@ def execInspection(data):
                     str(int(time.time())))
         return
 
-    if monitor.isTaskRepeated(inspection_id):
+    #just for testing to prevent same inspection ids happen at the same time
+    if inspection_monitor.isTaskRepeated(inspection_id):
         logger.error("Error! simultaneous same insepction_id, discard the later!")
         return
-
-    #only allow one inspection at same time
-#    if isInspectionRunning():
-#        logger.error("Error! An inspection is in running, exit!")
-#        #updateInspection(inspection_id, Inspection_Status_Codes['ERR_INSPECTION_STILL_RUNNING'])
-#       return
         
     working_robots = []
     for id in robot_ids:
-        if monitor.isRobotWorking(id):
+        if inspection_monitor.isRobotWorking(id):
             working_robots.append(id)
     if len(working_robots) > 0:
         logger.error("Error!, required robot occupied, exit!")
@@ -117,14 +111,14 @@ def execInspection(data):
             t.start()
         msg = 'Inspection {} by robots {} started sucessfully!'.format(inspection_id, robot_ids)
         logger.info(msg)
-        monitor.addTask(inspection_id, site_id, robot_ids)
+        inspection_monitor.addTask(inspection_id, site_id, robot_ids)
         sendTaskStatusMsg(inspection_id, site_id, 
                     Inspection_Status_Codes['INSPECTION_STARTED'],
                     str(int(time.time())))
         return
     except Exception as e:
         logger.error("Error!, navigation failed, exit!")
-        monitor.rmTask(inspection_id)
+        inspection_monitor.rmTask(inspection_id)
         sendTaskStatusMsg(inspection_id, site_id, 
                     Inspection_Status_Codes['ERR_INSPECTION_FAILED'],
                     str(int(time.time())))

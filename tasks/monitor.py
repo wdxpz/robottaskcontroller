@@ -4,13 +4,18 @@ logger.propagate = False
 
 from config import Inspection_Status_Codes
 
-Robot_Status = {
+Worker_Status = {
     'working': 0,
     'idle': 1,
     'failed': 3
 }
 
 class InspectionMonitor(object):
+    """
+    InspectionMonitor only records the status of on-going inspection task,
+    which also records the workers (robot)'s three status: 'working', 'idel' and 'failed', 
+    but dose not record the robot's entrance and leave events
+    """
 
     inspection_monitor = None
    
@@ -32,7 +37,7 @@ class InspectionMonitor(object):
             'robots': {}
         }
         for id in robot_ids:
-            self.task_list[inspection_id]['robots'][id] = {'status': Robot_Status['working']}
+            self.task_list[inspection_id]['robots'][id] = {'status': Worker_Status['working']}
 
     def setTaskStatus(self, inspection_id, status):
         if inspection_id not in self.task_list.keys():
@@ -56,6 +61,16 @@ class InspectionMonitor(object):
         else:
             return False
 
+    def setRobotWorking(self, inspection_id, robot_id):
+        if inspection_id not in self.task_list.keys():
+            logger.error("set task status error, no inspection id: {}".format(inspection_id))
+            return
+        if robot_id not in self.task_list[inspection_id]['robots'].keys():
+            logger.error("set robot idle error, no robot: {} in inspection {}".format(robot_id, inspection_id))
+            return
+        self.task_list[inspection_id]['robots'][robot_id]['status'] = Worker_Status['working']
+
+
     def setRobotIdle(self, inspection_id, robot_id):
         if inspection_id not in self.task_list.keys():
             logger.error("set task status error, no inspection id: {}".format(inspection_id))
@@ -63,7 +78,7 @@ class InspectionMonitor(object):
         if robot_id not in self.task_list[inspection_id]['robots'].keys():
             logger.error("set robot idle error, no robot: {} in inspection {}".format(robot_id, inspection_id))
             return
-        self.task_list[inspection_id]['robots'][robot_id]['status'] = Robot_Status['working']
+        self.task_list[inspection_id]['robots'][robot_id]['status'] = Worker_Status['idle']
 
     def setRobotFailed(self, inspection_id, robot_id):
         if inspection_id not in self.task_list.keys():
@@ -72,38 +87,38 @@ class InspectionMonitor(object):
         if robot_id not in self.task_list[inspection_id]['robots'].keys():
             logger.error("set robot idle error, no robot: {} in inspection {}".format(robot_id, inspection_id))
             return
-        self.task_list[inspection_id]['robots'][robot_id]['status'] = Robot_Status['failed']
+        self.task_list[inspection_id]['robots'][robot_id]['status'] = Worker_Status['failed']
 
 
     def isRobotIdle(self, robot_id, inspection_id=None):
         if inspection_id is None:
             for inspection_id in self.task_list.keys():
-                if robot_id in self.task_list[inspection_id]['robots']:
-                    return self.task_list[inspection_id]['robots'][robot_id]['status'] == Robot_Status['idle']
+                if robot_id in self.task_list[inspection_id]['robots'].keys():
+                    return self.task_list[inspection_id]['robots'][robot_id]['status'] == Worker_Status['idle']
         else:
             if inspection_id in self.task_list.keys() and robot_id in self.task_list[inspection_id]['robots'].keys():
-                return self.task_list[inspection_id]['robots'][robot_id]['status'] == Robot_Status['idle']
+                return self.task_list[inspection_id]['robots'][robot_id]['status'] == Worker_Status['idle']
 
         return True
         
     def isRobotFailed(self, robot_id, inspection_id=None):
         if inspection_id is None:
             for inspection_id in self.task_list.keys():
-                if robot_id in self.task_list[inspection_id]['robots']:
-                    return self.task_list[inspection_id]['robots'][robot_id]['status'] == Robot_Status['failed']
+                if robot_id in self.task_list[inspection_id]['robots'].keys():
+                    return self.task_list[inspection_id]['robots'][robot_id]['status'] == Worker_Status['failed']
         else:
             if inspection_id in self.task_list.keys() and robot_id in self.task_list[inspection_id]['robots'].keys():
-                return self.task_list[inspection_id]['robots'][robot_id]['status'] == Robot_Status['failed']
+                return self.task_list[inspection_id]['robots'][robot_id]['status'] == Worker_Status['failed']
 
         return False
 
     def isRobotWorking(self, robot_id, inspection_id=None):
         if inspection_id is None:
             for inspection_id in self.task_list.keys():
-                if robot_id in self.task_list[inspection_id]['robots']:
-                    return self.task_list[inspection_id]['robots'][robot_id]['status'] == Robot_Status['working']
+                if robot_id in self.task_list[inspection_id]['robots'].keys():
+                    return self.task_list[inspection_id]['robots'][robot_id]['status'] == Worker_Status['working']
         else:
             if inspection_id in self.task_list.keys() and robot_id in self.task_list[inspection_id]['robots'].keys():
-                return self.task_list[inspection_id]['robots'][robot_id]['status'] == Robot_Status['working']
+                return self.task_list[inspection_id]['robots'][robot_id]['status'] == Worker_Status['working']
 
         return False
