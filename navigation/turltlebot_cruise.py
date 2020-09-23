@@ -40,7 +40,6 @@ from turtlebot_launch import Turtlebot_Launcher
 
 from utils.logger import getLogger
 from utils.ros_utils import checkRobotNode, shell_cmd, killNavProcess
-from utils.inspection_utils import updateInspection
 from utils.time_utils import dt2timestamp
 from utils.kafka import sendTaskStatusMsg, sendRobotPosMsg
 from utils.tsdb import DBHelper
@@ -118,7 +117,7 @@ def getMapLocation(paras):
             rospy.sleep(config.Pos_Collect_Interval)
 
     except Exception as e:
-        logger.error('getMapLocation Error of robot: {}'.format(paras['robot_id']))
+        logger.error('getMapLocation Error of robot: {} \n'.format(paras['robot_id'])+str(e))
         return
         # raise Exception('getMapLocation Error of robot: {}'.format(paras['robot_id']))
 
@@ -393,7 +392,7 @@ def runRoute(inspectionid, siteid, robotid, robot_ids, route, org_pose, nav_subt
                 Turtlebot_Launcher.checkRobotOnline(paras['robot_id'])
             except Exception as e:
                 ts = time.time()
-                logger.error("robot {} not online anymore! Terminate its navigation routine!")
+                logger.error("robot {} not online anymore! Terminate its navigation routine! \n".format(paras['robot_id']) + str(e))
                 clearTasks(paras, scheduler, ts, config.Inspection_Status_Codes["INSPECTION_STARTED_WITH_ERROR"])
                 break
 
