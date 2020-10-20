@@ -101,8 +101,11 @@ class Turtlebot_Launcher():
             raise Exception(msg)
 
     @staticmethod
-    def checkRobotOnline(robot_id):
-        robot_core_node = '/{}/turtlebot3_core'.format(robot_id)
+    def checkRobotOnline(robot_id, robot_model):
+        if robot_model in Robot_Model[0:2]:
+            robot_core_node = '/{}/turtlebot3_core'.format(robot_id)
+        else:
+            robot_core_node = '/{}/rosbot_ekf'.format(robot_id)
         logger.info('start to check robot {} by ping rosnode {}'.format(robot_id, robot_core_node))
         if not checkRobotNode(robot_core_node, trytimes=1):
             msg = 'checkRobotOnline: robot {} not online!'.format(robot_id)
@@ -198,7 +201,7 @@ class Turtlebot_Launcher():
                 newnode.getchildren()[2].attrib['value'] = str(self.robots[id]['org_pos'][1])
                 newnode.getchildren()[3].attrib['name'] = id + "_init_a"
                 newnode.getchildren()[3].attrib['value'] = '0.0'
-                newnode.getchildren()[4].attrib['value'] = "false" if self.robots[id]['model']==Robot_Model[3] else "true"
+                # newnode.getchildren()[4].attrib['value'] = "false" if self.robots[id]['model']==Robot_Model[3] else "true"
                 root.append(newnode)
             
         #delete the template robot node

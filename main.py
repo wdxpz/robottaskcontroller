@@ -18,9 +18,6 @@ task_subscriber = KafkaConsumer(
 
 def execTaskLoop():
     
-
-    
-
     while True:
         task = getTasksFromMsgQueue()
         if task is None:
