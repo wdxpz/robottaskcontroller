@@ -79,4 +79,3 @@ def sendRobotPosMsg(inspection_id, site_id, timestamp, robot_id, pos_x, pos_y, p
         logger.info('Redis operation : send robot pos record {}'.format(body))
     except Exception as e:
         logger.error('Redis operation : send robot pos record error! ' + str(e))
-        continue

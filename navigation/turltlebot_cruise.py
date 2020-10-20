@@ -41,7 +41,7 @@ from turtlebot_launch import Turtlebot_Launcher
 from utils.logger import getLogger
 from utils.ros_utils import checkRobotNode, shell_cmd, killNavProcess
 from utils.time_utils import dt2timestamp
-from utils.kafka import sendTaskStatusMsg, sendRobotPosMsg
+from utils.msg_utils import sendTaskStatusMsg, sendRobotPosMsg
 from utils.tsdb import DBHelper
 from tasks.monitor import InspectionMonitor
 

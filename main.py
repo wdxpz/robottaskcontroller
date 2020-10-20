@@ -1,11 +1,11 @@
 import threading
 import time
+import json
 
 from kafka import KafkaConsumer
 
-from config import Task_Type, Msg_Center_Url, Task_Topic
+from config import Task_Type, Kafka_Brokers, Task_Topic
 from utils.ros_utils import killNavProcess, initROSNode
-from utils.inspection_utils import getTasksFromMsgQueue
 from tasks.inspection import execInspection
 
 from utils.logger import getLogger
@@ -13,8 +13,8 @@ logger = getLogger('main')
 logger.propagate = False
 
 task_subscriber = KafkaConsumer(
-    bootstrap_servers=Msg_Center_Url,
-                         group_id="", auto_offset_reset="earliest")
+    bootstrap_servers=Kafka_Brokers,
+                         group_id="robot_controller", auto_offset_reset="earliest")
 
 def execTaskLoop():
     
@@ -43,6 +43,7 @@ if __name__ == "__main__":
     task_subscriber.subscribe([Task_Topic])
     
     for task in task_subscriber:
+        task = json.loads(task.value)
         logger.info('get task: {}'.format(task))
         if 'task_type' not in task.keys():
             logger.info('error task data, ignored!')

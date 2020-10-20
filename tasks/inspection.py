@@ -7,7 +7,7 @@ from config import Inspection_Status_Codes, Enable_Influx
 from navigation.turtlebot_launch import Turtlebot_Launcher
 from navigation.turltlebot_cruise import runRoute
 from navigation.turtlebot_robot_status import setRobotWorking, setRobotIdel, isRobotWorking, isInspectionRunning, isInspectionRepeated
-from utils.kafka import sendTaskStatusMsg
+from utils.msg_utils import sendTaskStatusMsg
 from utils.ros_utils import killNavProcess, checkMapFile
 from monitor import InspectionMonitor
 
@@ -22,7 +22,7 @@ def execInspection(data):
         inspection_id = int(data['inspection_id'])
         site_id = str(data['site_id'])
         robots = data['robots']
-        robot_ids = robots.keys()
+        robot_ids =  [robot['robot_id'] for robot in robots]
     except Exception as e:
         logger.error("Error! command parameters error. " + str(e))
         sendTaskStatusMsg(inspection_id, site_id, 

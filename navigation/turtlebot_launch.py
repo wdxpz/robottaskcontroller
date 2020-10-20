@@ -84,7 +84,8 @@ class Turtlebot_Launcher():
             raise Exception(msg)
 
     def checkRobotsBaselink(self):
-        robot_ids = self.robots.keys()
+        # robot_ids = self.robots.keys()
+        robot_ids = [robot['robot_id'] for robot in self.robots]
         failed_robots = []
         
         for id in robot_ids:
@@ -179,26 +180,29 @@ class Turtlebot_Launcher():
         mapnode.getchildren()[0].attrib['value'] = map_path
         
         #create robot nodes
-        robot_ids = self.robots.keys()
-        for id in robot_ids:
-            if self.robots[id]['model'] in Robot_Model[0:2]:
+        for robot in self.robots:
+            if robot['model'] in Robot_Model[0:2]:
                 newnode = copy.deepcopy(node_temp_turtlebot)
+                id = robot['robot_id']
+                x, y, _ = robot['original_pos'].split('-')
                 newnode.getchildren()[0].attrib['value'] = id
                 newnode.getchildren()[1].attrib['name'] = id + "_init_x"
-                newnode.getchildren()[1].attrib['value'] = str(self.robots[id]['org_pos'][0])
+                newnode.getchildren()[1].attrib['value'] = x
                 newnode.getchildren()[2].attrib['name'] = id + "_init_y"
-                newnode.getchildren()[2].attrib['value'] = str(self.robots[id]['org_pos'][1])
+                newnode.getchildren()[2].attrib['value'] = y
                 newnode.getchildren()[3].attrib['name'] = id + "_init_a"
                 newnode.getchildren()[3].attrib['value'] = '0.0'
-                newnode.getchildren()[4].attrib['value'] = str(self.robots[id]['model'])
+                newnode.getchildren()[4].attrib['value'] = str(robot['model'])
                 root.append(newnode)
-            elif  self.robots[id]['model'] in Robot_Model[3:]:
+            elif robot['model'] in Robot_Model[3:]:
                 newnode = copy.deepcopy(node_temp_rosbot)
+                id = robot['robot_id']
+                x, y, _ = robot['org_pos'].split('-')
                 newnode.getchildren()[0].attrib['value'] = id
                 newnode.getchildren()[1].attrib['name'] = id + "_init_x"
-                newnode.getchildren()[1].attrib['value'] = str(self.robots[id]['org_pos'][0])
+                newnode.getchildren()[1].attrib['value'] = x
                 newnode.getchildren()[2].attrib['name'] = id + "_init_y"
-                newnode.getchildren()[2].attrib['value'] = str(self.robots[id]['org_pos'][1])
+                newnode.getchildren()[2].attrib['value'] = y
                 newnode.getchildren()[3].attrib['name'] = id + "_init_a"
                 newnode.getchildren()[3].attrib['value'] = '0.0'
                 # newnode.getchildren()[4].attrib['value'] = "false" if self.robots[id]['model']==Robot_Model[3] else "true"
