@@ -50,11 +50,15 @@ Table_Name_Robot_Event = 'robot_event'
 
 
 # Kafka setting
-Msg_Center = "192.168.12.146:9092"
+Kafka_Brokers = ["192.168.12.146:9092"]
 Task_Topic = "task"
 Task_Status_Topic = "task_status"
 Robot_Position_Topic = "robot_position"
 Kafka_Blocking_time = 1
+
+#redis
+redis_host = "192.168.12.146"
+redis_port = "6379"
 
 
 

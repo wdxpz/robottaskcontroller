@@ -1,15 +1,20 @@
 import copy
 import json
-from kafka import KafkaProducer
-import config
 
+import redis
+from kafka import KafkaProducer
+
+import config
 from utils.logger import getLogger
+
 logger = getLogger('utils-kafka')
 logger.propagate = False
 
-task_status_producer = KafkaProducer(
-    bootstrap_servers=config.Msg_Center_Url, 
+status_producer = KafkaProducer(
+    bootstrap_servers=config.Kafka_Brokers, 
         compression_type='gzip', value_serializer=lambda x: json.dumps(x).encode())
+
+redis_connector = redis.Redis(host=config.redis_host, port=config.redis_port, db=0)
 
 # just an example, you don't have to follow this format
 task_status_payload = {
@@ -46,9 +51,10 @@ def sendTaskStatusMsg(inspection_id, site_id, task_status, timestamp, robot_id=N
         body['robot']['status'] = robot_status
 
     try:
-        future = task_status_producer.send(config.Task_Status_Topic, key="".encode(), value=body)
+        future = status_producer.send(config.Task_Status_Topic, key="".encode(), value=body)
         # Block until a single message is sent (or timeout)
         result = future.get(timeout=config.Kafka_Blocking_time)
+        logger.info('Kafka operation : send task status {}, retuls: {}'.format(body, result))
     except Exception as e:
         logger.error('Kafka operation : send task status msg error! ' +  str(e))
 
@@ -59,9 +65,18 @@ def sendRobotPosMsg(inspection_id, site_id, timestamp, robot_id, pos_x, pos_y, p
     body['timestamp'] = timestamp
     body['robot_id'] = robot_id
     body['location'] = "-".join((pos_x, pos_y, pos_a)) if pos_x is not None else None
+    ###send to kafka robot-position-topic
+    # try:
+    #     future = status_producer.send(config.Robot_Position_Topic, key="".encode(), value=body)
+    #     # Block until a single message is sent (or timeout)
+    #     result = future.get(timeout=config.Kafka_Blocking_time)
+    # except Exception as e:
+    #     logger.error('Kafka operation : send robot position msg error! ' +  str(e))
+
+    ###directly send robot position msg to redis
     try:
-        future = task_status_producer.send(config.Robot_Position_Topic, key="".encode(), value=body)
-        # Block until a single message is sent (or timeout)
-        result = future.get(timeout=config.Kafka_Blocking_time)
+        redis_connector.hmset(robot_id, body)
+        logger.info('Redis operation : send robot pos record {}'.format(body))
     except Exception as e:
-        logger.error('Kafka operation : send robot position msg error! ' +  str(e))
+        logger.error('Redis operation : send robot pos record error! ' + str(e))
+        continue
