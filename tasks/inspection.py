@@ -125,3 +125,5 @@ def execInspection(data):
         logger.info('try to kill existed navigation process after failed navigation!')
         killNavProcess([inspection_id])
         return 
+
+    logger.info('!!!inspection done!!!')

@@ -56,10 +56,11 @@ def killNavProcess(inspection_ids=None):
             
         
 
-def initROSNode():
+def initROSNode(nodename=None):
     # Initialize
     #threadname = 'inspeciton_{}_robot_{}'.format(inspection_id, robot_id) 
-    nodename = 'robotmaster'
+    if nodename is None:
+        nodename = 'robotmaster'
     if not checkRobotNode('/'+nodename, trytimes=1):
         logger.info('init node: /'+nodename)
         #disable_signals=True otherwise the main thread will be killed after killNavProcess

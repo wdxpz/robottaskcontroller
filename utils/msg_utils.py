@@ -54,9 +54,9 @@ def sendTaskStatusMsg(inspection_id, site_id, task_status, timestamp, robot_id=N
         future = status_producer.send(config.Task_Status_Topic, key="".encode(), value=body)
         # Block until a single message is sent (or timeout)
         result = future.get(timeout=config.Kafka_Blocking_time)
-        logger.info('Kafka operation : send task status {}, retuls: {}'.format(body, result))
+        logger.info('Kafka operation : send task status {}'.format(body))
     except Exception as e:
-        logger.error('Kafka operation : send task status msg error! ' +  str(e))
+        logger.error('Kafka operation : send task status msg {} error! \n'.format(body) +  str(e))
 
 def sendRobotPosMsg(inspection_id, site_id, timestamp, robot_id, pos_x, pos_y, pos_a):
     body = copy.deepcopy(robot_position_payload)

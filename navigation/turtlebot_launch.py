@@ -9,7 +9,7 @@ import rospy
 import tf
 
 from config import ROS_Launch_File, Template_Turtlebot_Launch, Template_Rosbot_Launch, Map_Dir, Launch_Max_Try, Nav_Process_Pool, Robot_Model
-from utils.ros_utils import checkRobotNode, shell_open
+from utils.ros_utils import checkRobotNode, shell_open, initROSNode
 
 #from utils.logger import logger
 from utils.logger import getLogger
@@ -22,6 +22,7 @@ class Turtlebot_Launcher():
         self.robots = robots
         self.siteid = siteid
         self.inspection_id = inspection_id
+        self.trans_listener = None
 
     def launch(self):
         
@@ -31,19 +32,29 @@ class Turtlebot_Launcher():
             try:
                 #self.checkRobotsOn()
                 self.startNavigation()
-                rospy.sleep(5)
-                #self.checkRobotsNav()
-                #rospy.sleep(3)
-                self.checkRobotsBaselink()
+                rospy.sleep(1)
                 launched = True
                 break
             except Exception as e:
                 logger.error('launch: ' + str(e))
-                msg = 'Faild of trial no. {} to launch navigation in multirobot mode. '.format(i+1) + str(e)
+                msg = 'Failed the trial no. {} to launch navigation in multirobot mode. '.format(i+1) + str(e)
                 logger.info(msg)
 
         if launched:
-            logger.info('Succeed in trial no. {} to launch navigation in multirobot mode!'.format(i+1))
+            rospy.sleep(3)
+            launched = False
+            for i in range(Launch_Max_Try):
+                logger.info('Start trial no. {} to check map location ready!'.format(i+1))
+                try:
+                    self.checkRobotsBaselink()
+                    launched = True
+                    break
+                except Exception as e:
+                    msg = 'Failed the trial no. {} to check map location ready! '.format(i+1) + str(e)
+                    logger.info(msg)
+
+        if launched:
+            logger.info('Succeed to launch navigation in multirobot mode!')
         else:
             msg = 'Faild to launch navigation in multirobot mode after {} trials'.format(Launch_Max_Try)
             logger.error(msg)
@@ -84,7 +95,6 @@ class Turtlebot_Launcher():
             raise Exception(msg)
 
     def checkRobotsBaselink(self):
-        # robot_ids = self.robots.keys()
         robot_ids = [robot['robot_id'] for robot in self.robots]
         failed_robots = []
         
@@ -94,7 +104,7 @@ class Turtlebot_Launcher():
             except Exception as e:
                 logger.error('checkRobotsBaselink: ' + str(e))
                 failed_robots.append(id)
-                break
+                # break
 
         if len(failed_robots) != 0:
             msg = 'robot: {} /baselink not ready for map location!'.format(failed_robots)
@@ -124,12 +134,13 @@ class Turtlebot_Launcher():
             raise Exception(msg)
         logger.info('robot {} navigation is ready!'.format(robot_id))
 
-    @staticmethod
-    def checkRobotBaselinkOK(robot_id):
+    def checkRobotBaselinkOK(self, robot_id):
         logger.info('start to check robot {} ready for map location by listen to /{}/baselink.'.format(robot_id, robot_id))
-        listener = tf.TransformListener()
+        # initROSNode('testrobot')
+        if self.trans_listener is None:
+            self.trans_listener = tf.TransformListener()
         try:
-            listener.waitForTransform("/map", "/{}/base_link".format(robot_id), rospy.Time(0), rospy.Duration(10.0))
+            self.trans_listener.waitForTransform("/map", "/{}/base_link".format(robot_id), rospy.Time(0), rospy.Duration(10.0))
             logger.info('checkRobotBaselinkOK: /{}/base_link is ready for map location!'.format(robot_id))
         except Exception as e:
             logger.info('checkRobotBaselinkOK: /{}/base_link is not ready for map location! '.format(robot_id) + str(e))
@@ -216,4 +227,3 @@ class Turtlebot_Launcher():
             return new_launch_file
         except Exception as e:
             logger.error(str(e))
-        
