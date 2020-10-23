@@ -86,10 +86,12 @@ def execInspection(data):
         for id in robot_ids:
             task_name = 'robot: {} of inpsection: {}'.format(id, inspection_id)
             nav_subtasks_over[task_name] = False
-        for id in robot_ids:
+        for robot in robots:
+            id = robot['robot_id']
+            robot_model = robot['model']
             #prepare cruising data
             route = []
-            for pt in robots[id]['subtask']:
+            for pt in robot['subtasks']:
                 route.append(
                     {
                         'point_no': pt[0],
@@ -100,10 +102,17 @@ def execInspection(data):
                         'quaternion': {'r1': 0, 'r2': 0, 'r3': 0, 'r4': 1}
                     }
                 )
-            org_pose = robots[id]['org_pos']
+            try:
+                org_pos = [float(v) for v in robot['original_pos'].split('-')]
+            except Exception as e:
+                logger.error('ERROR! original_pos for robot {} not correct!'.format(id))
+                sendTaskStatusMsg(inspection_id, site_id, 
+                    Inspection_Status_Codes['ERR_CMD_PARAMETERS'],
+                    str(int(time.time())))
+                return
             task_name = 'robot: {} of inpsection: {}'.format(id, inspection_id)
             task = threading.Thread(name=task_name, target=runRoute, \
-                args=(inspection_id, site_id, id, robot_ids, route, org_pose, nav_subtasks_over,))
+                args=(inspection_id, site_id, id, robot_model, robot_ids, route, org_pos, nav_subtasks_over,))
             nav_subtasks.append(task)
         for t in nav_subtasks:
             logger.info("Start inspection subtask thread: {}.".format(t.getName()))
@@ -117,7 +126,7 @@ def execInspection(data):
                     str(int(time.time())))
         return
     except Exception as e:
-        logger.error("Error!, navigation failed, exit!")
+        logger.error("Error!, navigation failed, exit! \n " + str(e))
         inspection_monitor.rmTask(inspection_id)
         sendTaskStatusMsg(inspection_id, site_id, 
                     Inspection_Status_Codes['ERR_INSPECTION_FAILED'],

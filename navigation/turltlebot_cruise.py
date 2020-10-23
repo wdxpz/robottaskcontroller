@@ -272,10 +272,10 @@ def clearTasks(paras, scheduler, ts=time.time(), task_status=config.Inspection_S
         #config.Inspection_Status_Codes["INSPECTION_STARTED_WITH_ERROR"]
         #config.Inspection_Status_Codes["INSPECTION_STARTED"]
         if task_status == config.Inspection_Status_Codes["INSPECTION_STARTED_WITH_ERROR"]:
-            inspection_monitor.setRobotFailed(paras['inspection_id'], paras['site_id'])
+            inspection_monitor.setRobotFailed(paras['inspection_id'], paras['robot_id'])
             inspection_robot_status_code = 3
         else:
-            inspection_monitor.setRobotIdle(paras['inspection_id'], paras['site_id'])
+            inspection_monitor.setRobotIdle(paras['inspection_id'], paras['robot_id'])
             inspection_robot_status_code = 4
         sendRobotPosMsg(paras['inspection_id'], paras['site_id'], str(int(ts)), 
                 robot_id=paras['robot_id'], 
@@ -309,13 +309,14 @@ def setInReturn(paras, scheduler):
     if scheduler is not None and scheduler.running:
         scheduler.shutdown()
     
-def runRoute(inspectionid, siteid, robotid, robot_ids, route, org_pose, nav_subtasks_over):
+def runRoute(inspectionid, siteid, robotid, robot_model, robot_ids, route, org_pose, nav_subtasks_over):
     paras = initParas()
 
     #reset global variables
     paras['inspection_id'] = inspectionid 
     paras['site_id'] = siteid
     paras['robot_id'] = robotid
+    paras['robot_model'] = robot_model
     paras['all_robot_ids'] = robot_ids
     paras['msg_head'] = paras['msg_head'].format(inspectionid,robotid)
     paras['original_pose'] = None
@@ -383,18 +384,18 @@ def runRoute(inspectionid, siteid, robotid, robot_ids, route, org_pose, nav_subt
                 ts = time.time()
                 logger.error(paras['msg_head'] + 'runRoute quit for rospy shutdown')
                 clearTasks(paras, scheduler, ts, config.Inspection_Status_Codes["INSPECTION_TERMINATED_WITH_ERROR"])
-                break
+                return
 
             pt_num = pt['point_no']
 
             #to check if robot is still online
             try:
-                Turtlebot_Launcher.checkRobotOnline(paras['robot_id'])
+                Turtlebot_Launcher.checkRobotOnline(paras['robot_id'], paras['robot_model'])
             except Exception as e:
                 ts = time.time()
                 logger.error("robot {} not online anymore! Terminate its navigation routine! \n".format(paras['robot_id']) + str(e))
                 clearTasks(paras, scheduler, ts, config.Inspection_Status_Codes["INSPECTION_STARTED_WITH_ERROR"])
-                break
+                return
 
             # Navigation
             logger.info(paras['msg_head'] + "Go to No. {} pose".format(pt_num))
@@ -441,7 +442,7 @@ def runRoute(inspectionid, siteid, robotid, robot_ids, route, org_pose, nav_subt
         #to make the analyzePose thread finished after unsubscribe the odom topic
         logger.info(paras['msg_head'] + 'runRoute: finished route, unregister topic odom!')
         ts = time.time()
-        clearTasks(paras, scheduler, ts, config.Inspection_Status_Codes["INSPECTION_STARTED"])
+        clearTasks(paras, scheduler, ts, config.Inspection_Status_Codes["INSPECTION_FINISHED"])
     except rospy.ROSInterruptException:
         logger.info(paras['msg_head'] + "runRoute quit for Ctrl-C caught")
         ts = time.time()
