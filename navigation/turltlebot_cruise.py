@@ -118,6 +118,10 @@ def getMapLocation(paras):
 
     except Exception as e:
         logger.error('getMapLocation Error of robot: {} \n'.format(paras['robot_id'])+str(e))
+        logger.info('turn off realtime robot pos update by sending None to redis server!')
+        sendRobotPosMsg(paras['inspection_id'], paras['site_id'], str(int(time.time())), 
+                    robot_id=paras['robot_id'], 
+                    pos_x=None, pos_y=None, pos_a=None)
         return
         # raise Exception('getMapLocation Error of robot: {}'.format(paras['robot_id']))
 
@@ -177,9 +181,9 @@ def analyzePose(paras):
             if config.Enable_Influx:
                 paras['post_pose_queue'].put((1, paras['robot_status']['route_point_no'], paras['robot_status']['enter'][1].isoformat("T"), paras['robot_status']['leave'][1].isoformat("T")))
             
-            if paras['flag_arrive_last_checkpoint']:
-                logger.info(paras['msg_head'] + 'set in returning flag at leaving the last checkpoint')
-                paras['flag_in_returning'] = True
+            # if paras['flag_arrive_last_checkpoint']:
+            #     logger.info(paras['msg_head'] + 'set in returning flag at leaving the last checkpoint')
+            #     paras['flag_in_returning'] = True
             resetRobotStatus(paras)
             #paras['lock'].release()
             continue
@@ -233,7 +237,7 @@ def setEnterEvent(paras, pt_num, pt):
     paras['lock'].release()
 
 def reportTaskStatus(paras, ts=time.time(), task_status=config.Inspection_Status_Codes["INSPECTION_STARTED"]):
-    sendTaskStatusMsg(paras['inspection_id'], paras['site_id'], task_status, str(int(ts)))
+    sendTaskStatusMsg(paras['inspection_id'], paras['site_id'], paras['robots'], task_status, str(int(ts)))
 
 def reportRobotEvent(paras, event_code, checkpoint_no=None, ts=time.time()):
     """
@@ -243,7 +247,7 @@ def reportRobotEvent(paras, event_code, checkpoint_no=None, ts=time.time()):
         task_status=config.Inspection_Status_Codes["INSPECTION_STARTED_WITH_ERROR"]
     else:
         task_status=config.Inspection_Status_Codes["INSPECTION_STARTED"]
-    sendTaskStatusMsg(paras['inspection_id'], paras['site_id'], 
+    sendTaskStatusMsg(paras['inspection_id'], paras['site_id'], paras['robots'],
             task_status, str(int(ts)), 
             robot_id=paras['robot_id'],  checkpoint_no=checkpoint_no,  robot_status=event_code)  
             
@@ -309,12 +313,13 @@ def setInReturn(paras, scheduler):
     if scheduler is not None and scheduler.running:
         scheduler.shutdown()
     
-def runRoute(inspectionid, siteid, robotid, robot_model, robot_ids, route, org_pose, nav_subtasks_over):
+def runRoute(inspectionid, siteid, robots, robotid, robot_model, robot_ids, route, org_pose, nav_subtasks_over):
     paras = initParas()
 
     #reset global variables
     paras['inspection_id'] = inspectionid 
     paras['site_id'] = siteid
+    paras['robots'] = robots
     paras['robot_id'] = robotid
     paras['robot_model'] = robot_model
     paras['all_robot_ids'] = robot_ids
@@ -400,6 +405,7 @@ def runRoute(inspectionid, siteid, robotid, robot_model, robot_ids, route, org_p
             # Navigation
             logger.info(paras['msg_head'] + "Go to No. {} pose".format(pt_num))
             success = navigator.goto(pt['position'], pt['quaternion'])
+            
             # pose_initer.set_pose()
             if not success:
                 logger.warn(paras['msg_head'] + "Failed to reach No. {} pose".format(pt_num))
@@ -409,21 +415,26 @@ def runRoute(inspectionid, siteid, robotid, robot_model, robot_ids, route, org_p
                     if config.Enable_Influx:
                         paras['dbhelper'].writeMissPointEvent(paras['inspection_id'], paras['site_id'], paras['robot_id'], datetime.datetime.utcnow(), pt_num)
                 if index == route_len:
+                    logger.info(paras['msg_head'] + 'Last checkpoint missed, set in return!')
                     setInReturn(paras, scheduler)
                 continue
-            logger.info(paras['msg_head'] + "Reached No. {} pose".format(pt_num))
+            else:
+                logger.info(paras['msg_head'] + "Reached No. {} pose".format(pt_num))            
             
-            
-            if pt_num == route[-1]['point_no']:
-                logger.info(paras['msg_head'] + 'Set flag of arrivging the last checkpoint')
-                paras['flag_arrive_last_checkpoint'] = True
+            # if pt_num == route[-1]['point_no']:
+            #     logger.info(paras['msg_head'] + 'Set flag of arrivging the last checkpoint')
+            #     paras['flag_arrive_last_checkpoint'] = True
+
+            # if index > route_len:
+            #     # returning route
+            #     if paras['flag_arrive_last_checkpoint'] == False:
+            #         logger.info(paras['msg_head'] + 'set in returning flag at first returning point')
+            #     setInReturn(paras, scheduler)
+            #     continue  
 
             if index > route_len:
-                # returning route
-                if paras['flag_arrive_last_checkpoint'] == False:
-                    logger.info(paras['msg_head'] + 'set in returning flag at first returning point')
-                setInReturn(paras, scheduler)
-                continue  
+                #no need to do rotation and report pos during returning back
+                continue
             
             #set point enter information
             setEnterEvent(paras, pt_num, pt)
@@ -438,6 +449,10 @@ def runRoute(inspectionid, siteid, robotid, robot_model, robot_ids, route, org_p
 
             #this guarantee to send the parameters out
             rospy.sleep(0.5)
+
+            if not paras['flag_in_returning'] and index == route_len:
+                logger.info(paras['msg_head'] + 'Last checkpoint finished, set in return!')
+                setInReturn(paras, scheduler)
 
         #to make the analyzePose thread finished after unsubscribe the odom topic
         logger.info(paras['msg_head'] + 'runRoute: finished route, unregister topic odom!')

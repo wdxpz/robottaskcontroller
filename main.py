@@ -16,23 +16,23 @@ task_subscriber = KafkaConsumer(
     bootstrap_servers=Kafka_Brokers,
                          group_id="robot_controller", auto_offset_reset="earliest")
 
-def execTaskLoop():
+# def execTaskLoop():
     
-    while True:
-        task = getTasksFromMsgQueue()
-        if task is None:
-            time.sleep(1)
-            continue
-        task_type, task_data = task[0], task[1]
-        if task_type == Task_Type["Task_Inspection"]:   
-            inspection_id = int(task_data['inspection_id'])
-            task_name = 'inpsection: {}'.format(inspection_id)
-            logger.info('start inspection task: {}'.format(task_name))
-            task = threading.Thread(name=task_name, target=execInspection, args=(task_data,))
-            task.start()
-        elif task_type == Task_Type["Task_KillAllNavProcess"]:
-            logger.info('start to kill all existing navigation process!')
-            killNavProcess()
+#     while True:
+#         task = getTasksFromMsgQueue()
+#         if task is None:
+#             time.sleep(1)
+#             continue
+#         task_type, task_data = task[0], task[1]
+#         if task_type == Task_Type["Task_Inspection"]:   
+#             inspection_id = int(task_data['inspection_id'])
+#             task_name = 'inpsection: {}'.format(inspection_id)
+#             logger.info('start inspection task: {}'.format(task_name))
+#             task = threading.Thread(name=task_name, target=execInspection, args=(task_data,))
+#             task.start()
+#         elif task_type == Task_Type["Task_KillAllNavProcess"]:
+#             logger.info('start to kill all existing navigation process!')
+#             killNavProcess()
 
 if __name__ == "__main__":
     #init ROS node

@@ -37,10 +37,11 @@ robot_position_payload = {
     "location": '0-0-0'
 }
 
-def sendTaskStatusMsg(inspection_id, site_id, task_status, timestamp, robot_id=None, checkpoint_no=None, robot_status=None):
+def sendTaskStatusMsg(inspection_id, site_id, robots, task_status, timestamp, robot_id=None, checkpoint_no=None, robot_status=None):
     body = copy.deepcopy(task_status_payload)
     body['inspection_id'] = inspection_id
     body['site_id'] = site_id
+    body['robots'] = robots
     body['timestamp'] = timestamp
     body['status'] = task_status
     if robot_id is None:
@@ -57,6 +58,7 @@ def sendTaskStatusMsg(inspection_id, site_id, task_status, timestamp, robot_id=N
         logger.info('Kafka operation : send task status {}'.format(body))
     except Exception as e:
         logger.error('Kafka operation : send task status msg {} error! \n'.format(body) +  str(e))
+        logger.error('Kafka operation : ' + str(result))
 
 def sendRobotPosMsg(inspection_id, site_id, timestamp, robot_id, pos_x, pos_y, pos_a):
     body = copy.deepcopy(robot_position_payload)
@@ -64,7 +66,7 @@ def sendRobotPosMsg(inspection_id, site_id, timestamp, robot_id, pos_x, pos_y, p
     body['site_id'] = site_id
     body['timestamp'] = timestamp
     body['robot_id'] = robot_id
-    body['location'] = "-".join((str(pos_x), str(pos_y), str(pos_a))) if pos_x is not None else ''
+    body['location'] = config.Pos_Value_Splitter.join((str(pos_x), str(pos_y), str(pos_a))) if pos_x is not None else ''
     ###send to kafka robot-position-topic
     # try:
     #     future = status_producer.send(config.Robot_Position_Topic, key="".encode(), value=body)

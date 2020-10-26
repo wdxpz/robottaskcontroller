@@ -38,6 +38,7 @@ Pos_Collect_Interval = 0.2
 Upload_Interval = 2
 ##navigation prcocess pickle file
 Nav_Process_Pool = {}
+Pos_Value_Splitter = '#'
 
 
 #tsdb

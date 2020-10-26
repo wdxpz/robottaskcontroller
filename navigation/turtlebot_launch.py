@@ -112,7 +112,7 @@ class Turtlebot_Launcher():
             raise Exception(msg)
 
     @staticmethod
-    def checkRobotOnline(robot_id, robot_model):
+    def checkRobotOnline(robot_id, robot_model='waffle_pi'):
         if robot_model in Robot_Model[0:2]:
             robot_core_node = '/{}/turtlebot3_core'.format(robot_id)
         else:

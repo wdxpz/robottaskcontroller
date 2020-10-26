@@ -2,7 +2,7 @@ import threading
 import time
 
 
-from config import Inspection_Status_Codes, Enable_Influx
+from config import Inspection_Status_Codes, Enable_Influx, Pos_Value_Splitter
 
 from navigation.turtlebot_launch import Turtlebot_Launcher
 from navigation.turltlebot_cruise import runRoute
@@ -25,14 +25,14 @@ def execInspection(data):
         robot_ids =  [robot['robot_id'] for robot in robots]
     except Exception as e:
         logger.error("Error! command parameters error. " + str(e))
-        sendTaskStatusMsg(inspection_id, site_id, 
+        sendTaskStatusMsg(inspection_id, site_id, robot_ids,
                     Inspection_Status_Codes['ERR_CMD_PARAMETERS'],
                     str(int(time.time())))
         return
     
     if not checkMapFile(site_id):
         logger.error("Error!, map parameters error, exit!")
-        sendTaskStatusMsg(inspection_id, site_id, 
+        sendTaskStatusMsg(inspection_id, site_id, robot_ids,
                     Inspection_Status_Codes['ERR_CMD_PARAMETERS'],
                     str(int(time.time())))
         return
@@ -48,7 +48,7 @@ def execInspection(data):
             working_robots.append(id)
     if len(working_robots) > 0:
         logger.error("Error!, required robot occupied, exit!")
-        sendTaskStatusMsg(inspection_id, site_id, 
+        sendTaskStatusMsg(inspection_id, site_id, robot_ids,
                     Inspection_Status_Codes['ERR_ROBOT_OCCUPIED'],
                     str(int(time.time())))
         return
@@ -71,7 +71,7 @@ def execInspection(data):
         bot_launcher.launch()
     except Exception as e:
         logger.error("Error!, failed to start robots, exit!")
-        sendTaskStatusMsg(inspection_id, site_id, 
+        sendTaskStatusMsg(inspection_id, site_id, robot_ids,
                     Inspection_Status_Codes['ERR_ROBOT_START'],
                     str(int(time.time())))
         logger.info('try to kill existed navigation process after failed start!')
@@ -103,16 +103,16 @@ def execInspection(data):
                     }
                 )
             try:
-                org_pos = [float(v) for v in robot['original_pos'].split('-')]
+                org_pos = [float(v) for v in robot['original_pos'].split(Pos_Value_Splitter)]
             except Exception as e:
                 logger.error('ERROR! original_pos for robot {} not correct!'.format(id))
-                sendTaskStatusMsg(inspection_id, site_id, 
+                sendTaskStatusMsg(inspection_id, site_id, robot_ids,
                     Inspection_Status_Codes['ERR_CMD_PARAMETERS'],
                     str(int(time.time())))
                 return
             task_name = 'robot: {} of inpsection: {}'.format(id, inspection_id)
             task = threading.Thread(name=task_name, target=runRoute, \
-                args=(inspection_id, site_id, id, robot_model, robot_ids, route, org_pos, nav_subtasks_over,))
+                args=(inspection_id, site_id, robot_ids, id, robot_model, robot_ids, route, org_pos, nav_subtasks_over,))
             nav_subtasks.append(task)
         for t in nav_subtasks:
             logger.info("Start inspection subtask thread: {}.".format(t.getName()))
@@ -121,14 +121,14 @@ def execInspection(data):
         msg = 'Inspection {} by robots {} started sucessfully!'.format(inspection_id, robot_ids)
         logger.info(msg)
         inspection_monitor.addTask(inspection_id, site_id, robot_ids)
-        sendTaskStatusMsg(inspection_id, site_id, 
+        sendTaskStatusMsg(inspection_id, site_id, robot_ids,
                     Inspection_Status_Codes['INSPECTION_STARTED'],
                     str(int(time.time())))
         return
     except Exception as e:
         logger.error("Error!, navigation failed, exit! \n " + str(e))
         inspection_monitor.rmTask(inspection_id)
-        sendTaskStatusMsg(inspection_id, site_id, 
+        sendTaskStatusMsg(inspection_id, site_id, robot_ids,
                     Inspection_Status_Codes['ERR_INSPECTION_FAILED'],
                     str(int(time.time())))
         logger.info('try to kill existed navigation process after failed navigation!')
