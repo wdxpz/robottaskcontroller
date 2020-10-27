@@ -8,7 +8,7 @@ from os.path import expanduser
 import rospy
 import tf
 
-from config import ROS_Launch_File, Template_Turtlebot_Launch, Template_Rosbot_Launch, Map_Dir, Launch_Max_Try, Nav_Process_Pool, Robot_Model
+from config import ROS_Launch_File, Template_Turtlebot_Launch, Template_Rosbot_Launch, Map_Dir, Launch_Max_Try, Nav_Process_Pool, Robot_Model, Pos_Value_Splitter
 from utils.ros_utils import checkRobotNode, shell_open, initROSNode
 
 #from utils.logger import logger
@@ -195,7 +195,7 @@ class Turtlebot_Launcher():
             if robot['model'] in Robot_Model[0:2]:
                 newnode = copy.deepcopy(node_temp_turtlebot)
                 id = robot['robot_id']
-                x, y, _ = robot['original_pos'].split('-')
+                x, y, _ = robot['original_pos'].split(Pos_Value_Splitter)
                 newnode.getchildren()[0].attrib['value'] = id
                 newnode.getchildren()[1].attrib['name'] = id + "_init_x"
                 newnode.getchildren()[1].attrib['value'] = x
@@ -208,7 +208,7 @@ class Turtlebot_Launcher():
             elif robot['model'] in Robot_Model[3:]:
                 newnode = copy.deepcopy(node_temp_rosbot)
                 id = robot['robot_id']
-                x, y, _ = robot['org_pos'].split('-')
+                x, y, _ = robot['org_pos'].split(Pos_Value_Splitter)
                 newnode.getchildren()[0].attrib['value'] = id
                 newnode.getchildren()[1].attrib['name'] = id + "_init_x"
                 newnode.getchildren()[1].attrib['value'] = x

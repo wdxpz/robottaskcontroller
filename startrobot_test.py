@@ -25,10 +25,10 @@ def startTask():
             {
                 "robot_id": "tb3_0",
                 "model": "waffle_pi",
-                "original_pos": "0.0-0.0-0.0", # x-y-angle
+                "original_pos": "0.0#0.0#0.0", # x-y-angle
                 "subtasks": [
-                    [1, 0, 0.5], # sequential number - x - y
-                    # [2, 0.5, 0.5]#
+                    [1, 0.3, 0.0], # sequential number - x - y
+                    [2, 0.5, -0.5]#
                 ]
             }
         ]
