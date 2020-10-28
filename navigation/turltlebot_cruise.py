@@ -199,9 +199,10 @@ def uploadCacheData(paras):
         else:
             event_records.append(rec[1:])
 
-    t = threading.Thread(target=paras['dbhelper'].upload, args=(paras['inspection_id'], paras['site_id'], paras['robot_id'], pos_records, event_records))
-    t.setDaemon(True)
-    t.start()
+    if len(pos_records) > 0 or len(event_records) > 0:
+        t = threading.Thread(target=paras['dbhelper'].upload, args=(paras['inspection_id'], paras['site_id'], paras['robot_id'], pos_records, event_records))
+        # t.setDaemon(True)
+        t.start()
 
 def buildFullRoute(paras, route, org_pose):
     #prepare navigation route to make robot return to original position after the job
@@ -355,11 +356,11 @@ def runRoute(inspectionid, siteid, robots, robotid, robot_model, robot_ids, rout
         # odom_sub = rospy.Subscriber("/{}/odom".format(robot_id), Odometry, readPose)
         # logger.info(msg_head + 'start analyze pose thread')
         locater_t =  threading.Thread(name='{}_get_pose'.format(paras['robot_id']), target=getMapLocation, args=(paras,))
-        locater_t.setDaemon(True)
+        # locater_t.setDaemon(True)
         locater_t.start()
 
         analyzer_t = threading.Thread(name='{}_analyze_pose'.format(paras['robot_id']), target=analyzePose, args=(paras,))
-        analyzer_t.setDaemon(True)
+        # analyzer_t.setDaemon(True)
         analyzer_t.start()
 
         if config.Enable_Influx:

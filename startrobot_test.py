@@ -19,7 +19,7 @@ task_producer = KafkaProducer(
 def startTask():
     task_body = {
         "task_type": 0, # 0 for Task_Inspection
-        "inspection_id": 4,
+        "inspection_id": 6,
         "site_id": "bj01",
         "robots": [
             {
@@ -28,7 +28,7 @@ def startTask():
                 "original_pos": "0.0#0.0#0.0", # x-y-angle
                 "subtasks": [
                     [1, 0.3, 0.0], # sequential number - x - y
-                    [2, 0.5, -0.5]#
+                    #[2, 0.5, -0.5]#
                 ]
             }
         ]
