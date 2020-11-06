@@ -41,10 +41,11 @@ class Turtlebot_Launcher():
                 logger.info(msg)
 
         if launched:
-            rospy.sleep(3)
             launched = False
             for i in range(Launch_Max_Try):
                 logger.info('Start trial no. {} to check map location ready!'.format(i+1))
+                logger.info('Wait for /baselink for 3 seconds ......')
+                rospy.sleep(3)
                 try:
                     self.checkRobotsBaselink()
                     launched = True
@@ -54,7 +55,7 @@ class Turtlebot_Launcher():
                     logger.info(msg)
 
         if launched:
-            logger.info('Succeed to launch navigation in multirobot mode!')
+            logger.info('Succeeded to launch navigation in multirobot mode!')
         else:
             msg = 'Faild to launch navigation in multirobot mode after {} trials'.format(Launch_Max_Try)
             logger.error(msg)
@@ -206,18 +207,22 @@ class Turtlebot_Launcher():
                 newnode.getchildren()[4].attrib['value'] = str(robot['model'])
                 root.append(newnode)
             elif robot['model'] in Robot_Model[3:]:
-                newnode = copy.deepcopy(node_temp_rosbot)
-                id = robot['robot_id']
-                x, y, _ = robot['org_pos'].split(Pos_Value_Splitter)
-                newnode.getchildren()[0].attrib['value'] = id
-                newnode.getchildren()[1].attrib['name'] = id + "_init_x"
-                newnode.getchildren()[1].attrib['value'] = x
-                newnode.getchildren()[2].attrib['name'] = id + "_init_y"
-                newnode.getchildren()[2].attrib['value'] = y
-                newnode.getchildren()[3].attrib['name'] = id + "_init_a"
-                newnode.getchildren()[3].attrib['value'] = '0.0'
-                # newnode.getchildren()[4].attrib['value'] = "false" if self.robots[id]['model']==Robot_Model[3] else "true"
-                root.append(newnode)
+                # newnode = copy.deepcopy(node_temp_rosbot)
+                # id = robot['robot_id']
+                # x, y, _ = robot['org_pos'].split(Pos_Value_Splitter)
+                # newnode.getchildren()[0].attrib['value'] = id
+                # newnode.getchildren()[1].attrib['name'] = id + "_init_x"
+                # newnode.getchildren()[1].attrib['value'] = x
+                # newnode.getchildren()[2].attrib['name'] = id + "_init_y"
+                # newnode.getchildren()[2].attrib['value'] = y
+                # newnode.getchildren()[3].attrib['name'] = id + "_init_a"
+                # newnode.getchildren()[3].attrib['value'] = '0.0'
+                # # newnode.getchildren()[4].attrib['value'] = "false" if self.robots[id]['model']==Robot_Model[3] else "true"
+                # root.append(newnode)
+
+                #currently, the multirobot navigation components are all launched in rosbot2 pro locally,
+                # including lidar, amcl, and movebase. Only map_server is needed to be launched from controller side 
+                pass
             
         #delete the template robot node
         #root.remove(root[1])
