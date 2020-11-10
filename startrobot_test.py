@@ -23,12 +23,13 @@ def startTask():
         "site_id": "bj01",
         "robots": [
             {
-                "robot_id": "tb3_0",
-                "model": "waffle_pi",
+                "robot_id": "rosbot1", #"tb3_0",
+                "model": "rosbot2_pro", #waffle_pi",
                 "original_pos": "0.0#0.0#0.0", # x-y-angle
                 "subtasks": [
-                    [1, 0.3, 0.0], # sequential number - x - y
-                    #[2, 0.5, -0.5]#
+                    [1, 0.0, 0.3], # sequential number - x - y
+                    #[2, 0.1, 0.5], 
+                    #[3, 0.3, 0.7]
                 ]
             }
         ]

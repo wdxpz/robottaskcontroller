@@ -78,6 +78,7 @@ def sendRobotPosMsg(inspection_id, site_id, timestamp, robot_id, pos_x, pos_y, p
     ###directly send robot position msg to redis
     try:
         redis_connector.hmset(robot_id, body)
-        logger.info('Redis operation : send robot pos record {}'.format(body))
+        # logger.info('Redis operation : send robot pos record {}'.format(body))
+        logger.info('Redis operation : send robot pos {}-{}'.format(pos_x, pos_y))
     except Exception as e:
         logger.error('Redis operation : send robot pos record error! ' + str(e))

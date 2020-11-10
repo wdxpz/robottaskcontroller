@@ -2,7 +2,7 @@ import threading
 import time
 
 
-from config import Inspection_Status_Codes, Enable_Influx, Pos_Value_Splitter
+from config import Inspection_Status_Codes, Enable_Influx, Pos_Value_Splitter, Robot_Model
 
 from navigation.turtlebot_launch import Turtlebot_Launcher
 from navigation.turltlebot_cruise import runRoute
@@ -96,8 +96,8 @@ def execInspection(data):
                     {
                         'point_no': pt[0],
                         'position':{
-                            'x': pt[1],
-                            'y': pt[2]
+                            'x': pt[1] if robot_model in Robot_Model[0:2] else pt[2],
+                            'y': pt[2] if robot_model in Robot_Model[0:2] else pt[1]*-1.0
                         },
                         'quaternion': {'r1': 0, 'r2': 0, 'r3': 0, 'r4': 1}
                     }
