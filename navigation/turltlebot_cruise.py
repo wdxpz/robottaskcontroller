@@ -443,14 +443,16 @@ def runRoute(inspectionid, inspection_type, siteid, robots, robotid, robot_model
             reportRobotEvent(paras, event_code=0, checkpoint_no=paras['robot_status']['route_point_no'])
 
             #commend to robot to rotate 360 degree at current place
-            step_angle = 360*1.0 / config.Circle_Rotate_Steps
-            for i in range(1, config.Circle_Rotate_Steps+1):
-                logger.info(paras['msg_head'] + 'runRoute: rotate step {}, rotate angle: {}'.format(i, step_angle))
-                rotate_ctl.rotate(angle=step_angle)
-                if paras['inspection_type'] == config.Task_Type["Task_Visual_Scout"]:
-                    sendSyncCmdMsg(paras['inspection_id'], paras['site_id'], str(int(time.time())), 
-                    robot_id=paras['robot_id'), cmd='photo')
-                rospy.sleep(config.Holding_Step_Time/config.Circle_Rotate_Steps)
+            if paras['inspection_type'] == config.Task_Type["Task_Inspection"] or \
+                (paras['inspection_type'] == config.Task_Type["Task_Visual_Scout"] and index == route_len):
+                step_angle = 360*1.0 / config.Circle_Rotate_Steps
+                for i in range(1, config.Circle_Rotate_Steps+1):
+                    logger.info(paras['msg_head'] + 'runRoute: rotate step {}, rotate angle: {}'.format(i, step_angle))
+                    rotate_ctl.rotate(angle=step_angle)
+                    if paras['inspection_type'] == config.Task_Type["Task_Visual_Scout"]:
+                        sendSyncCmdMsg(paras['inspection_id'], paras['site_id'], str(int(time.time())), 
+                        robot_id=paras['robot_id'), cmd='photo')
+                    rospy.sleep(config.Holding_Step_Time/config.Circle_Rotate_Steps)
 
             #this guarantee to send the parameters out
             rospy.sleep(0.5)
