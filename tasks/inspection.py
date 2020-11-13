@@ -20,6 +20,7 @@ inspection_monitor = InspectionMonitor.getInspectionMonitor()
 def execInspection(data):
     try: 
         inspection_id = int(data['inspection_id'])
+        inspection_type = int(data['task_type'])
         site_id = str(data['site_id'])
         robots = data['robots']
         robot_ids =  [robot['robot_id'] for robot in robots]
@@ -112,7 +113,7 @@ def execInspection(data):
                 return
             task_name = 'robot: {} of inpsection: {}'.format(id, inspection_id)
             task = threading.Thread(name=task_name, target=runRoute, \
-                args=(inspection_id, site_id, robot_ids, id, robot_model, robot_ids, route, org_pos, nav_subtasks_over,))
+                args=(inspection_id, inspection_type, site_id, robot_ids, id, robot_model, robot_ids, route, org_pos, nav_subtasks_over,))
             nav_subtasks.append(task)
         for t in nav_subtasks:
             logger.info("Start inspection subtask thread: {}.".format(t.getName()))

@@ -55,6 +55,7 @@ Kafka_Brokers = ["192.168.12.146:9092"]
 Task_Topic = "task-test"
 Task_Status_Topic = "task-status-test"
 Robot_Position_Topic = "robot_position"
+Robot_Sync_Cmd_Topic = "robot-sync-cmd-test"
 Kafka_Blocking_time = 1
 
 #redis

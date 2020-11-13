@@ -19,6 +19,7 @@ redis_connector = redis.Redis(host=config.redis_host, port=config.redis_port, db
 # just an example, you don't have to follow this format
 task_status_payload = {
     "inspection_id": 3,
+    "task_type": 0,
     "site_id": "site01",
     'timestamp': 1599033481,
     "robot": {
@@ -37,9 +38,18 @@ robot_position_payload = {
     "location": '0-0-0'
 }
 
-def sendTaskStatusMsg(inspection_id, site_id, robots, task_status, timestamp, robot_id=None, checkpoint_no=None, robot_status=None):
+robot_sync_cmd_paylaod = {
+    "timestamp": 1599033481,
+    "robot_id": 0,
+    "inspection_id": 0,
+    "site_id": 0,
+    "cmd": 'photo'
+}
+
+def sendTaskStatusMsg(inspection_id, inspection_type, site_id, robots, task_status, timestamp, robot_id=None, checkpoint_no=None, robot_status=None):
     body = copy.deepcopy(task_status_payload)
     body['inspection_id'] = inspection_id
+    body['task_type'] = inspection_type
     body['site_id'] = site_id
     body['robots'] = robots
     body['timestamp'] = timestamp
@@ -82,3 +92,19 @@ def sendRobotPosMsg(inspection_id, site_id, timestamp, robot_id, pos_x, pos_y, p
         logger.info('Redis operation : send robot pos {}-{}'.format(pos_x, pos_y))
     except Exception as e:
         logger.error('Redis operation : send robot pos record error! ' + str(e))
+
+def sendSyncCmdMsg(inspection_id, site_id, timestamp, robot_id, cmd='photo'):
+    body = copy.deepcopy(robot_position_payload)
+    body['inspection_id'] = inspection_id
+    body['site_id'] = site_id
+    body['timestamp'] = timestamp
+    body['robot_id'] = robot_id
+    body['cmd'] = cmd
+    ##send to kafka robot-position-topic
+    try:
+        future = status_producer.send(config.Robot_Position_Topic, key="".encode(), value=body)
+        # Block until a single message is sent (or timeout)
+        result = future.get(timeout=config.Kafka_Blocking_time)
+        logger.error('Kafka operation : send robot sync cmd msg: {}! '.format(cmd)
+    except Exception as e:
+        logger.error('Kafka operation : send robot position msg error! ' +  str(e))

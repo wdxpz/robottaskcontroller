@@ -41,7 +41,7 @@ from turtlebot_launch import Turtlebot_Launcher
 from utils.logger import getLogger
 from utils.ros_utils import checkRobotNode, shell_cmd, killNavProcess
 from utils.time_utils import dt2timestamp
-from utils.msg_utils import sendTaskStatusMsg, sendRobotPosMsg
+from utils.msg_utils import sendTaskStatusMsg, sendRobotPosMsg, sendSyncCmdMsg
 from utils.tsdb import DBHelper
 from tasks.monitor import InspectionMonitor
 
@@ -314,11 +314,12 @@ def setInReturn(paras, scheduler):
     if scheduler is not None and scheduler.running:
         scheduler.shutdown()
     
-def runRoute(inspectionid, siteid, robots, robotid, robot_model, robot_ids, route, org_pose, nav_subtasks_over):
+def runRoute(inspectionid, inspection_type, siteid, robots, robotid, robot_model, robot_ids, route, org_pose, nav_subtasks_over):
     paras = initParas()
 
-    #reset global variables
+    #reset thread params
     paras['inspection_id'] = inspectionid 
+    paras['inspection_type'] = inspection_type
     paras['site_id'] = siteid
     paras['robots'] = robots
     paras['robot_id'] = robotid
@@ -446,6 +447,9 @@ def runRoute(inspectionid, siteid, robots, robotid, robot_model, robot_ids, rout
             for i in range(1, config.Circle_Rotate_Steps+1):
                 logger.info(paras['msg_head'] + 'runRoute: rotate step {}, rotate angle: {}'.format(i, step_angle))
                 rotate_ctl.rotate(angle=step_angle)
+                if paras['inspection_type'] == config.Task_Type["Task_Visual_Scout"]:
+                    sendSyncCmdMsg(paras['inspection_id'], paras['site_id'], str(int(time.time())), 
+                    robot_id=paras['robot_id'), cmd='photo')
                 rospy.sleep(config.Holding_Step_Time/config.Circle_Rotate_Steps)
 
             #this guarantee to send the parameters out

@@ -48,7 +48,7 @@ if __name__ == "__main__":
         if 'task_type' not in task.keys():
             logger.info('error task data, ignored!')
             continue
-        if task['task_type'] == Task_Type["Task_Inspection"]:   
+        if task['task_type'] in [Task_Type["Task_Inspection"], Task_Type["Task_Visual_Scout"]]:   
             inspection_id = int(task['inspection_id'])
             task_name = 'inpsection: {}'.format(inspection_id)
             logger.info('start inspection task: {}'.format(task_name))
