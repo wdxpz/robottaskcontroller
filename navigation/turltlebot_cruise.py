@@ -451,7 +451,7 @@ def runRoute(inspectionid, inspection_type, siteid, robots, robotid, robot_model
                     rotate_ctl.rotate(angle=step_angle)
                     if paras['inspection_type'] == config.Task_Type["Task_Visual_Scout"]:
                         sendSyncCmdMsg(paras['inspection_id'], paras['site_id'], str(int(time.time())), 
-                        robot_id=paras['robot_id'), cmd='photo')
+                        robot_id=paras['robot_id'], cmd='photo')
                     rospy.sleep(config.Holding_Step_Time/config.Circle_Rotate_Steps)
 
             #this guarantee to send the parameters out

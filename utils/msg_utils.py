@@ -105,6 +105,6 @@ def sendSyncCmdMsg(inspection_id, site_id, timestamp, robot_id, cmd='photo'):
         future = status_producer.send(config.Robot_Position_Topic, key="".encode(), value=body)
         # Block until a single message is sent (or timeout)
         result = future.get(timeout=config.Kafka_Blocking_time)
-        logger.error('Kafka operation : send robot sync cmd msg: {}! '.format(cmd)
+        logger.error('Kafka operation : send robot sync cmd msg: {}! '.format(cmd))
     except Exception as e:
         logger.error('Kafka operation : send robot position msg error! ' +  str(e))
