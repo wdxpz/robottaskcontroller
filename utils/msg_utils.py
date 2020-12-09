@@ -32,10 +32,10 @@ task_status_payload = {
 
 robot_position_payload = {
     "timestamp": 1599033481,
-    "robot_id": 0,
+    "robot_name": 0,
     "inspection_id": 0,
-    "site_id": 0,
-    "location": '0-0-0'
+    # "site_id": 0,
+    # "location": '0-0-0'
 }
 
 robot_sync_cmd_paylaod = {
@@ -96,15 +96,15 @@ def sendRobotPosMsg(inspection_id, site_id, timestamp, robot_id, pos_x, pos_y, p
 def sendSyncCmdMsg(inspection_id, site_id, timestamp, robot_id, cmd='photo'):
     body = copy.deepcopy(robot_position_payload)
     body['inspection_id'] = inspection_id
-    body['site_id'] = site_id
+    # body['site_id'] = site_id
     body['timestamp'] = timestamp
-    body['robot_id'] = robot_id
-    body['cmd'] = cmd
+    body['robot_name'] = robot_id
+    # body['cmd'] = cmd
     ##send to kafka robot-position-topic
     try:
         future = status_producer.send(config.Robot_Position_Topic, key="".encode(), value=body)
         # Block until a single message is sent (or timeout)
         result = future.get(timeout=config.Kafka_Blocking_time)
-        logger.error('Kafka operation : send robot sync cmd msg: {}! '.format(cmd))
+        logger.info('Kafka operation : send robot sync cmd msg: {}! '.format(cmd))
     except Exception as e:
         logger.error('Kafka operation : send robot position msg error! ' +  str(e))
