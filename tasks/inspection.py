@@ -27,11 +27,12 @@ def execInspection(data):
         '''
         #assign robot model by split robot_id
         '''
-        for id in robot_ids:
+        for robot in robots:
+            id = robot['robot_id']
             if id.startswith("tb3"):
-                robots[id]['model'] = 'waffle_pi'
+                robot['model'] = 'waffle_pi'
             elif id.startswith("ros2p"):
-                robots[id]['model'] = 'rosbot2_pro'
+                robot['model'] = 'rosbot2_pro'
             else:
                 raise Exception('error in naming of robot_id: {}'.format(id))
     except Exception as e:
