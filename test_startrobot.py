@@ -17,17 +17,36 @@ task_producer = KafkaProducer(
         compression_type='gzip', value_serializer=lambda x: json.dumps(x).encode())
 
 def startTask():
+    # task_body = {
+    #     "task_type": 0, # 0 for Task_Inspection
+    #     "inspection_id": 6,
+    #     "site_id": "bj01",
+    #     "robots": [
+    #         {
+    #             "robot_id": "rosbot1", #"tb3_0",
+    #             "model": "rosbot2_pro", #waffle_pi",
+    #             "original_pos": "0.0#0.0#0.0", # x-y-angle
+    #             "subtasks": [
+    #                 [1, 0.0, 0.3], # sequential number - x - y
+    #                 #[2, 0.1, 0.5], 
+    #                 #[3, 0.3, 0.7]
+    #             ]
+    #         }
+    #     ]
+    # }
+
     task_body = {
-        "task_type": 0, # 0 for Task_Inspection
-        "inspection_id": 6,
-        "site_id": "bj01",
+        "task_type": 30, # 0 for Task_Inspection
+        "robots": ["tb3_0"],
+        "inspection_id": 10,
+        "site_id": "testbedbj02",
         "robots": [
             {
-                "robot_id": "rosbot1", #"tb3_0",
-                "model": "rosbot2_pro", #waffle_pi",
+                "robot_id": "tb3_0", #"tb3_0",
+                "model": "waffle_pi",
                 "original_pos": "0.0#0.0#0.0", # x-y-angle
                 "subtasks": [
-                    [1, 0.0, 0.3], # sequential number - x - y
+                    [1, -0.3, 2.53], # sequential number - x - y
                     #[2, 0.1, 0.5], 
                     #[3, 0.3, 0.7]
                 ]
@@ -36,6 +55,7 @@ def startTask():
     }
 
     sendMsg(task_body)
+
 
 def killNavProcess():
     kill_command = {

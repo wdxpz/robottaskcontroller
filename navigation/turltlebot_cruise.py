@@ -238,7 +238,7 @@ def setEnterEvent(paras, pt_num, pt):
     paras['lock'].release()
 
 def reportTaskStatus(paras, ts=time.time(), task_status=config.Inspection_Status_Codes["INSPECTION_STARTED"]):
-    sendTaskStatusMsg(paras['inspection_id'], paras['site_id'], paras['robots'], task_status, str(int(ts)))
+    sendTaskStatusMsg(paras['inspection_id'], paras['inspection_type'], paras['site_id'], paras['robots'], task_status, str(int(ts)))
 
 def reportRobotEvent(paras, event_code, checkpoint_no=None, ts=time.time()):
     """
@@ -248,7 +248,7 @@ def reportRobotEvent(paras, event_code, checkpoint_no=None, ts=time.time()):
         task_status=config.Inspection_Status_Codes["INSPECTION_STARTED_WITH_ERROR"]
     else:
         task_status=config.Inspection_Status_Codes["INSPECTION_STARTED"]
-    sendTaskStatusMsg(paras['inspection_id'], paras['site_id'], paras['robots'],
+    sendTaskStatusMsg(paras['inspection_id'], paras['inspection_type'], paras['site_id'], paras['robots'],
             task_status, str(int(ts)), 
             robot_id=paras['robot_id'],  checkpoint_no=checkpoint_no,  robot_status=event_code)  
             

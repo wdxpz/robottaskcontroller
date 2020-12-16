@@ -26,7 +26,7 @@ Launch_Max_Try = 3
 ##robot pose initialization configration
 Trial_Set_Pose_Count = 3
 ##robot navigation configuration
-Wait_For_GoToPose_Time = 60
+Wait_For_GoToPose_Time = 120
 Holding_Step_Time = 20
 Holding_Time_Variance = 1
 Circle_Rotate_Steps = 4
