@@ -38,7 +38,7 @@ def startTask():
     task_body = {
         "task_type": 30, # 0 for Task_Inspection
         "robots": ["tb3_0"],
-        "inspection_id": 10,
+        "inspection_id": 50,
         "site_id": "testbedbj02",
         "robots": [
             {

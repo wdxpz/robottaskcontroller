@@ -188,6 +188,12 @@ def analyzePose(paras):
             #paras['lock'].release()
             continue
 
+    #empty robot pos record after inspection done
+    logger.info('analyzePose: inspection done or eixt! set robot postion empty!')
+    sendRobotPosMsg(paras['inspection_id'], paras['site_id'], str(int(time.time())), 
+        robot_id=paras['robot_id'], 
+        pos_x=None, pos_y=None, pos_a=None)
+
 def uploadCacheData(paras):
     pos_records = []
     event_records = []
@@ -364,6 +370,7 @@ def runRoute(inspectionid, inspection_type, siteid, robots, robotid, robot_model
         # analyzer_t.setDaemon(True)
         analyzer_t.start()
 
+        scheduler = None
         if config.Enable_Influx:
             scheduler = BackgroundScheduler()  
             scheduler.add_job(lambda: uploadCacheData(paras), 'interval', seconds=config.Upload_Interval)

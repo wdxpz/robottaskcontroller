@@ -27,7 +27,7 @@ Launch_Max_Try = 3
 Trial_Set_Pose_Count = 3
 ##robot navigation configuration
 Wait_For_GoToPose_Time = 120
-Holding_Step_Time = 20
+Holding_Step_Time = 60
 Holding_Time_Variance = 1
 Circle_Rotate_Steps = 4
 Rotate_Speed = 30
@@ -42,7 +42,7 @@ Pos_Value_Splitter = '#'
 
 
 #tsdb
-Enable_Influx = True
+Enable_Influx = False
 upload_URL = 'www.bestfly.ml'
 upload_PORT = 8086
 upload_DB = 'robot'

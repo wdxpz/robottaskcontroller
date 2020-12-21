@@ -32,7 +32,7 @@ task_status_payload = {
 
 robot_position_payload = {
     "timestamp": 1599033481,
-    "robot_name": 0,
+    # "robot_name": 0,
     "inspection_id": 0,
     # "site_id": 0,
     # "location": '0-0-0'
@@ -89,7 +89,8 @@ def sendRobotPosMsg(inspection_id, site_id, timestamp, robot_id, pos_x, pos_y, p
     try:
         redis_connector.hmset(robot_id, body)
         # logger.info('Redis operation : send robot pos record {}'.format(body))
-        logger.info('Redis operation : send robot pos {}-{}'.format(pos_x, pos_y))
+        logger.info('Redis operation : send robot pos {}#{}'.format(pos_x, pos_y))
+        logger.info('Redis operation : send {}'.format(body))
     except Exception as e:
         logger.error('Redis operation : send robot pos record error! ' + str(e))
 
