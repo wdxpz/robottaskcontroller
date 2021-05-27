@@ -37,14 +37,14 @@ def test_kafka_service():
 
 def fake_send_robot_ready_status_msg():
     body = {
-        "inspection_id": 13,
-        "task_type": 0,  
+        "inspection_id": 560,
+        "task_type": 30,  
         "site_id": "bj02",
-        "robots": ["tb3_0", "tb3_1"],
+        "robots": ["tb3_0"],
         "timestamp": 1599033481,
         "robot": {
-            "robot_id": "robot03",
-            "checkpoint_no": 2,
+            "robot_id": "tb3_0",
+            "checkpoint_no": 1,
             "status": 0 # 0:"reached", 1:"left", 2:"missed", 3:"failed", 4:"done"
             },
         "status": 130 #130:"started", 140:"finished", 150:"terminated"

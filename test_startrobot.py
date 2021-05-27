@@ -38,17 +38,17 @@ def startTask():
     task_body = {
         "task_type": 30, # 0 for Task_Inspection
         "robots": ["tb3_0"],
-        "inspection_id": 50,
-        "site_id": "testbedbj02",
+        "inspection_id": 559,
+        "site_id": "bj02",
         "robots": [
             {
                 "robot_id": "tb3_0", #"tb3_0",
                 "model": "waffle_pi",
                 "original_pos": "0.0#0.0#0.0", # x-y-angle
                 "subtasks": [
-                    [1, -0.3, 2.53], # sequential number - x - y
-                    #[2, 0.1, 0.5], 
-                    #[3, 0.3, 0.7]
+                    [1, -1.1347986,-0.33763275],
+                    [2, -1.3348376,-1.6876328],
+                    [3, 1.181696,-0.30600053]
                 ]
             }
         ]
