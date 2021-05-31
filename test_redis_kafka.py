@@ -6,10 +6,14 @@ from utils.logger import getLogger
 logger = getLogger('test_redis_kafka')
 logger.propagate = False
 
+robot_id = 'tb3_0'
+task_type = 30
+site_id = 'bj02'
+inspection_id =562
 
 def test_redis_service():
     #redis
-    redis_host = "192.168.12.146"
+    redis_host = "123.1127.237.146"
     redis_port = "6379"
 
     robot_position_payload = {
@@ -30,24 +34,24 @@ def test_redis_service():
 
 def test_kafka_service():
     # Kafka setting
-    Kafka_Brokers = ["192.168.12.146:9092"]
+    Kafka_Brokers = ["123.1127.237.146:9092"]
     Test_Topic = "orange-test"
     Kafka_Blocking_time = 1
     status_producer = KafkaProducer(bootstrap_servers=Kafka_Brokers, compression_type='gzip', value_serializer=lambda x: json.dumps(x).encode())
 
-def fake_send_robot_ready_status_msg():
+def fake_send_task_start_end_status_msg():
     body = {
-        "inspection_id": 560,
-        "task_type": 30,  
-        "site_id": "bj02",
+        "inspection_id": inspection_id,
+        "task_type": task_type,  
+        "site_id": site_id,
         "robots": ["tb3_0"],
-        "timestamp": 1599033481,
+        "timestamp": str(int(time.time())),
+        "status": 130, #130:"started", 140:"finished", 150:"terminated"
         "robot": {
-            "robot_id": "tb3_0",
-            "checkpoint_no": 1,
-            "status": 0 # 0:"reached", 1:"left", 2:"missed", 3:"failed", 4:"done"
+            #"robot_id": "tb3_0",
+            #"checkpoint_no": 1,
+            #"status": 0 # 0:"reached", 1:"left", 2:"missed", 3:"failed", 4:"done"
             },
-        "status": 130 #130:"started", 140:"finished", 150:"terminated"
     }
 
     Kafka_Brokers = ["192.168.12.146:9092"]

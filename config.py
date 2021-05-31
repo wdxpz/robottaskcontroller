@@ -59,7 +59,7 @@ Robot_Sync_Cmd_Topic = "robot-sync-cmd-test"
 Kafka_Blocking_time = 1
 
 #redis
-redis_host = "192.168.12.146"
+redis_host = "123.127.237.146"
 redis_port = "6379"
 
 
