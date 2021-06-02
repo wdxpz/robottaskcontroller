@@ -41,7 +41,7 @@ from turtlebot_launch import Turtlebot_Launcher
 from utils.logger import getLogger
 from utils.ros_utils import checkRobotNode, shell_cmd, killNavProcess
 from utils.time_utils import dt2timestamp
-from utils.msg_utils import sendTaskStatusMsg, sendRobotPosMsg, sendSyncCmdMsg
+from utils.msg_utils import sendTaskStatusMsg, sendRobotPosMsg, sendSyncCmdMsg,sendDiscoveryStopRecords
 from utils.tsdb import DBHelper
 from tasks.monitor import InspectionMonitor
 
@@ -245,6 +245,11 @@ def setEnterEvent(paras, pt_num, pt):
 
 def reportTaskStatus(paras, ts=time.time(), task_status=config.Inspection_Status_Codes["INSPECTION_STARTED"]):
     sendTaskStatusMsg(paras['inspection_id'], paras['inspection_type'], paras['site_id'], paras['robots'], task_status, str(int(ts)))
+    if task_status in [config.Inspection_Status_Codes["INSPECTION_FINISHED"],
+                        config.Inspection_Status_Codes["INSPECTION_FINISHED_WITH_ERROR"],
+                        config.Inspection_Status_Codes["INSPECTION_TERMINATED"],
+                        config.Inspection_Status_Codes["INSPECTION_TERMINATED_WITH_ERROR"]]:
+        sendDiscoveryStopRecords(paras["robots"][0])
 
 def reportRobotEvent(paras, event_code, checkpoint_no=None, ts=time.time()):
     """

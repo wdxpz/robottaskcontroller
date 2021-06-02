@@ -109,3 +109,24 @@ def sendSyncCmdMsg(inspection_id, site_id, timestamp, robot_id, cmd='photo'):
         logger.info('Kafka operation : send robot sync cmd msg: {}! '.format(cmd))
     except Exception as e:
         logger.error('Kafka operation : send robot position msg error! ' +  str(e))
+
+def sendDiscoveryStopRecords(robot_id):
+    stop_rec_body_wifi = {
+        'timestamp': 0, # value 0 says the inspection related with the corresponding robot was finished
+        'id': robot_id+"-wifi01"
+    }
+    stop_rec_body_bt = {
+        'timestamp': 0, # value 0 says the inspection related with the corresponding robot was finished
+        'id': robot_id+"-bt01"
+    }
+    try:
+        #wifi
+        future = status_producer.send(config.Wifi_Record_Topic, key="".encode(), value=stop_rec_body_wifi)
+        result = future.get(timeout=config.Kafka_Blocking_time)
+        logger.info('Kafka operation : send discovery stop msg: {}! '.format(stop_rec_body_wifi))
+        #bt
+        future = status_producer.send(config.Bt_Record_Topic, key="".encode(), value=stop_rec_body_bt)
+        result = future.get(timeout=config.Kafka_Blocking_time)
+        logger.info('Kafka operation : send discovery stop msg: {}! '.format(stop_rec_body_bt))
+    except Exception as e:
+        logger.error('Kafka operation : send robot position msg error! ' +  str(e))

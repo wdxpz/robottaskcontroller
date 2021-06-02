@@ -7,7 +7,7 @@ from config import Inspection_Status_Codes, Enable_Influx, Pos_Value_Splitter, R
 from navigation.turtlebot_launch import Turtlebot_Launcher
 from navigation.turltlebot_cruise import runRoute
 from navigation.turtlebot_robot_status import setRobotWorking, setRobotIdel, isRobotWorking, isInspectionRunning, isInspectionRepeated
-from utils.msg_utils import sendTaskStatusMsg
+from utils.msg_utils import sendTaskStatusMsg, sendDiscoveryStopRecords
 from utils.ros_utils import killNavProcess, checkMapFile
 from monitor import InspectionMonitor
 
@@ -157,6 +157,7 @@ def execInspection(data):
                     Inspection_Status_Codes['ERR_INSPECTION_FAILED'],
                     str(int(time.time()))
                     )
+        sendDiscoveryStopRecords(robot_ids[0])
         logger.info('try to kill existed navigation process after failed navigation!')
         killNavProcess([inspection_id])
         return 
