@@ -31,7 +31,7 @@ def execInspection(data):
             id = robot['robot_id']
             if id.startswith("tb3"):
                 robot['model'] = 'waffle_pi'
-            elif id.startswith("ros2p"):
+            elif id.startswith("rosbot"):
                 robot['model'] = 'rosbot2_pro'
             else:
                 raise Exception('error in naming of robot_id: {}'.format(id))
@@ -39,7 +39,7 @@ def execInspection(data):
         logger.error("Error! command parameters error. " + str(e))
         sendTaskStatusMsg(inspection_id, inspection_type, site_id, robot_ids, 
             Inspection_Status_Codes['ERR_CMD_PARAMETERS'],
-            str(int(time.time()))
+            int(time.time())
             )
         return
     
@@ -47,7 +47,7 @@ def execInspection(data):
         logger.error("Error!, map parameters error, exit!")
         sendTaskStatusMsg(inspection_id, inspection_type, site_id, robot_ids, 
             Inspection_Status_Codes['ERR_CMD_PARAMETERS'],
-            str(int(time.time()))
+            int(time.time())
             )
         return
 
@@ -64,7 +64,7 @@ def execInspection(data):
         logger.error("Error!, required robot occupied, exit!")
         sendTaskStatusMsg(inspection_id, inspection_type, site_id, robot_ids, 
             Inspection_Status_Codes['ERR_ROBOT_OCCUPIED'],
-            str(int(time.time()))
+            int(time.time())
             )
         return
 
@@ -90,7 +90,7 @@ def execInspection(data):
         logger.error("Error!, failed to start robots, exit!")
         sendTaskStatusMsg(inspection_id, inspection_type, site_id, robot_ids, 
             Inspection_Status_Codes['ERR_ROBOT_START'],
-            str(int(time.time()))
+            int(time.time())
             )
         logger.info('try to kill existed navigation process after failed start!')
         inspection_monitor.rmTask(inspection_id)
@@ -131,7 +131,7 @@ def execInspection(data):
                 killNavProcess([inspection_id])
                 sendTaskStatusMsg(inspection_id, inspection_type, site_id, robot_ids, 
                     Inspection_Status_Codes['ERR_CMD_PARAMETERS'],
-                    str(int(time.time()))
+                    int(time.time())
                     )
                 return
             task_name = 'robot: {} of inpsection: {}'.format(id, inspection_id)
@@ -147,7 +147,7 @@ def execInspection(data):
         # inspection_monitor.addTask(inspection_id, site_id, robot_ids)
         sendTaskStatusMsg(inspection_id, inspection_type, site_id, robot_ids, 
                     Inspection_Status_Codes['INSPECTION_STARTED'],
-                    str(int(time.time()))
+                    int(time.time())
                     )
         return
     except Exception as e:
@@ -155,7 +155,7 @@ def execInspection(data):
         inspection_monitor.rmTask(inspection_id)
         sendTaskStatusMsg(inspection_id, inspection_type, site_id, robot_ids, 
                     Inspection_Status_Codes['ERR_INSPECTION_FAILED'],
-                    str(int(time.time()))
+                    int(time.time())
                     )
         sendDiscoveryStopRecords(robot_ids[0])
         logger.info('try to kill existed navigation process after failed navigation!')

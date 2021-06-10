@@ -26,7 +26,7 @@ import tf
 from nav_msgs.msg import Odometry
 from tf.transformations import euler_from_quaternion
 from geometry_msgs.msg import Point, Twist, Pose
-from apscheduler.schedulers.background import BackgroundScheduler
+#from apscheduler.schedulers.background import BackgroundScheduler
 
 
 import config
@@ -244,7 +244,7 @@ def setEnterEvent(paras, pt_num, pt):
     paras['lock'].release()
 
 def reportTaskStatus(paras, ts=time.time(), task_status=config.Inspection_Status_Codes["INSPECTION_STARTED"]):
-    sendTaskStatusMsg(paras['inspection_id'], paras['inspection_type'], paras['site_id'], paras['robots'], task_status, str(int(ts)))
+    sendTaskStatusMsg(paras['inspection_id'], paras['inspection_type'], paras['site_id'], paras['robots'], task_status, int(ts))
     if task_status in [config.Inspection_Status_Codes["INSPECTION_FINISHED"],
                         config.Inspection_Status_Codes["INSPECTION_FINISHED_WITH_ERROR"],
                         config.Inspection_Status_Codes["INSPECTION_TERMINATED"],
@@ -260,7 +260,7 @@ def reportRobotEvent(paras, event_code, checkpoint_no=None, ts=time.time()):
     else:
         task_status=config.Inspection_Status_Codes["INSPECTION_STARTED"]
     sendTaskStatusMsg(paras['inspection_id'], paras['inspection_type'], paras['site_id'], paras['robots'],
-            task_status, str(int(ts)), 
+            task_status, int(ts), 
             robot_id=paras['robot_id'],  checkpoint_no=checkpoint_no,  robot_status=event_code)  
             
 
@@ -376,10 +376,10 @@ def runRoute(inspectionid, inspection_type, siteid, robots, robotid, robot_model
         analyzer_t.start()
 
         scheduler = None
-        if config.Enable_Influx:
-            scheduler = BackgroundScheduler()  
-            scheduler.add_job(lambda: uploadCacheData(paras), 'interval', seconds=config.Upload_Interval)
-            scheduler.start()
+ #       if config.Enable_Influx:
+ #           scheduler = BackgroundScheduler()  
+ #           scheduler.add_job(lambda: uploadCacheData(paras), 'interval', seconds=config.Upload_Interval)
+ #           scheduler.start()
 
 
         #init the rotate controller

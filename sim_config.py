@@ -1,8 +1,8 @@
-robot_id = 'tb3_0'
+robot_id = 'rosbot1'
 task_type = 30
 site_id = 'bj02'
-inspection_id = 563
-sim_robot_duration = 5 #minitues
+inspection_id = 580
+sim_robot_duration = 2 #minitues
 
 Kafka_Brokers = ["192.168.12.146:9092"]
 Test_Topic = "task-status-test"
