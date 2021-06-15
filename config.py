@@ -62,7 +62,7 @@ Bt_Record_Topic = "bt-sniffer-test"
 Kafka_Blocking_time = 1
 
 #redis
-redis_host = "123.127.237.146"
+redis_host = "192.168.12.146"
 redis_port = "6379"
 
 
