@@ -115,10 +115,10 @@ def execInspection(data):
                     {
                         'point_no': pt[0],
                         'position':{
-                            # 'x': pt[1] if robot_model in Robot_Model[0:2] else pt[2],
-                            # 'y': pt[2] if robot_model in Robot_Model[0:2] else pt[1]*-1.0
-                            'x': pt[2] if robot_model in Robot_Model[0:2] else pt[2],
-                            'y': pt[1]*-1.0 if robot_model in Robot_Model[0:2] else pt[1]*-1.0
+                             # 'x': pt[2] if robot_model in Robot_Model[0:2] else pt[2],
+                             # 'y': pt[1]*-1.0 if robot_model in Robot_Model[0:2] else pt[1]*-1.0
+                            'x': pt[2] if robot_model in Robot_Model[0:2] else pt[1],
+                            'y': pt[1]*-1.0 if robot_model in Robot_Model[0:2] else pt[2]
                         },
                         'quaternion': {'r1': 0, 'r2': 0, 'r3': 0, 'r4': 1}
                     }
