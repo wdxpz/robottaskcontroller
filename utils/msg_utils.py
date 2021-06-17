@@ -1,5 +1,6 @@
 import copy
 import json
+import time
 
 import redis
 from kafka import KafkaProducer
@@ -111,12 +112,13 @@ def sendSyncCmdMsg(inspection_id, site_id, timestamp, robot_id, cmd='photo'):
         logger.error('Kafka operation : send robot position msg error! ' +  str(e))
 
 def sendDiscoveryStopRecords(robot_id):
+    timestamp = -1*int(time.time())
     stop_rec_body_wifi = {
-        'timestamp': 0, # value 0 says the inspection related with the corresponding robot was finished
+        'timestamp': timestamp, # value -time.time() says the inspection related with the corresponding robot was finished
         'id': robot_id+"-wifi01"
     }
     stop_rec_body_bt = {
-        'timestamp': 0, # value 0 says the inspection related with the corresponding robot was finished
+        'timestamp': timestamp, # value -time.time() says the inspection related with the corresponding robot was finished
         'id': robot_id+"-bt01"
     }
     try:
