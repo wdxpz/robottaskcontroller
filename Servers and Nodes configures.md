@@ -147,3 +147,33 @@
     systemctl start docker
     docker exec -it container_id bash
     ```
+    
+# Start Rosbot for inspection
+## At robot server side
+login server: ssh ubuntu@192.168.28.11 password:abc123!@#
+* start roscore
+```
+roscore
+```
+* start map server
+```
+roslaunch multirobot_nv start_rosbot_only_map.launch
+```
+* start task_controller
+```
+cd ~/projects/multisense/rosbot/taskcontroller
+python main.py
+```
+## at rosbot side
+login: ssh husarion@182.168.28.77
+```
+roslaunch multi_rosbot_nav nav_rosbot1.launch
+```
+## at message server side
+login: ssh ssh ubuntu@192.168.12.146 password:abc123!@#
+```
+cd /usr/kafka/kafka_2.13-2.4.1
+bin/kafka-console-consumer.sh --topic video-test --from-beginning --bootstrap-server 192.168.12.146:9092
+bin/kafka-console-consumer.sh --topic bt-sniffer-test --from-beginning --bootstrap-server 192.168.12.146:9092
+bin/kafka-console-consumer.sh --topic wifi-sniffer-test --from-beginning --bootstrap-server 192.168.12.146:9092
+```
