@@ -52,7 +52,7 @@
     ```
 
   * Task Scheduler: 192.168.12.146
-
+    * [Github](https://github.com/orange-cn/patrolling-robot.git) (**mainained the latest version, CI to 146 machine with domainname: "discovery.orangelabschina.cn"**)
     * Gitlab: https://gitlab.tech.orange/kun.qian/robot
     * used for the management of robots, sites, inspections...
 
@@ -61,6 +61,31 @@
     sudo -i
     cd /home/ubuntu/robot
     bash start.sh
+    ```
+  * Task Observer: 192.168.12.146
+    * [Github](https://github.com/orange-cn/inspection-observer.git) (**mainained the latest version, CI to 146 machine with domainname: "discovery.orangelabschina.cn"**)
+    * Gitlab: 
+    * user for monitor the task status
+    ```
+    # To Launch
+    cd /home/ubuntu/inspection-observer
+    bash start.sh
+    ```
+    
+  * Yolo Server: 192.168.23.1(internet IP:123.127.237.185) 
+    * used for visual recognition request from visual sniffer
+    ```
+    ssh si@192.168.23.1
+    #if rejected
+    ## copy public key from ~/.ssh/authorized_keys
+    ssh sw@192.168.23.1
+    su si  #password: abc123!@#
+    nano ~/.ssh/authorized_keys
+    ## paste the copies public keys
+    eixt
+    
+    cd ~/yolo-server
+    nohup build/yoloserver &
     ```
 
 * Sniffers
