@@ -2,7 +2,7 @@
 
 * wifi network: Chaos
 
-* robot master: 192.168.28.11 , login: sw/abc123!@# , wifi: Cloud
+* robot master: 192.168.28.11 , login: ubuntu/abc123!@# , network: virtual machine
 
 * robot nodes:
 
@@ -11,7 +11,7 @@
     * bt_enabler_0: 192.168.28.83 ssh:pi/123456 (wifi: Chaos)
       * to set the static ip address for pi, please refer [for pi](https://electrondust.com/2017/11/25/setting-raspberry-pi-wifi-static-ip-raspbian-stretch-lite/)
   * tb3_1: 192.168.28.149  ssh: robot/robot , wifi: Chaos
-  * ros2p_0: 192.168.28.77 ssh: husarion/husarion, wifi: Chaos
+  * rosbot1: 192.168.28.77 ssh: husarion/husarion, wifi: Robot
 
 * Backends
 
@@ -122,7 +122,3 @@
     systemctl start docker
     docker exec -it container_id bash
     ```
-
-    
-
-    
