@@ -77,7 +77,7 @@ def sendRobotPosMsg(inspection_id, site_id, timestamp, robot_id, pos_x, pos_y, p
     body['site_id'] = site_id
     body['timestamp'] = timestamp
     body['robot_id'] = robot_id
-    body['location'] = config.Pos_Value_Splitter.join((str(pos_x), str(pos_y), str(pos_a))) if pos_x is not None else ''
+    body['location'] = config.Pos_Value_Splitter.join((str(pos_x), str(pos_y), str(-1*pos_a))) if pos_x is not None else ''
     ###send to kafka robot-position-topic
     # try:
     #     future = status_producer.send(config.Robot_Position_Topic, key="".encode(), value=body)
