@@ -160,6 +160,7 @@
       
       #to install the sound card driver
       rpi-update # to the lastest rpi kernel
+      # rpi-update e1050e94821a70b2e4c72b318d6c6c968552e9a2 #downgrade rpi kernel to 4.19
       install sound_card_drive #refer: https://wiki.seeedstudio.com/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/ 
       ```
     
