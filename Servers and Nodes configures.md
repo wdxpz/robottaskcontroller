@@ -147,22 +147,6 @@
     systemctl start docker
     docker exec -it container_id bash
     ```
-      * to clean the disk space in case the docker daemon cann't start up, clean the docker container directory
-      ```
-      cd /var/lib/docker
-      sudo rm -r containers
-      sudo mkdir containers
-      ```
-      * to build up the audio capture card drive in case the sound recognition app in docker image: dcase2018t2vggish:1.4 cann't work
-      ```
-      #check the logs from running container of image: dcase2018t2vggish to see if the sound device error
-      docker container logs the ID_container_of_dcase2018t2vggish
-      
-      #to install the sound card driver
-      rpi-update # to the lastest rpi kernel
-      # rpi-update e1050e94821a70b2e4c72b318d6c6c968552e9a2 #downgrade rpi kernel to 4.19
-      install sound_card_drive #refer: https://wiki.seeedstudio.com/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/ 
-      ```
     
 # Start Rosbot for inspection
 ## At robot server side
