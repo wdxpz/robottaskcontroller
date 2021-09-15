@@ -47,7 +47,7 @@ robot_sync_cmd_paylaod = {
     "cmd": 'photo'
 }
 
-def sendTaskStatusMsg(inspection_id, inspection_type, site_id, robots, task_status, timestamp, robot_id=None, checkpoint_no=None, robot_status=None):
+def sendTaskStatusMsg(inspection_id, inspection_type, site_id, robots, task_status, timestamp, robot_id=None, checkpoint_no=None, robot_status=None, trigger=None):
     body = copy.deepcopy(task_status_payload)
     body['inspection_id'] = inspection_id
     body['task_type'] = inspection_type
@@ -61,6 +61,9 @@ def sendTaskStatusMsg(inspection_id, inspection_type, site_id, robots, task_stat
         body['robot']['robot_id'] = robot_id
         body['robot']['checkpoint_no'] = checkpoint_no
         body['robot']['status'] = robot_status
+
+    if inspection_type == config.Task_Type['Task_Device_Check']:
+        body['trigger_alarm'] = trigger
 
     try:
         future = status_producer.send(config.Task_Status_Topic, key="".encode(), value=body)

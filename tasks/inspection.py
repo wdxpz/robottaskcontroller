@@ -24,6 +24,7 @@ def execInspection(data):
         site_id = str(data['site_id'])
         robots = data['robots']
         robot_ids =  [robot['robot_id'] for robot in robots]
+        trigger = None if 'trigger_alarms' not in data.keys() else data['trigger_alarms']
         '''
         #assign robot model by split robot_id
         '''
@@ -147,7 +148,8 @@ def execInspection(data):
         # inspection_monitor.addTask(inspection_id, site_id, robot_ids)
         sendTaskStatusMsg(inspection_id, inspection_type, site_id, robot_ids, 
                     Inspection_Status_Codes['INSPECTION_STARTED'],
-                    int(time.time())
+                    int(time.time(), 
+                    trigger=trigger)
                     )
         return
     except Exception as e:
