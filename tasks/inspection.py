@@ -24,6 +24,7 @@ def execInspection(data):
         site_id = str(data['site_id'])
         robots = data['robots']
         robot_ids =  [robot['robot_id'] for robot in robots]
+        trigger = None if 'trigger_alarms' not in data.keys() else data['trigger_alarms']
         '''
         #assign robot model by split robot_id
         '''
@@ -31,7 +32,7 @@ def execInspection(data):
             id = robot['robot_id']
             if id.startswith("tb3"):
                 robot['model'] = 'waffle_pi'
-            elif id.startswith("ros2p"):
+            elif id.startswith("rosbot"):
                 robot['model'] = 'rosbot2_pro'
             else:
                 raise Exception('error in naming of robot_id: {}'.format(id))
@@ -115,10 +116,10 @@ def execInspection(data):
                     {
                         'point_no': pt[0],
                         'position':{
-                            # 'x': pt[1] if robot_model in Robot_Model[0:2] else pt[2],
-                            # 'y': pt[2] if robot_model in Robot_Model[0:2] else pt[1]*-1.0
-                            'x': pt[2] if robot_model in Robot_Model[0:2] else pt[2],
-                            'y': pt[1]*-1.0 if robot_model in Robot_Model[0:2] else pt[1]*-1.0
+                             # 'x': pt[2] if robot_model in Robot_Model[0:2] else pt[2],
+                             # 'y': pt[1]*-1.0 if robot_model in Robot_Model[0:2] else pt[1]*-1.0
+                            'x': pt[2] if robot_model in Robot_Model[0:2] else pt[1],
+                            'y': pt[1]*-1.0 if robot_model in Robot_Model[0:2] else pt[2]
                         },
                         'quaternion': {'r1': 0, 'r2': 0, 'r3': 0, 'r4': 1}
                     }
@@ -147,7 +148,12 @@ def execInspection(data):
         # inspection_monitor.addTask(inspection_id, site_id, robot_ids)
         sendTaskStatusMsg(inspection_id, inspection_type, site_id, robot_ids, 
                     Inspection_Status_Codes['INSPECTION_STARTED'],
+<<<<<<< HEAD
                     int(time.time())
+=======
+                    int(time.time(), 
+                    trigger=trigger)
+>>>>>>> 26dc14c4ce0938cf5a6d5572013afae721bc2ccd
                     )
         return
     except Exception as e:

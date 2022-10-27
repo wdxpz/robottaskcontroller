@@ -26,7 +26,7 @@ import tf
 from nav_msgs.msg import Odometry
 from tf.transformations import euler_from_quaternion
 from geometry_msgs.msg import Point, Twist, Pose
-from apscheduler.schedulers.background import BackgroundScheduler
+#from apscheduler.schedulers.background import BackgroundScheduler
 
 
 import config
@@ -56,6 +56,7 @@ def initParas():
         'site_id': 0,
         'robot_id': 0,
         'original_pose': None,
+        'trigger': None,
         'cur_x': 0,
         'cur_y': 0,
         'cur_theta': 0,
@@ -376,10 +377,10 @@ def runRoute(inspectionid, inspection_type, siteid, robots, robotid, robot_model
         analyzer_t.start()
 
         scheduler = None
-        if config.Enable_Influx:
-            scheduler = BackgroundScheduler()  
-            scheduler.add_job(lambda: uploadCacheData(paras), 'interval', seconds=config.Upload_Interval)
-            scheduler.start()
+ #       if config.Enable_Influx:
+ #           scheduler = BackgroundScheduler()  
+ #           scheduler.add_job(lambda: uploadCacheData(paras), 'interval', seconds=config.Upload_Interval)
+ #           scheduler.start()
 
 
         #init the rotate controller
@@ -456,14 +457,14 @@ def runRoute(inspectionid, inspection_type, siteid, robots, robotid, robot_model
 
             #commend to robot to rotate 360 degree at current place
             if paras['inspection_type'] == config.Task_Type["Task_Inspection"] or \
-                (paras['inspection_type'] == config.Task_Type["Task_Visual_Scout"] and index == route_len):
+                (paras['inspection_type'] in [config.Task_Type["Task_Visual_Scout"], config.Task_Type["Task_Device_Check"]] and index == route_len):
                 step_angle = 360*1.0 / config.Circle_Rotate_Steps
                 for i in range(1, config.Circle_Rotate_Steps+1):
                     logger.info(paras['msg_head'] + 'runRoute: rotate step {}, rotate angle: {}'.format(i, step_angle))
                     rotate_ctl.rotate(angle=step_angle)
-                    if paras['inspection_type'] == config.Task_Type["Task_Visual_Scout"]:
-                        sendSyncCmdMsg(paras['inspection_id'], paras['site_id'], str(int(time.time())), 
-                        robot_id=paras['robot_id'], cmd='photo')
+                    # if paras['inspection_type'] == config.Task_Type["Task_Visual_Scout"]:
+                    #     sendSyncCmdMsg(paras['inspection_id'], paras['site_id'], str(int(time.time())), 
+                    #     robot_id=paras['robot_id'], cmd='photo')
                     rospy.sleep(config.Holding_Step_Time/config.Circle_Rotate_Steps)
 
             #this guarantee to send the parameters out

@@ -3,6 +3,7 @@ Task_Type:
   Task_KillAllNavProcess: 10
   Task_SaveMap: 20
   Task_Visual_Scout: 30
+  Task_Device_Check: 35
   Task_Fixed_Sensor: 40
   Task_Inspection_AT_RUSHTIME: 50
 

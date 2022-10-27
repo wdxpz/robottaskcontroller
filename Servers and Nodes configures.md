@@ -2,7 +2,7 @@
 
 * wifi network: Chaos
 
-* robot master: 192.168.28.11 , login: sw/abc123!@# , wifi: Cloud
+* robot master: 192.168.28.11 , login: ubuntu/abc123!@# , network: virtual machine
 
 * robot nodes:
 
@@ -11,7 +11,7 @@
     * bt_enabler_0: 192.168.28.83 ssh:pi/123456 (wifi: Chaos)
       * to set the static ip address for pi, please refer [for pi](https://electrondust.com/2017/11/25/setting-raspberry-pi-wifi-static-ip-raspbian-stretch-lite/)
   * tb3_1: 192.168.28.149  ssh: robot/robot , wifi: Chaos
-  * ros2p_0: 192.168.28.77 ssh: husarion/husarion, wifi: Chaos
+  * rosbot1: 192.168.28.77 ssh: husarion/husarion, wifi: Robot
 
 * Backends
 
@@ -52,7 +52,7 @@
     ```
 
   * Task Scheduler: 192.168.12.146
-
+    * [Github](https://github.com/orange-cn/patrolling-robot.git) (**mainained the latest version, CI to 146 machine with domainname: "discovery.orangelabschina.cn"**)
     * Gitlab: https://gitlab.tech.orange/kun.qian/robot
     * used for the management of robots, sites, inspections...
 
@@ -61,6 +61,31 @@
     sudo -i
     cd /home/ubuntu/robot
     bash start.sh
+    ```
+  * Task Observer: 192.168.12.146
+    * [Github](https://github.com/orange-cn/inspection-observer.git) (**mainained the latest version, CI to 146 machine with domainname: "discovery.orangelabschina.cn"**)
+    * Gitlab: 
+    * user for monitor the task status
+    ```
+    # To Launch
+    cd /home/ubuntu/inspection-observer
+    bash start.sh
+    ```
+    
+  * Yolo Server: 192.168.23.1(internet IP:123.127.237.185) 
+    * used for visual recognition request from visual sniffer
+    ```
+    ssh si@192.168.23.1
+    #if rejected
+    ## copy public key from ~/.ssh/authorized_keys
+    ssh sw@192.168.23.1
+    su si  #password: abc123!@#
+    nano ~/.ssh/authorized_keys
+    ## paste the copies public keys
+    eixt
+    
+    cd ~/yolo-server
+    nohup build/yoloserver &
     ```
 
 * Sniffers
@@ -122,7 +147,33 @@
     systemctl start docker
     docker exec -it container_id bash
     ```
-
     
-
-    
+# Start Rosbot for inspection
+## At robot server side
+login server: ssh ubuntu@192.168.28.11 password:abc123!@#
+* start roscore
+```
+roscore
+```
+* start map server
+```
+roslaunch multirobot_nv start_rosbot_only_map.launch
+```
+* start task_controller
+```
+cd ~/projects/multisense/rosbot/taskcontroller
+python main.py
+```
+## at rosbot side
+login: ssh husarion@182.168.28.77
+```
+roslaunch multi_rosbot_nav nav_rosbot1.launch
+```
+## at message server side
+login: ssh ssh ubuntu@192.168.12.146 password:abc123!@#
+```
+cd /usr/kafka/kafka_2.13-2.4.1
+bin/kafka-console-consumer.sh --topic video-test --from-beginning --bootstrap-server 192.168.12.146:9092
+bin/kafka-console-consumer.sh --topic bt-sniffer-test --from-beginning --bootstrap-server 192.168.12.146:9092
+bin/kafka-console-consumer.sh --topic wifi-sniffer-test --from-beginning --bootstrap-server 192.168.12.146:9092
+```

@@ -1,5 +1,6 @@
 import copy
 import json
+import time
 
 import redis
 from kafka import KafkaProducer
@@ -46,7 +47,7 @@ robot_sync_cmd_paylaod = {
     "cmd": 'photo'
 }
 
-def sendTaskStatusMsg(inspection_id, inspection_type, site_id, robots, task_status, timestamp, robot_id=None, checkpoint_no=None, robot_status=None):
+def sendTaskStatusMsg(inspection_id, inspection_type, site_id, robots, task_status, timestamp, robot_id=None, checkpoint_no=None, robot_status=None, trigger=None):
     body = copy.deepcopy(task_status_payload)
     body['inspection_id'] = inspection_id
     body['task_type'] = inspection_type
@@ -60,6 +61,9 @@ def sendTaskStatusMsg(inspection_id, inspection_type, site_id, robots, task_stat
         body['robot']['robot_id'] = robot_id
         body['robot']['checkpoint_no'] = checkpoint_no
         body['robot']['status'] = robot_status
+
+    if inspection_type == config.Task_Type['Task_Device_Check']:
+        body['trigger_alarm'] = trigger
 
     try:
         future = status_producer.send(config.Task_Status_Topic, key="".encode(), value=body)
@@ -76,7 +80,7 @@ def sendRobotPosMsg(inspection_id, site_id, timestamp, robot_id, pos_x, pos_y, p
     body['site_id'] = site_id
     body['timestamp'] = timestamp
     body['robot_id'] = robot_id
-    body['location'] = config.Pos_Value_Splitter.join((str(pos_x), str(pos_y), str(pos_a))) if pos_x is not None else ''
+    body['location'] = config.Pos_Value_Splitter.join((str(pos_x), str(pos_y), str(-1*pos_a))) if pos_x is not None else ''
     ###send to kafka robot-position-topic
     # try:
     #     future = status_producer.send(config.Robot_Position_Topic, key="".encode(), value=body)
@@ -111,12 +115,13 @@ def sendSyncCmdMsg(inspection_id, site_id, timestamp, robot_id, cmd='photo'):
         logger.error('Kafka operation : send robot position msg error! ' +  str(e))
 
 def sendDiscoveryStopRecords(robot_id):
+    timestamp = -1*int(time.time())
     stop_rec_body_wifi = {
-        'timestamp': 0, # value 0 says the inspection related with the corresponding robot was finished
+        'timestamp': timestamp, # value -time.time() says the inspection related with the corresponding robot was finished
         'id': robot_id+"-wifi01"
     }
     stop_rec_body_bt = {
-        'timestamp': 0, # value 0 says the inspection related with the corresponding robot was finished
+        'timestamp': timestamp, # value -time.time() says the inspection related with the corresponding robot was finished
         'id': robot_id+"-bt01"
     }
     try:
