@@ -14,7 +14,7 @@ logger.propagate = False
 
 task_subscriber = KafkaConsumer(
     bootstrap_servers=Kafka_Brokers,
-                         group_id="robot_controller", auto_offset_reset="earliest")
+                         group_id="robot_controller2", auto_offset_reset="earliest")
 
 # def execTaskLoop():
     

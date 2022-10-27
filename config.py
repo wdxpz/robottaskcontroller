@@ -58,6 +58,7 @@ Robot_Position_Topic = "robot-in-place-test"
 Robot_Sync_Cmd_Topic = "robot-sync-cmd-test"
 Wifi_Record_Topic = "wifi-sniffer-test"
 Bt_Record_Topic = "bt-sniffer-test"
+Visual_Record_Topic = "video-test"
 
 Kafka_Blocking_time = 1
 
