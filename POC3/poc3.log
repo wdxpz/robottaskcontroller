@@ -1,0 +1,131 @@
+2022-11-02 15:02:33,056 - Robot Navigator - INFO - Wait for the action server to come up
+2022-11-02 15:02:33,515 - Robot Navigator - INFO - target_pose: 
+  header: 
+    seq: 0
+    stamp: 
+      secs: 0
+      nsecs:         0
+    frame_id: "map"
+  pose: 
+    position: 
+      x: 0.3
+      y: 0
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+2022-11-02 15:02:35,896 - Robot Navigator - INFO - arrived!!!
+2022-11-02 15:02:36,360 - Robot Navigator - INFO - current position -- x:0.236850267102, y:-0.00666422922705
+2022-11-02 15:02:37,362 - POC3_robot - INFO - robot_controller: rotate step 1, rotate angle: 90.0
+2022-11-02 15:02:38,914 - Robot Navigator - INFO - stop goto
+2022-11-02 15:05:43,668 - Robot Navigator - INFO - Wait for the action server to come up
+2022-11-02 15:05:48,707 - Robot Navigator - INFO - target_pose: 
+  header: 
+    seq: 0
+    stamp: 
+      secs: 0
+      nsecs:         0
+    frame_id: "map"
+  pose: 
+    position: 
+      x: 0.3
+      y: 0
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+2022-11-02 15:06:12,706 - Robot Navigator - INFO - stop goto
+2022-11-02 15:06:15,360 - POC3_robot - INFO - robot_controller: rotate step 1, rotate angle: 90.0
+2022-11-02 15:10:28,966 - Robot Navigator - INFO - Wait for the action server to come up
+2022-11-02 15:10:29,268 - Robot Navigator - INFO - target_pose: 
+  header: 
+    seq: 0
+    stamp: 
+      secs: 0
+      nsecs:         0
+    frame_id: "map"
+  pose: 
+    position: 
+      x: 0.3
+      y: 0
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+2022-11-02 15:10:31,495 - Robot Navigator - INFO - arrived!!!
+2022-11-02 15:10:31,758 - Robot Navigator - INFO - current position -- x:0.194163520435, y:-0.039091548861
+2022-11-02 15:10:32,760 - POC3_robot - INFO - robot_controller: rotate step 1, rotate angle: 90.0
+2022-11-02 15:10:34,315 - Robot Navigator - INFO - stop goto
+2022-11-02 15:13:16,366 - Robot Navigator - INFO - Wait for the action server to come up
+2022-11-02 15:13:17,127 - Robot Navigator - INFO - target_pose: 
+  header: 
+    seq: 0
+    stamp: 
+      secs: 0
+      nsecs:         0
+    frame_id: "map"
+  pose: 
+    position: 
+      x: 0.3
+      y: 0
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+2022-11-02 15:14:18,143 - POC3_robot - INFO - robot_controller: rotate step 1, rotate angle: 90.0
+2022-11-02 15:14:43,567 - POC3_robot - INFO - robot_controller: rotate step 2, rotate angle: 90.0
+2022-11-02 15:15:00,141 - POC3_robot - INFO - robot_controller: rotate step 3, rotate angle: 90.0
+2022-11-02 15:15:16,724 - POC3_robot - INFO - robot_controller: rotate step 4, rotate angle: 90.0
+2022-11-02 15:15:33,319 - Robot Navigator - INFO - stop goto
+2022-11-02 15:35:08,595 - Robot Navigator - INFO - Wait for the action server to come up
+2022-11-02 15:35:09,018 - Robot Navigator - INFO - target_pose: 
+  header: 
+    seq: 0
+    stamp: 
+      secs: 0
+      nsecs:         0
+    frame_id: "map"
+  pose: 
+    position: 
+      x: 0.3
+      y: 0
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0
+2022-11-02 15:35:15,427 - Robot Navigator - INFO - arrived!!!
+2022-11-02 15:35:18,022 - Robot Navigator - INFO - current position -- x:0.227693893687, y:0.00207792935642
+2022-11-02 15:35:19,024 - POC3_robot - INFO - robot_controller: rotate step 1, rotate angle: 90.0
+2022-11-02 15:35:35,602 - POC3_robot - INFO - robot_controller: rotate step 2, rotate angle: 90.0
+2022-11-02 15:35:52,176 - POC3_robot - INFO - robot_controller: rotate step 3, rotate angle: 90.0
+2022-11-02 15:36:08,732 - POC3_robot - INFO - robot_controller: rotate step 4, rotate angle: 90.0
+2022-11-02 15:36:25,521 - POC3_robot - INFO - Kafka operation : send discovery stop msg: {'timestamp': 0, 'id': 'rosbot1-wifi01'}! 
+2022-11-02 15:36:25,523 - Robot Navigator - INFO - stop goto
+2022-11-02 15:39:06,797 - Robot Navigator - INFO - Wait for the action server to come up
+2022-11-02 15:39:06,981 - Robot Navigator - INFO - target_pose: 
+  header: 
+    seq: 0
+    stamp: 
+      secs: 0
+      nsecs:         0
+    frame_id: "map"
+  pose: 
+    position: 
+      x: 0.3
+      y: 0
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 1.0

@@ -7,7 +7,7 @@ main_controller.py: simplified implementation of robot task controll for POC3
 """
 
 import time
-
+import rospy
 import redis
 from kafka import KafkaProducer
 import json
@@ -23,7 +23,7 @@ logger.propagate = False
 msg_header = "robot_controller: "
 
 
-status_producer = KafkaProducer(bootstrap_servers=sim_config.Kafka_Brokers, 
+status_producer = KafkaProducer(bootstrap_servers=config.Kafka_Brokers, 
         compression_type='gzip', value_serializer=lambda x: json.dumps(x).encode())
 
 def send_task_start_end_status_msg(msg):
@@ -82,7 +82,7 @@ if __name__=='__main__':
         rotate_ctl = RotateController()
 
         # Customize the following values so they are appropriate for your location
-        #position = {'x': 0.3, 'y' : 1.5}
+        position = {'x': 0.3, 'y' : 0}
         quaternion = {'r1' : 0.000, 'r2' : 0.000, 'r3' : 0.000, 'r4' : 1.000}
 
         rospy.loginfo(msg_header + "Go to (%s, %s) pose", position['x'], position['y'])
@@ -112,7 +112,7 @@ if __name__=='__main__':
     task_body["timestamp"] = int(time.time())
     task_body["status"] = 140
     send_task_start_end_status_msg(task_body)
-    sendDiscoveryStopRecords(sim_config.robot_id)
+    #sendDiscoveryStopRecords(config.robot_id)
 
 
 

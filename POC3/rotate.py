@@ -68,7 +68,7 @@ class RotateController():
             r.sleep()
 
         #Forcing our robot to stop
-        logger.info(self.msg_head + 'send stop rotate command')
+        rospy.loginfo('send stop rotate command')
         self.rotate_command.angular.z = 0
         self.rotate_pub.publish(self.rotate_command)
 
@@ -117,7 +117,7 @@ class RotateController():
 
     def shutdown(self):
         self.ctrl_c = True
-        rospy.loginfo(self.msg_head + 'stopped rotation')
+        rospy.loginfo('stopped rotation')
         rospy.sleep(1)
 
 if __name__ == '__main__':

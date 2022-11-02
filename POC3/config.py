@@ -1,10 +1,18 @@
 robot_id = 'rosbot1'
 task_type = 30
 site_id = 'bj02'
-inspection_id = 563
+inspection_id = 875
 sim_robot_duration = 5 #minitues
 
-Task_Inspection_AT_RUSHTIME: 50
+Task_Inspection_AT_Rushtime = 30 #50
+
+##robot navigation configuration
+Wait_For_GoToPose_Time = 120
+Holding_Step_Time = 60
+Holding_Time_Variance = 1
+Circle_Rotate_Steps = 4
+Rotate_Speed = 30
+Valid_Range_Radius = 0.1
 
 
 #Kafka
@@ -13,6 +21,7 @@ Task_Topic = "task-test"
 Task_Status_Topic = "task-status-test"
 Wifi_Record_Topic = "wifi-sniffer-test"
 Bt_Record_Topic = "bt-sniffer-test"
+Visual_Topic = "video-test"
 Kafka_Blocking_time = 1
 
 #redis
