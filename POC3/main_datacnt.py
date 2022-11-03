@@ -59,76 +59,87 @@ def switchFinger():
 def start_datacnt():
     task_subscriber = KafkaConsumer(
         bootstrap_servers=config.Kafka_Brokers,
-        group_id="robot_controller13", auto_offset_reset="earliest") #"latest")
+        group_id="poc3_24", auto_offset_reset="earliest") #"latest")
     task_subscriber.subscribe([config.Task_Status_Topic])
     
     visual_subscriber = KafkaConsumer(
         bootstrap_servers=config.Kafka_Brokers,
-        group_id="robot_controller9", auto_offset_reset="earliest")
+        group_id="poc3_23", auto_offset_reset="earliest")
     visual_subscriber.subscribe([config.Visual_Topic])
 
     visual_record_reader = None
     visual_record_reader_thread = None
     current_inspection_id =None
 
+    first_error_task = True
     for task in task_subscriber:
         task = json.loads(task.value)
         logger.info('get task: {}'.format(task["inspection_id"]))
         # just for debug, keep only one thred for task 870 record
-        first_error_task = True
+        
         if task["inspection_id"] == 870 and first_error_task:
+            logger.info("fist error task: {}".format(task["inspection_id"]))
             first_error_task = False
             continue
         #just for debug
-        if task["inspection_id"] < 800:
+        if task["inspection_id"] < config.inspection_id:
             logger.info('already finished task: {}'.format(task["inspection_id"]))
             continue
         if 'task_type' not in task.keys():
-            logger.info('ERROR TASK DATA, ignored!')
+            logger.info('ERROR TASK DATA witout task type, task: {}'.format(task["inspection_id"]))
             continue
         if task['task_type'] != config.Task_Inspection_AT_Rushtime:
-            logger.info('NOT CORRECT TASK TYPE, ignored!')
+            logger.info('NOT CORRECT TASK TYPE, task: {}, taks type: {}, wanted task type: {}'.format(task["inspection_id"], task['task_type'], config.Task_Inspection_AT_Rushtime))
             continue
         if current_inspection_id:
             if task["inspection_id"] != current_inspection_id:
-                logger("NOT ONGOING TASK, ignored!")
+                logger("NOT ONGOING TASK, task: {}, task id: {}, ongoing task id: {}".format(task["inspection_id"], task["inspection_id"], current_inspection_id))
                 continue
 
         if task['status'] == 130: #TASK STARTED
             current_inspection_id = task["inspection_id"]
             visual_record_reader = VisualRecordReader(visual_subscriber, task["inspection_id"], task["timestamp"])
-            logger.info('Start monitoring visual records!')
+            logger.info('Start monitoring visual records for task {}!'.format(task["inspection_id"]))
             visual_record_reader_thread = Thread(target = visual_record_reader.run, args =())
             visual_record_reader_thread.start()
-            visual_record_reader_thread.join()
         
         if task['status'] in [140, 150]: #TASK FINISHED OR TERMINATED
             logger.info('task: {} finished, visual monitoring done!'.format(task["inspection_id"]))
             visual_record_reader.terminate()
             visual_record_reader_thread.join()
             break
+        if visual_record_reader and not visual_record_reader.detect_person_after_rushtime:
+          logger.info('No Person detected after rushtime: {}'.format(RushTime))
+          logger.info('switch off powner!!!')
+          # switchoffBulb()
+          logger.info('switch off aircondition!!!')
+          # switchFinger()
 
 
 class VisualRecordReader():
     def __init__(self, reader, inspection_id, start_ts):
         self._running = True
         self.inspection_id = inspection_id
-        self.task_start_ts = start_ts
+        self.task_start_ts = int(start_ts)
         self.reader = reader
         self.robot_list = {}
-        self.detect_person = False
+        self.detect_person_after_rushtime = False
       
     def terminate(self):
         self._running = False
         
     def run(self):
+        logger.info("reading ... ")
         for record in self.reader:
             try:
                 if not self._running: break
                 record = json.loads(record.value)[0]
+                if record["category"] != "person":
+                    logger.info('get record {}, Ignored for invalid type!'.format(record["category"]))
+                    continue
                 #check record time
-                if record["timestamp"] < self.task_start_ts:
-                    logger.info('Invalid (early) visual record: {}'.format(record))
+                if int(record["timestamp"]) < self.task_start_ts:
+                    logger.info("get record {}, Ignored for earlier than the task, record timestamp: {}, task timestamp: {}".format(record["category"], record["timestamp"], self.task_start_ts))
                     continue
                 #check record's inspection id is current inpsection
                 robot_id = record["id"].split("-")[0]
@@ -136,22 +147,20 @@ class VisualRecordReader():
                   self.robot_list[robot_id] = getRobotTask(robot_id)
                 robot_task_id = self.robot_list[robot_id]
                 # just for debug to track task 870
-                robot_task_id = 870
+                robot_task_id = config.inspection_id
                 # just for debug to track task 870
                 if robot_task_id != self.inspection_id:
-                    logger.info('Invalid (other task {}, current task {}) visual record: {}'.format(robot_task_id, self.inspection_id, record))
+                    logger.info('get record {}, Ignored for otehr task record, record task {}, current task {}'.format(record["category"], robot_task_id, self.inspection_id))
                     continue
 
                 # if person detected
-                if record["category"] == "person":
-                    if datetime.datetime.now() < RushTime:
-                        logger.info('Person detected before rushtime: {}'.format(record))
-                    else:
-                        logger.info('Person detected after rushtime: {}'.format(record))
-                        logger.info('switch off powner!!!')
-                        switchoffBulb()
-                        switchFinger()
-                        break
+                detected_time = datetime.datetime.fromtimestamp(record["timestamp"])
+                if detected_time < RushTime:
+                    logger.info('get record {}, Ignored for person detected before rushtime, detected time: {}, rushtime: {}'.format(record["category"], str(detected_time), str(RushTime)))
+                else:
+                    logger.info('get record {}, person detected after rushtime, detected time: {}, rushtime: {}'.format(record["category"], str(detected_time), str(RushTime)))
+                    self.detect_person_after_rushtime = True
+                    break
             except Exception as e:
                 logger.info("Error: {}".format(e))
                 break

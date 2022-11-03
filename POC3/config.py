@@ -1,10 +1,10 @@
 robot_id = 'rosbot1'
-task_type = 30
+task_type = 50
 site_id = 'bj02'
-inspection_id = 875
+inspection_id = 880
 sim_robot_duration = 5 #minitues
 
-Task_Inspection_AT_Rushtime = 30 #50
+Task_Inspection_AT_Rushtime = 50 #50
 
 ##robot navigation configuration
 Wait_For_GoToPose_Time = 120
