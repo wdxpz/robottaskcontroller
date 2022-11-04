@@ -129,3 +129,1511 @@
       y: 0.0
       z: 0.0
       w: 1.0
+2022-11-04 15:44:09,537 - POC3_datacenter - INFO - get task: 563
+2022-11-04 15:44:09,537 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:44:09,537 - POC3_datacenter - INFO - get task: 563
+2022-11-04 15:44:09,537 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:44:09,537 - POC3_datacenter - INFO - get task: 563
+2022-11-04 15:44:09,537 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:44:09,537 - POC3_datacenter - INFO - get task: 563
+2022-11-04 15:44:09,537 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:44:09,537 - POC3_datacenter - INFO - get task: 563
+2022-11-04 15:44:09,537 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:44:09,537 - POC3_datacenter - INFO - get task: 563
+2022-11-04 15:44:09,538 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:44:09,538 - POC3_datacenter - INFO - get task: 563
+2022-11-04 15:44:09,538 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:44:09,538 - POC3_datacenter - INFO - get task: 563
+2022-11-04 15:44:09,538 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:44:09,538 - POC3_datacenter - INFO - get task: 563
+2022-11-04 15:44:09,538 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:44:09,538 - POC3_datacenter - INFO - get task: 563
+2022-11-04 15:44:09,538 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:44:09,539 - POC3_datacenter - INFO - get task: 563
+2022-11-04 15:44:09,539 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:44:09,539 - POC3_datacenter - INFO - get task: 563
+2022-11-04 15:44:09,539 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:44:09,539 - POC3_datacenter - INFO - get task: 870
+2022-11-04 15:44:09,539 - POC3_datacenter - INFO - fist error task: 870
+2022-11-04 15:44:09,539 - POC3_datacenter - INFO - get task: 870
+2022-11-04 15:44:09,539 - POC3_datacenter - INFO - already finished task: 870
+2022-11-04 15:44:09,539 - POC3_datacenter - INFO - get task: 870
+2022-11-04 15:44:09,540 - POC3_datacenter - INFO - already finished task: 870
+2022-11-04 15:44:09,540 - POC3_datacenter - INFO - get task: 878
+2022-11-04 15:44:09,540 - POC3_datacenter - INFO - already finished task: 878
+2022-11-04 15:44:09,540 - POC3_datacenter - INFO - get task: 878
+2022-11-04 15:44:09,540 - POC3_datacenter - INFO - already finished task: 878
+2022-11-04 15:44:09,540 - POC3_datacenter - INFO - get task: 879
+2022-11-04 15:44:09,540 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 15:44:09,540 - POC3_datacenter - INFO - get task: 879
+2022-11-04 15:44:09,541 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 15:44:09,541 - POC3_datacenter - INFO - get task: 879
+2022-11-04 15:44:09,541 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 15:44:09,541 - POC3_datacenter - INFO - get task: 879
+2022-11-04 15:44:09,541 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 15:44:09,541 - POC3_datacenter - INFO - get task: 880
+2022-11-04 15:44:09,541 - POC3_datacenter - INFO - Start monitoring visual records for task 880!
+2022-11-04 15:44:09,542 - POC3_datacenter - INFO - reading ... 
+2022-11-04 15:44:09,542 - POC3_datacenter - INFO - No Person detected after rushtime: 2022-11-04 18:00:00
+2022-11-04 15:44:09,542 - POC3_datacenter - INFO - switch off powner!!!
+2022-11-04 15:44:09,542 - POC3_datacenter - INFO - switch off aircondition!!!
+2022-11-04 15:44:09,542 - POC3_datacenter - INFO - get task: 880
+2022-11-04 15:44:09,542 - POC3_datacenter - INFO - task: 880 finished, visual monitoring done!
+2022-11-04 15:46:37,390 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:46:37,391 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:46:37,391 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:46:37,391 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:46:37,391 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:46:37,391 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:46:37,391 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:46:37,392 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:46:37,392 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:46:37,392 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:46:37,392 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:46:37,392 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:46:37,392 - POC3_datacenter - INFO - already finished task: 870
+2022-11-04 15:46:37,393 - POC3_datacenter - INFO - already finished task: 870
+2022-11-04 15:46:37,393 - POC3_datacenter - INFO - already finished task: 878
+2022-11-04 15:46:37,393 - POC3_datacenter - INFO - already finished task: 878
+2022-11-04 15:46:37,393 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 15:46:37,393 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 15:46:37,393 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 15:46:37,394 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 15:46:37,394 - POC3_datacenter - INFO - Start monitoring visual records for task 880!
+2022-11-04 15:46:37,394 - POC3_datacenter - INFO - reading ... 
+2022-11-04 15:46:37,394 - POC3_datacenter - INFO - No Person detected after rushtime: 2022-11-04 18:00:00
+2022-11-04 15:46:37,395 - POC3_datacenter - INFO - switch off powner!!!
+2022-11-04 15:46:37,395 - POC3_datacenter - INFO - switch off aircondition!!!
+2022-11-04 15:46:37,396 - POC3_datacenter - INFO - task: 880 finished, visual monitoring done!
+2022-11-04 15:46:37,742 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667374449, task timestamp: 1667461942
+2022-11-04 15:46:37,742 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667374951, task timestamp: 1667461942
+2022-11-04 15:46:37,742 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375042, task timestamp: 1667461942
+2022-11-04 15:46:37,742 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375314, task timestamp: 1667461942
+2022-11-04 15:46:37,742 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375318, task timestamp: 1667461942
+2022-11-04 15:46:37,742 - POC3_datacenter - INFO - get record cup, Ignored for invalid type!
+2022-11-04 15:46:37,742 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375475, task timestamp: 1667461942
+2022-11-04 15:46:37,742 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375479, task timestamp: 1667461942
+2022-11-04 15:46:37,743 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375538, task timestamp: 1667461942
+2022-11-04 15:46:37,743 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375614, task timestamp: 1667461942
+2022-11-04 15:46:37,743 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375619, task timestamp: 1667461942
+2022-11-04 15:46:37,743 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375682, task timestamp: 1667461942
+2022-11-04 15:46:37,743 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375687, task timestamp: 1667461942
+2022-11-04 15:46:37,743 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375769, task timestamp: 1667461942
+2022-11-04 15:46:37,743 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375922, task timestamp: 1667461942
+2022-11-04 15:46:37,743 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376019, task timestamp: 1667461942
+2022-11-04 15:46:37,743 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376028, task timestamp: 1667461942
+2022-11-04 15:46:37,743 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376037, task timestamp: 1667461942
+2022-11-04 15:46:37,743 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376049, task timestamp: 1667461942
+2022-11-04 15:46:37,743 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376068, task timestamp: 1667461942
+2022-11-04 15:46:37,743 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376089, task timestamp: 1667461942
+2022-11-04 15:46:37,743 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376104, task timestamp: 1667461942
+2022-11-04 15:46:37,743 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376235, task timestamp: 1667461942
+2022-11-04 15:46:37,743 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376242, task timestamp: 1667461942
+2022-11-04 15:46:37,743 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376246, task timestamp: 1667461942
+2022-11-04 15:46:37,744 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376289, task timestamp: 1667461942
+2022-11-04 15:46:37,744 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376296, task timestamp: 1667461942
+2022-11-04 15:46:37,744 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:46:37,744 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:46:37,744 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460505, task timestamp: 1667461942
+2022-11-04 15:46:37,744 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460509, task timestamp: 1667461942
+2022-11-04 15:46:37,744 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460512, task timestamp: 1667461942
+2022-11-04 15:46:37,744 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460515, task timestamp: 1667461942
+2022-11-04 15:46:37,744 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460518, task timestamp: 1667461942
+2022-11-04 15:46:37,744 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:46:37,744 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:46:37,744 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:46:37,744 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:46:37,744 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:46:37,744 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:46:37,744 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:46:37,744 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:46:37,745 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:46:37,745 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:46:37,745 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460561, task timestamp: 1667461942
+2022-11-04 15:46:37,745 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:46:37,745 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:46:37,745 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:46:37,745 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:46:37,745 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:46:37,745 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460971, task timestamp: 1667461942
+2022-11-04 15:46:37,745 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461102, task timestamp: 1667461942
+2022-11-04 15:46:37,745 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461145, task timestamp: 1667461942
+2022-11-04 15:46:37,745 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461149, task timestamp: 1667461942
+2022-11-04 15:46:37,745 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461152, task timestamp: 1667461942
+2022-11-04 15:46:37,745 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461155, task timestamp: 1667461942
+2022-11-04 15:46:37,745 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461159, task timestamp: 1667461942
+2022-11-04 15:46:37,745 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461166, task timestamp: 1667461942
+2022-11-04 15:46:37,746 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461169, task timestamp: 1667461942
+2022-11-04 15:46:37,746 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461181, task timestamp: 1667461942
+2022-11-04 15:46:37,746 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461185, task timestamp: 1667461942
+2022-11-04 15:46:37,746 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461303, task timestamp: 1667461942
+2022-11-04 15:46:37,746 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461306, task timestamp: 1667461942
+2022-11-04 15:46:37,746 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461309, task timestamp: 1667461942
+2022-11-04 15:46:37,746 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461396, task timestamp: 1667461942
+2022-11-04 15:46:37,746 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461399, task timestamp: 1667461942
+2022-11-04 15:46:37,746 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461403, task timestamp: 1667461942
+2022-11-04 15:46:37,746 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461406, task timestamp: 1667461942
+2022-11-04 15:46:37,746 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461409, task timestamp: 1667461942
+2022-11-04 15:46:37,746 - POC3_datacenter - INFO - get record chair, Ignored for invalid type!
+2022-11-04 15:46:37,746 - POC3_datacenter - INFO - get record chair, Ignored for invalid type!
+2022-11-04 15:46:37,746 - POC3_datacenter - INFO - get record chair, Ignored for invalid type!
+2022-11-04 15:46:37,746 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461729, task timestamp: 1667461942
+2022-11-04 15:46:37,746 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461750, task timestamp: 1667461942
+2022-11-04 15:46:37,747 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461754, task timestamp: 1667461942
+2022-11-04 15:46:37,747 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461757, task timestamp: 1667461942
+2022-11-04 15:46:37,747 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461761, task timestamp: 1667461942
+2022-11-04 15:46:37,747 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461764, task timestamp: 1667461942
+2022-11-04 15:46:37,747 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461768, task timestamp: 1667461942
+2022-11-04 15:46:37,747 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461772, task timestamp: 1667461942
+2022-11-04 15:46:37,747 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461775, task timestamp: 1667461942
+2022-11-04 15:46:37,747 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461779, task timestamp: 1667461942
+2022-11-04 15:46:37,747 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461786, task timestamp: 1667461942
+2022-11-04 15:46:37,747 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461789, task timestamp: 1667461942
+2022-11-04 15:46:37,747 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461792, task timestamp: 1667461942
+2022-11-04 15:46:37,747 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461796, task timestamp: 1667461942
+2022-11-04 15:46:37,747 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461799, task timestamp: 1667461942
+2022-11-04 15:46:37,747 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461803, task timestamp: 1667461942
+2022-11-04 15:46:37,747 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461806, task timestamp: 1667461942
+2022-11-04 15:46:37,747 - POC3_datacenter - INFO - get record cup, Ignored for invalid type!
+2022-11-04 15:46:37,747 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461830, task timestamp: 1667461942
+2022-11-04 15:46:37,747 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461834, task timestamp: 1667461942
+2022-11-04 15:46:37,748 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461837, task timestamp: 1667461942
+2022-11-04 15:46:37,748 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461840, task timestamp: 1667461942
+2022-11-04 15:46:37,748 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461844, task timestamp: 1667461942
+2022-11-04 15:46:37,748 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461847, task timestamp: 1667461942
+2022-11-04 15:46:37,748 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461850, task timestamp: 1667461942
+2022-11-04 15:46:37,748 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461854, task timestamp: 1667461942
+2022-11-04 15:46:37,748 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461857, task timestamp: 1667461942
+2022-11-04 15:46:37,748 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461860, task timestamp: 1667461942
+2022-11-04 15:46:37,748 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461864, task timestamp: 1667461942
+2022-11-04 15:46:37,748 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461867, task timestamp: 1667461942
+2022-11-04 15:46:37,748 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461870, task timestamp: 1667461942
+2022-11-04 15:46:37,748 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461873, task timestamp: 1667461942
+2022-11-04 15:46:37,748 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461876, task timestamp: 1667461942
+2022-11-04 15:46:37,748 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461880, task timestamp: 1667461942
+2022-11-04 15:46:37,748 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461883, task timestamp: 1667461942
+2022-11-04 15:46:37,748 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461886, task timestamp: 1667461942
+2022-11-04 15:46:37,748 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461889, task timestamp: 1667461942
+2022-11-04 15:46:37,749 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461893, task timestamp: 1667461942
+2022-11-04 15:46:37,749 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461896, task timestamp: 1667461942
+2022-11-04 15:46:37,749 - POC3_datacenter - INFO - get record chair, Ignored for invalid type!
+2022-11-04 15:46:37,749 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461906, task timestamp: 1667461942
+2022-11-04 15:46:37,812 - POC3_datacenter - INFO - Error: a float is required
+2022-11-04 15:51:38,033 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:51:38,033 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:51:38,033 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:51:38,033 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:51:38,034 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:51:38,034 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:51:38,034 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:51:38,034 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:51:38,034 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:51:38,035 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:51:38,035 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:51:38,035 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:51:38,035 - POC3_datacenter - INFO - already finished task: 870
+2022-11-04 15:51:38,035 - POC3_datacenter - INFO - already finished task: 870
+2022-11-04 15:51:38,035 - POC3_datacenter - INFO - already finished task: 878
+2022-11-04 15:51:38,036 - POC3_datacenter - INFO - already finished task: 878
+2022-11-04 15:51:38,036 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 15:51:38,036 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 15:51:38,036 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 15:51:38,036 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 15:51:38,036 - POC3_datacenter - INFO - Start monitoring visual records for task 880!
+2022-11-04 15:51:38,037 - POC3_datacenter - INFO - reading ... 
+2022-11-04 15:51:38,037 - POC3_datacenter - INFO - No Person detected after rushtime: 2022-11-04 18:00:00
+2022-11-04 15:51:38,037 - POC3_datacenter - INFO - switch off powner!!!
+2022-11-04 15:51:38,037 - POC3_datacenter - INFO - switch off aircondition!!!
+2022-11-04 15:51:38,037 - POC3_datacenter - INFO - task: 880 finished, visual monitoring done!
+2022-11-04 15:51:38,360 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667374449, task timestamp: 1667461942
+2022-11-04 15:51:38,360 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667374951, task timestamp: 1667461942
+2022-11-04 15:51:38,360 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375042, task timestamp: 1667461942
+2022-11-04 15:51:38,360 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375314, task timestamp: 1667461942
+2022-11-04 15:51:38,360 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375318, task timestamp: 1667461942
+2022-11-04 15:51:38,360 - POC3_datacenter - INFO - get record cup, Ignored for invalid type!
+2022-11-04 15:51:38,360 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375475, task timestamp: 1667461942
+2022-11-04 15:51:38,360 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375479, task timestamp: 1667461942
+2022-11-04 15:51:38,361 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375538, task timestamp: 1667461942
+2022-11-04 15:51:38,361 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375614, task timestamp: 1667461942
+2022-11-04 15:51:38,361 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375619, task timestamp: 1667461942
+2022-11-04 15:51:38,361 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375682, task timestamp: 1667461942
+2022-11-04 15:51:38,361 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375687, task timestamp: 1667461942
+2022-11-04 15:51:38,361 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375769, task timestamp: 1667461942
+2022-11-04 15:51:38,361 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375922, task timestamp: 1667461942
+2022-11-04 15:51:38,361 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376019, task timestamp: 1667461942
+2022-11-04 15:51:38,361 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376028, task timestamp: 1667461942
+2022-11-04 15:51:38,361 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376037, task timestamp: 1667461942
+2022-11-04 15:51:38,361 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376049, task timestamp: 1667461942
+2022-11-04 15:51:38,361 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376068, task timestamp: 1667461942
+2022-11-04 15:51:38,362 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376089, task timestamp: 1667461942
+2022-11-04 15:51:38,362 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376104, task timestamp: 1667461942
+2022-11-04 15:51:38,362 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376235, task timestamp: 1667461942
+2022-11-04 15:51:38,362 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376242, task timestamp: 1667461942
+2022-11-04 15:51:38,362 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376246, task timestamp: 1667461942
+2022-11-04 15:51:38,362 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376289, task timestamp: 1667461942
+2022-11-04 15:51:38,362 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376296, task timestamp: 1667461942
+2022-11-04 15:51:38,362 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:51:38,362 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:51:38,362 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460505, task timestamp: 1667461942
+2022-11-04 15:51:38,362 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460509, task timestamp: 1667461942
+2022-11-04 15:51:38,363 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460512, task timestamp: 1667461942
+2022-11-04 15:51:38,363 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460515, task timestamp: 1667461942
+2022-11-04 15:51:38,363 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460518, task timestamp: 1667461942
+2022-11-04 15:51:38,363 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:51:38,363 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:51:38,363 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:51:38,363 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:51:38,363 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:51:38,363 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:51:38,363 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:51:38,363 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:51:38,364 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:51:38,364 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:51:38,364 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460561, task timestamp: 1667461942
+2022-11-04 15:51:38,364 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:51:38,364 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:51:38,364 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:51:38,364 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:51:38,364 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:51:38,364 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460971, task timestamp: 1667461942
+2022-11-04 15:51:38,364 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461102, task timestamp: 1667461942
+2022-11-04 15:51:38,364 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461145, task timestamp: 1667461942
+2022-11-04 15:51:38,365 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461149, task timestamp: 1667461942
+2022-11-04 15:51:38,365 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461152, task timestamp: 1667461942
+2022-11-04 15:51:38,365 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461155, task timestamp: 1667461942
+2022-11-04 15:51:38,365 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461159, task timestamp: 1667461942
+2022-11-04 15:51:38,365 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461166, task timestamp: 1667461942
+2022-11-04 15:51:38,365 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461169, task timestamp: 1667461942
+2022-11-04 15:51:38,365 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461181, task timestamp: 1667461942
+2022-11-04 15:51:38,365 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461185, task timestamp: 1667461942
+2022-11-04 15:51:38,365 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461303, task timestamp: 1667461942
+2022-11-04 15:51:38,365 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461306, task timestamp: 1667461942
+2022-11-04 15:51:38,365 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461309, task timestamp: 1667461942
+2022-11-04 15:51:38,366 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461396, task timestamp: 1667461942
+2022-11-04 15:51:38,366 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461399, task timestamp: 1667461942
+2022-11-04 15:51:38,366 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461403, task timestamp: 1667461942
+2022-11-04 15:51:38,366 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461406, task timestamp: 1667461942
+2022-11-04 15:51:38,366 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461409, task timestamp: 1667461942
+2022-11-04 15:51:38,366 - POC3_datacenter - INFO - get record chair, Ignored for invalid type!
+2022-11-04 15:51:38,366 - POC3_datacenter - INFO - get record chair, Ignored for invalid type!
+2022-11-04 15:51:38,366 - POC3_datacenter - INFO - get record chair, Ignored for invalid type!
+2022-11-04 15:51:38,366 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461729, task timestamp: 1667461942
+2022-11-04 15:51:38,366 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461750, task timestamp: 1667461942
+2022-11-04 15:51:38,366 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461754, task timestamp: 1667461942
+2022-11-04 15:51:38,366 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461757, task timestamp: 1667461942
+2022-11-04 15:51:38,367 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461761, task timestamp: 1667461942
+2022-11-04 15:51:38,367 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461764, task timestamp: 1667461942
+2022-11-04 15:51:38,367 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461768, task timestamp: 1667461942
+2022-11-04 15:51:38,367 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461772, task timestamp: 1667461942
+2022-11-04 15:51:38,367 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461775, task timestamp: 1667461942
+2022-11-04 15:51:38,367 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461779, task timestamp: 1667461942
+2022-11-04 15:51:38,367 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461786, task timestamp: 1667461942
+2022-11-04 15:51:38,367 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461789, task timestamp: 1667461942
+2022-11-04 15:51:38,367 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461792, task timestamp: 1667461942
+2022-11-04 15:51:38,367 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461796, task timestamp: 1667461942
+2022-11-04 15:51:38,367 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461799, task timestamp: 1667461942
+2022-11-04 15:51:38,368 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461803, task timestamp: 1667461942
+2022-11-04 15:51:38,368 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461806, task timestamp: 1667461942
+2022-11-04 15:51:38,368 - POC3_datacenter - INFO - get record cup, Ignored for invalid type!
+2022-11-04 15:51:38,368 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461830, task timestamp: 1667461942
+2022-11-04 15:51:38,368 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461834, task timestamp: 1667461942
+2022-11-04 15:51:38,368 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461837, task timestamp: 1667461942
+2022-11-04 15:51:38,368 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461840, task timestamp: 1667461942
+2022-11-04 15:51:38,368 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461844, task timestamp: 1667461942
+2022-11-04 15:51:38,368 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461847, task timestamp: 1667461942
+2022-11-04 15:51:38,368 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461850, task timestamp: 1667461942
+2022-11-04 15:51:38,368 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461854, task timestamp: 1667461942
+2022-11-04 15:51:38,368 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461857, task timestamp: 1667461942
+2022-11-04 15:51:38,369 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461860, task timestamp: 1667461942
+2022-11-04 15:51:38,369 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461864, task timestamp: 1667461942
+2022-11-04 15:51:38,369 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461867, task timestamp: 1667461942
+2022-11-04 15:51:38,369 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461870, task timestamp: 1667461942
+2022-11-04 15:51:38,369 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461873, task timestamp: 1667461942
+2022-11-04 15:51:38,369 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461876, task timestamp: 1667461942
+2022-11-04 15:51:38,369 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461880, task timestamp: 1667461942
+2022-11-04 15:51:38,369 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461883, task timestamp: 1667461942
+2022-11-04 15:51:38,369 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461886, task timestamp: 1667461942
+2022-11-04 15:51:38,369 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461889, task timestamp: 1667461942
+2022-11-04 15:51:38,369 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461893, task timestamp: 1667461942
+2022-11-04 15:51:38,369 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461896, task timestamp: 1667461942
+2022-11-04 15:51:38,370 - POC3_datacenter - INFO - get record chair, Ignored for invalid type!
+2022-11-04 15:51:38,370 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461906, task timestamp: 1667461942
+2022-11-04 15:51:38,419 - POC3_datacenter - INFO - Error: a float is required
+2022-11-04 15:51:38,419 - POC3_datacenter - INFO - {u'category': u'person', u'horizontal_angle': u'-31.247299', u'confidence': u'0.733230', u'distance': u'1.442578', u'timestamp': u'1667461959', u'location': u'', u'vertical_angle': u'2.356441', u'id': u'rosbot1'}
+2022-11-04 15:56:45,776 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:56:45,776 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:56:45,776 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:56:45,776 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:56:45,776 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:56:45,777 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:56:45,777 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:56:45,777 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:56:45,777 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:56:45,777 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:56:45,777 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:56:45,778 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 15:56:45,778 - POC3_datacenter - INFO - already finished task: 870
+2022-11-04 15:56:45,778 - POC3_datacenter - INFO - already finished task: 870
+2022-11-04 15:56:45,778 - POC3_datacenter - INFO - already finished task: 878
+2022-11-04 15:56:45,778 - POC3_datacenter - INFO - already finished task: 878
+2022-11-04 15:56:45,778 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 15:56:45,778 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 15:56:45,778 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 15:56:45,778 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 15:56:45,778 - POC3_datacenter - INFO - Start monitoring visual records for task 880!
+2022-11-04 15:56:45,778 - POC3_datacenter - INFO - No Person detected after rushtime: 2022-11-04 18:00:00
+2022-11-04 15:56:45,779 - POC3_datacenter - INFO - reading ... 
+2022-11-04 15:56:45,779 - POC3_datacenter - INFO - switch off powner!!!
+2022-11-04 15:56:45,779 - POC3_datacenter - INFO - switch off aircondition!!!
+2022-11-04 15:56:45,779 - POC3_datacenter - INFO - task: 880 finished, visual monitoring done!
+2022-11-04 15:56:46,113 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,114 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667374449, task timestamp: 1667461942
+2022-11-04 15:56:46,114 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,114 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667374951, task timestamp: 1667461942
+2022-11-04 15:56:46,114 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,114 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375042, task timestamp: 1667461942
+2022-11-04 15:56:46,114 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,114 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375314, task timestamp: 1667461942
+2022-11-04 15:56:46,114 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,114 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375318, task timestamp: 1667461942
+2022-11-04 15:56:46,114 - POC3_datacenter - INFO - get record cup, Ignored for invalid type!
+2022-11-04 15:56:46,114 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,114 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375475, task timestamp: 1667461942
+2022-11-04 15:56:46,115 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,115 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375479, task timestamp: 1667461942
+2022-11-04 15:56:46,115 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,115 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375538, task timestamp: 1667461942
+2022-11-04 15:56:46,115 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,115 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375614, task timestamp: 1667461942
+2022-11-04 15:56:46,115 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,115 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375619, task timestamp: 1667461942
+2022-11-04 15:56:46,115 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,115 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375682, task timestamp: 1667461942
+2022-11-04 15:56:46,115 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,115 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375687, task timestamp: 1667461942
+2022-11-04 15:56:46,115 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,116 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375769, task timestamp: 1667461942
+2022-11-04 15:56:46,116 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,116 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375922, task timestamp: 1667461942
+2022-11-04 15:56:46,116 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,116 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376019, task timestamp: 1667461942
+2022-11-04 15:56:46,116 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,116 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376028, task timestamp: 1667461942
+2022-11-04 15:56:46,116 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,116 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376037, task timestamp: 1667461942
+2022-11-04 15:56:46,116 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,116 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376049, task timestamp: 1667461942
+2022-11-04 15:56:46,116 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,116 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376068, task timestamp: 1667461942
+2022-11-04 15:56:46,117 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,117 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376089, task timestamp: 1667461942
+2022-11-04 15:56:46,117 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,117 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376104, task timestamp: 1667461942
+2022-11-04 15:56:46,117 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,117 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376235, task timestamp: 1667461942
+2022-11-04 15:56:46,117 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,117 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376242, task timestamp: 1667461942
+2022-11-04 15:56:46,117 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,117 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376246, task timestamp: 1667461942
+2022-11-04 15:56:46,117 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,117 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376289, task timestamp: 1667461942
+2022-11-04 15:56:46,117 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,117 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376296, task timestamp: 1667461942
+2022-11-04 15:56:46,118 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:56:46,118 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:56:46,118 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,118 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460505, task timestamp: 1667461942
+2022-11-04 15:56:46,118 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,118 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460509, task timestamp: 1667461942
+2022-11-04 15:56:46,118 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,118 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460512, task timestamp: 1667461942
+2022-11-04 15:56:46,118 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,118 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460515, task timestamp: 1667461942
+2022-11-04 15:56:46,118 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,118 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460518, task timestamp: 1667461942
+2022-11-04 15:56:46,118 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:56:46,118 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:56:46,118 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:56:46,118 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:56:46,118 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:56:46,118 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:56:46,119 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:56:46,119 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:56:46,119 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:56:46,119 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:56:46,119 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,119 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460561, task timestamp: 1667461942
+2022-11-04 15:56:46,119 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:56:46,119 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:56:46,119 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:56:46,119 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:56:46,119 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 15:56:46,119 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,119 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460971, task timestamp: 1667461942
+2022-11-04 15:56:46,119 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,119 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461102, task timestamp: 1667461942
+2022-11-04 15:56:46,119 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,120 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461145, task timestamp: 1667461942
+2022-11-04 15:56:46,120 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,120 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461149, task timestamp: 1667461942
+2022-11-04 15:56:46,120 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,120 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461152, task timestamp: 1667461942
+2022-11-04 15:56:46,120 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,120 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461155, task timestamp: 1667461942
+2022-11-04 15:56:46,120 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,120 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461159, task timestamp: 1667461942
+2022-11-04 15:56:46,120 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,120 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461166, task timestamp: 1667461942
+2022-11-04 15:56:46,120 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,120 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461169, task timestamp: 1667461942
+2022-11-04 15:56:46,120 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,120 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461181, task timestamp: 1667461942
+2022-11-04 15:56:46,120 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,120 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461185, task timestamp: 1667461942
+2022-11-04 15:56:46,120 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,120 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461303, task timestamp: 1667461942
+2022-11-04 15:56:46,120 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,121 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461306, task timestamp: 1667461942
+2022-11-04 15:56:46,121 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,121 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461309, task timestamp: 1667461942
+2022-11-04 15:56:46,121 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,121 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461396, task timestamp: 1667461942
+2022-11-04 15:56:46,121 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,121 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461399, task timestamp: 1667461942
+2022-11-04 15:56:46,121 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,121 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461403, task timestamp: 1667461942
+2022-11-04 15:56:46,121 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,121 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461406, task timestamp: 1667461942
+2022-11-04 15:56:46,121 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,121 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461409, task timestamp: 1667461942
+2022-11-04 15:56:46,121 - POC3_datacenter - INFO - get record chair, Ignored for invalid type!
+2022-11-04 15:56:46,121 - POC3_datacenter - INFO - get record chair, Ignored for invalid type!
+2022-11-04 15:56:46,121 - POC3_datacenter - INFO - get record chair, Ignored for invalid type!
+2022-11-04 15:56:46,121 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,121 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461729, task timestamp: 1667461942
+2022-11-04 15:56:46,121 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,121 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461750, task timestamp: 1667461942
+2022-11-04 15:56:46,122 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,122 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461754, task timestamp: 1667461942
+2022-11-04 15:56:46,122 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,122 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461757, task timestamp: 1667461942
+2022-11-04 15:56:46,122 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,122 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461761, task timestamp: 1667461942
+2022-11-04 15:56:46,122 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,122 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461764, task timestamp: 1667461942
+2022-11-04 15:56:46,122 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,122 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461768, task timestamp: 1667461942
+2022-11-04 15:56:46,122 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,122 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461772, task timestamp: 1667461942
+2022-11-04 15:56:46,122 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,122 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461775, task timestamp: 1667461942
+2022-11-04 15:56:46,122 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,122 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461779, task timestamp: 1667461942
+2022-11-04 15:56:46,122 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,122 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461786, task timestamp: 1667461942
+2022-11-04 15:56:46,122 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,122 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461789, task timestamp: 1667461942
+2022-11-04 15:56:46,123 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,123 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461792, task timestamp: 1667461942
+2022-11-04 15:56:46,123 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,123 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461796, task timestamp: 1667461942
+2022-11-04 15:56:46,123 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,123 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461799, task timestamp: 1667461942
+2022-11-04 15:56:46,123 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,123 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461803, task timestamp: 1667461942
+2022-11-04 15:56:46,123 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,123 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461806, task timestamp: 1667461942
+2022-11-04 15:56:46,123 - POC3_datacenter - INFO - get record cup, Ignored for invalid type!
+2022-11-04 15:56:46,123 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,123 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461830, task timestamp: 1667461942
+2022-11-04 15:56:46,123 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,123 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461834, task timestamp: 1667461942
+2022-11-04 15:56:46,123 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,123 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461837, task timestamp: 1667461942
+2022-11-04 15:56:46,123 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,123 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461840, task timestamp: 1667461942
+2022-11-04 15:56:46,123 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,124 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461844, task timestamp: 1667461942
+2022-11-04 15:56:46,124 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,124 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461847, task timestamp: 1667461942
+2022-11-04 15:56:46,124 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,124 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461850, task timestamp: 1667461942
+2022-11-04 15:56:46,124 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,124 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461854, task timestamp: 1667461942
+2022-11-04 15:56:46,124 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,124 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461857, task timestamp: 1667461942
+2022-11-04 15:56:46,124 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,124 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461860, task timestamp: 1667461942
+2022-11-04 15:56:46,124 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,124 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461864, task timestamp: 1667461942
+2022-11-04 15:56:46,124 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,124 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461867, task timestamp: 1667461942
+2022-11-04 15:56:46,124 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,124 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461870, task timestamp: 1667461942
+2022-11-04 15:56:46,124 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,124 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461873, task timestamp: 1667461942
+2022-11-04 15:56:46,124 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,124 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461876, task timestamp: 1667461942
+2022-11-04 15:56:46,125 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,125 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461880, task timestamp: 1667461942
+2022-11-04 15:56:46,125 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,125 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461883, task timestamp: 1667461942
+2022-11-04 15:56:46,125 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,125 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461886, task timestamp: 1667461942
+2022-11-04 15:56:46,125 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,125 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461889, task timestamp: 1667461942
+2022-11-04 15:56:46,125 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,125 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461893, task timestamp: 1667461942
+2022-11-04 15:56:46,125 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,125 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461896, task timestamp: 1667461942
+2022-11-04 15:56:46,125 - POC3_datacenter - INFO - get record chair, Ignored for invalid type!
+2022-11-04 15:56:46,125 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,125 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461906, task timestamp: 1667461942
+2022-11-04 15:56:46,125 - POC3_datacenter - INFO - check record time!
+2022-11-04 15:56:46,125 - POC3_datacenter - INFO - check record inspection id!
+2022-11-04 15:56:46,168 - POC3_datacenter - INFO - Error: a float is required
+2022-11-04 15:56:46,169 - POC3_datacenter - INFO - {u'category': u'person', u'horizontal_angle': u'-31.247299', u'confidence': u'0.733230', u'distance': u'1.442578', u'timestamp': u'1667461959', u'location': u'', u'vertical_angle': u'2.356441', u'id': u'rosbot1'}
+2022-11-04 16:01:23,469 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:01:23,469 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:01:23,469 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:01:23,469 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:01:23,470 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:01:23,470 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:01:23,470 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:01:23,470 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:01:23,470 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:01:23,471 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:01:23,471 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:01:23,471 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:01:23,471 - POC3_datacenter - INFO - already finished task: 870
+2022-11-04 16:01:23,471 - POC3_datacenter - INFO - already finished task: 870
+2022-11-04 16:01:23,472 - POC3_datacenter - INFO - already finished task: 878
+2022-11-04 16:01:23,472 - POC3_datacenter - INFO - already finished task: 878
+2022-11-04 16:01:23,472 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 16:01:23,472 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 16:01:23,472 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 16:01:23,472 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 16:01:23,473 - POC3_datacenter - INFO - Start monitoring visual records for task 880!
+2022-11-04 16:01:23,473 - POC3_datacenter - INFO - No Person detected after rushtime: 2022-11-04 18:00:00
+2022-11-04 16:01:23,473 - POC3_datacenter - INFO - reading ... 
+2022-11-04 16:01:23,473 - POC3_datacenter - INFO - switch off powner!!!
+2022-11-04 16:01:23,473 - POC3_datacenter - INFO - switch off aircondition!!!
+2022-11-04 16:01:23,474 - POC3_datacenter - INFO - task: 880 finished, visual monitoring done!
+2022-11-04 16:01:23,915 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,915 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667374449, task timestamp: 1667461942
+2022-11-04 16:01:23,915 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,916 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667374951, task timestamp: 1667461942
+2022-11-04 16:01:23,916 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,916 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375042, task timestamp: 1667461942
+2022-11-04 16:01:23,916 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,916 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375314, task timestamp: 1667461942
+2022-11-04 16:01:23,916 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,917 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375318, task timestamp: 1667461942
+2022-11-04 16:01:23,917 - POC3_datacenter - INFO - get record cup, Ignored for invalid type!
+2022-11-04 16:01:23,917 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,917 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375475, task timestamp: 1667461942
+2022-11-04 16:01:23,917 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,917 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375479, task timestamp: 1667461942
+2022-11-04 16:01:23,917 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,917 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375538, task timestamp: 1667461942
+2022-11-04 16:01:23,918 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,918 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375614, task timestamp: 1667461942
+2022-11-04 16:01:23,918 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,918 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375619, task timestamp: 1667461942
+2022-11-04 16:01:23,918 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,918 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375682, task timestamp: 1667461942
+2022-11-04 16:01:23,918 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,918 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375687, task timestamp: 1667461942
+2022-11-04 16:01:23,918 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,918 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375769, task timestamp: 1667461942
+2022-11-04 16:01:23,918 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,918 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375922, task timestamp: 1667461942
+2022-11-04 16:01:23,918 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,918 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376019, task timestamp: 1667461942
+2022-11-04 16:01:23,919 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,919 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376028, task timestamp: 1667461942
+2022-11-04 16:01:23,919 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,919 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376037, task timestamp: 1667461942
+2022-11-04 16:01:23,919 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,919 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376049, task timestamp: 1667461942
+2022-11-04 16:01:23,919 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,919 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376068, task timestamp: 1667461942
+2022-11-04 16:01:23,919 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,919 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376089, task timestamp: 1667461942
+2022-11-04 16:01:23,919 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,919 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376104, task timestamp: 1667461942
+2022-11-04 16:01:23,919 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,919 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376235, task timestamp: 1667461942
+2022-11-04 16:01:23,919 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,919 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376242, task timestamp: 1667461942
+2022-11-04 16:01:23,919 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,919 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376246, task timestamp: 1667461942
+2022-11-04 16:01:23,919 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,919 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376289, task timestamp: 1667461942
+2022-11-04 16:01:23,919 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,919 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376296, task timestamp: 1667461942
+2022-11-04 16:01:23,920 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:01:23,920 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:01:23,920 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,920 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460505, task timestamp: 1667461942
+2022-11-04 16:01:23,920 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,920 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460509, task timestamp: 1667461942
+2022-11-04 16:01:23,920 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,920 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460512, task timestamp: 1667461942
+2022-11-04 16:01:23,920 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,920 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460515, task timestamp: 1667461942
+2022-11-04 16:01:23,920 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,920 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460518, task timestamp: 1667461942
+2022-11-04 16:01:23,920 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:01:23,920 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:01:23,920 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:01:23,920 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:01:23,920 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:01:23,920 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:01:23,920 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:01:23,920 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:01:23,921 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:01:23,921 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:01:23,921 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,921 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460561, task timestamp: 1667461942
+2022-11-04 16:01:23,921 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:01:23,921 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:01:23,921 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:01:23,921 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:01:23,921 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:01:23,921 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,921 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460971, task timestamp: 1667461942
+2022-11-04 16:01:23,921 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,921 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461102, task timestamp: 1667461942
+2022-11-04 16:01:23,921 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,921 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461145, task timestamp: 1667461942
+2022-11-04 16:01:23,921 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,921 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461149, task timestamp: 1667461942
+2022-11-04 16:01:23,921 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,921 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461152, task timestamp: 1667461942
+2022-11-04 16:01:23,922 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,922 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461155, task timestamp: 1667461942
+2022-11-04 16:01:23,922 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,922 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461159, task timestamp: 1667461942
+2022-11-04 16:01:23,922 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,922 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461166, task timestamp: 1667461942
+2022-11-04 16:01:23,922 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,922 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461169, task timestamp: 1667461942
+2022-11-04 16:01:23,922 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,922 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461181, task timestamp: 1667461942
+2022-11-04 16:01:23,922 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,922 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461185, task timestamp: 1667461942
+2022-11-04 16:01:23,922 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,922 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461303, task timestamp: 1667461942
+2022-11-04 16:01:23,922 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,922 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461306, task timestamp: 1667461942
+2022-11-04 16:01:23,922 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,922 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461309, task timestamp: 1667461942
+2022-11-04 16:01:23,922 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,922 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461396, task timestamp: 1667461942
+2022-11-04 16:01:23,922 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,922 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461399, task timestamp: 1667461942
+2022-11-04 16:01:23,923 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,923 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461403, task timestamp: 1667461942
+2022-11-04 16:01:23,923 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,923 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461406, task timestamp: 1667461942
+2022-11-04 16:01:23,923 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,923 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461409, task timestamp: 1667461942
+2022-11-04 16:01:23,923 - POC3_datacenter - INFO - get record chair, Ignored for invalid type!
+2022-11-04 16:01:23,923 - POC3_datacenter - INFO - get record chair, Ignored for invalid type!
+2022-11-04 16:01:23,923 - POC3_datacenter - INFO - get record chair, Ignored for invalid type!
+2022-11-04 16:01:23,923 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,923 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461729, task timestamp: 1667461942
+2022-11-04 16:01:23,923 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,923 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461750, task timestamp: 1667461942
+2022-11-04 16:01:23,923 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,923 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461754, task timestamp: 1667461942
+2022-11-04 16:01:23,923 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,923 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461757, task timestamp: 1667461942
+2022-11-04 16:01:23,923 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,923 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461761, task timestamp: 1667461942
+2022-11-04 16:01:23,923 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,923 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461764, task timestamp: 1667461942
+2022-11-04 16:01:23,923 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,923 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461768, task timestamp: 1667461942
+2022-11-04 16:01:23,924 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,924 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461772, task timestamp: 1667461942
+2022-11-04 16:01:23,924 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,924 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461775, task timestamp: 1667461942
+2022-11-04 16:01:23,924 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,924 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461779, task timestamp: 1667461942
+2022-11-04 16:01:23,924 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,924 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461786, task timestamp: 1667461942
+2022-11-04 16:01:23,924 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,924 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461789, task timestamp: 1667461942
+2022-11-04 16:01:23,924 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,924 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461792, task timestamp: 1667461942
+2022-11-04 16:01:23,924 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,924 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461796, task timestamp: 1667461942
+2022-11-04 16:01:23,924 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,924 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461799, task timestamp: 1667461942
+2022-11-04 16:01:23,924 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,924 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461803, task timestamp: 1667461942
+2022-11-04 16:01:23,924 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,924 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461806, task timestamp: 1667461942
+2022-11-04 16:01:23,924 - POC3_datacenter - INFO - get record cup, Ignored for invalid type!
+2022-11-04 16:01:23,924 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,925 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461830, task timestamp: 1667461942
+2022-11-04 16:01:23,925 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,925 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461834, task timestamp: 1667461942
+2022-11-04 16:01:23,925 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,925 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461837, task timestamp: 1667461942
+2022-11-04 16:01:23,925 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,925 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461840, task timestamp: 1667461942
+2022-11-04 16:01:23,925 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,925 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461844, task timestamp: 1667461942
+2022-11-04 16:01:23,925 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,925 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461847, task timestamp: 1667461942
+2022-11-04 16:01:23,925 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,925 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461850, task timestamp: 1667461942
+2022-11-04 16:01:23,925 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,925 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461854, task timestamp: 1667461942
+2022-11-04 16:01:23,925 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,925 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461857, task timestamp: 1667461942
+2022-11-04 16:01:23,925 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,925 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461860, task timestamp: 1667461942
+2022-11-04 16:01:23,925 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,925 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461864, task timestamp: 1667461942
+2022-11-04 16:01:23,925 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,926 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461867, task timestamp: 1667461942
+2022-11-04 16:01:23,926 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,926 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461870, task timestamp: 1667461942
+2022-11-04 16:01:23,926 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,926 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461873, task timestamp: 1667461942
+2022-11-04 16:01:23,926 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,926 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461876, task timestamp: 1667461942
+2022-11-04 16:01:23,926 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,926 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461880, task timestamp: 1667461942
+2022-11-04 16:01:23,926 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,926 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461883, task timestamp: 1667461942
+2022-11-04 16:01:23,926 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,926 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461886, task timestamp: 1667461942
+2022-11-04 16:01:23,926 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,926 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461889, task timestamp: 1667461942
+2022-11-04 16:01:23,926 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,926 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461893, task timestamp: 1667461942
+2022-11-04 16:01:23,926 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,926 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461896, task timestamp: 1667461942
+2022-11-04 16:01:23,926 - POC3_datacenter - INFO - get record chair, Ignored for invalid type!
+2022-11-04 16:01:23,926 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,926 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461906, task timestamp: 1667461942
+2022-11-04 16:01:23,926 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:01:23,927 - POC3_datacenter - INFO - check record inspection id!
+2022-11-04 16:01:23,972 - POC3_datacenter - INFO - check person appeared time!
+2022-11-04 16:01:23,972 - POC3_datacenter - INFO - Error: a float is required
+2022-11-04 16:01:23,972 - POC3_datacenter - INFO - {u'category': u'person', u'horizontal_angle': u'-31.247299', u'confidence': u'0.733230', u'distance': u'1.442578', u'timestamp': u'1667461959', u'location': u'', u'vertical_angle': u'2.356441', u'id': u'rosbot1'}
+2022-11-04 16:02:39,377 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:02:39,377 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:02:39,377 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:02:39,377 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:02:39,377 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:02:39,378 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:02:39,378 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:02:39,378 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:02:39,378 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:02:39,378 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:02:39,378 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:02:39,379 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:02:39,379 - POC3_datacenter - INFO - already finished task: 870
+2022-11-04 16:02:39,379 - POC3_datacenter - INFO - already finished task: 870
+2022-11-04 16:02:39,379 - POC3_datacenter - INFO - already finished task: 878
+2022-11-04 16:02:39,379 - POC3_datacenter - INFO - already finished task: 878
+2022-11-04 16:02:39,379 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 16:02:39,380 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 16:02:39,380 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 16:02:39,380 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 16:02:39,380 - POC3_datacenter - INFO - Start monitoring visual records for task 880!
+2022-11-04 16:02:39,380 - POC3_datacenter - INFO - reading ... 
+2022-11-04 16:02:39,380 - POC3_datacenter - INFO - No Person detected after rushtime: 2022-11-04 18:00:00
+2022-11-04 16:02:39,381 - POC3_datacenter - INFO - switch off powner!!!
+2022-11-04 16:02:39,382 - POC3_datacenter - INFO - switch off aircondition!!!
+2022-11-04 16:02:39,382 - POC3_datacenter - INFO - task: 880 finished, visual monitoring done!
+2022-11-04 16:02:39,619 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,619 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667374449, task timestamp: 1667461942
+2022-11-04 16:02:39,619 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,620 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667374951, task timestamp: 1667461942
+2022-11-04 16:02:39,620 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,620 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375042, task timestamp: 1667461942
+2022-11-04 16:02:39,620 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,620 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375314, task timestamp: 1667461942
+2022-11-04 16:02:39,620 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,620 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375318, task timestamp: 1667461942
+2022-11-04 16:02:39,620 - POC3_datacenter - INFO - get record cup, Ignored for invalid type!
+2022-11-04 16:02:39,620 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,620 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375475, task timestamp: 1667461942
+2022-11-04 16:02:39,620 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,621 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375479, task timestamp: 1667461942
+2022-11-04 16:02:39,621 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,621 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375538, task timestamp: 1667461942
+2022-11-04 16:02:39,621 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,621 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375614, task timestamp: 1667461942
+2022-11-04 16:02:39,621 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,621 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375619, task timestamp: 1667461942
+2022-11-04 16:02:39,621 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,621 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375682, task timestamp: 1667461942
+2022-11-04 16:02:39,621 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,621 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375687, task timestamp: 1667461942
+2022-11-04 16:02:39,621 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,622 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375769, task timestamp: 1667461942
+2022-11-04 16:02:39,622 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,622 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667375922, task timestamp: 1667461942
+2022-11-04 16:02:39,622 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,622 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376019, task timestamp: 1667461942
+2022-11-04 16:02:39,622 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,622 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376028, task timestamp: 1667461942
+2022-11-04 16:02:39,622 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,622 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376037, task timestamp: 1667461942
+2022-11-04 16:02:39,622 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,622 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376049, task timestamp: 1667461942
+2022-11-04 16:02:39,622 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,622 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376068, task timestamp: 1667461942
+2022-11-04 16:02:39,622 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,622 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376089, task timestamp: 1667461942
+2022-11-04 16:02:39,623 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,623 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376104, task timestamp: 1667461942
+2022-11-04 16:02:39,623 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,623 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376235, task timestamp: 1667461942
+2022-11-04 16:02:39,623 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,623 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376242, task timestamp: 1667461942
+2022-11-04 16:02:39,623 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,623 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376246, task timestamp: 1667461942
+2022-11-04 16:02:39,623 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,623 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376289, task timestamp: 1667461942
+2022-11-04 16:02:39,623 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,623 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667376296, task timestamp: 1667461942
+2022-11-04 16:02:39,623 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:02:39,623 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:02:39,623 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,623 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460505, task timestamp: 1667461942
+2022-11-04 16:02:39,624 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,624 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460509, task timestamp: 1667461942
+2022-11-04 16:02:39,624 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,624 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460512, task timestamp: 1667461942
+2022-11-04 16:02:39,624 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,624 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460515, task timestamp: 1667461942
+2022-11-04 16:02:39,624 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,624 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460518, task timestamp: 1667461942
+2022-11-04 16:02:39,624 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:02:39,624 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:02:39,624 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:02:39,624 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:02:39,624 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:02:39,624 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:02:39,624 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:02:39,624 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:02:39,625 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:02:39,625 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:02:39,625 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,625 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460561, task timestamp: 1667461942
+2022-11-04 16:02:39,625 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:02:39,625 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:02:39,625 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:02:39,625 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:02:39,625 - POC3_datacenter - INFO - get record mouse, Ignored for invalid type!
+2022-11-04 16:02:39,625 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,625 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667460971, task timestamp: 1667461942
+2022-11-04 16:02:39,625 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,625 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461102, task timestamp: 1667461942
+2022-11-04 16:02:39,625 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,625 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461145, task timestamp: 1667461942
+2022-11-04 16:02:39,625 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,626 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461149, task timestamp: 1667461942
+2022-11-04 16:02:39,626 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,626 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461152, task timestamp: 1667461942
+2022-11-04 16:02:39,626 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,626 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461155, task timestamp: 1667461942
+2022-11-04 16:02:39,626 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,626 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461159, task timestamp: 1667461942
+2022-11-04 16:02:39,626 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,626 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461166, task timestamp: 1667461942
+2022-11-04 16:02:39,626 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,626 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461169, task timestamp: 1667461942
+2022-11-04 16:02:39,626 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,626 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461181, task timestamp: 1667461942
+2022-11-04 16:02:39,626 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,626 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461185, task timestamp: 1667461942
+2022-11-04 16:02:39,626 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,626 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461303, task timestamp: 1667461942
+2022-11-04 16:02:39,627 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,627 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461306, task timestamp: 1667461942
+2022-11-04 16:02:39,627 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,627 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461309, task timestamp: 1667461942
+2022-11-04 16:02:39,627 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,627 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461396, task timestamp: 1667461942
+2022-11-04 16:02:39,627 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,627 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461399, task timestamp: 1667461942
+2022-11-04 16:02:39,627 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,627 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461403, task timestamp: 1667461942
+2022-11-04 16:02:39,627 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,627 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461406, task timestamp: 1667461942
+2022-11-04 16:02:39,627 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,627 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461409, task timestamp: 1667461942
+2022-11-04 16:02:39,627 - POC3_datacenter - INFO - get record chair, Ignored for invalid type!
+2022-11-04 16:02:39,627 - POC3_datacenter - INFO - get record chair, Ignored for invalid type!
+2022-11-04 16:02:39,627 - POC3_datacenter - INFO - get record chair, Ignored for invalid type!
+2022-11-04 16:02:39,627 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,628 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461729, task timestamp: 1667461942
+2022-11-04 16:02:39,628 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,628 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461750, task timestamp: 1667461942
+2022-11-04 16:02:39,628 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,628 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461754, task timestamp: 1667461942
+2022-11-04 16:02:39,628 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,628 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461757, task timestamp: 1667461942
+2022-11-04 16:02:39,628 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,628 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461761, task timestamp: 1667461942
+2022-11-04 16:02:39,628 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,628 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461764, task timestamp: 1667461942
+2022-11-04 16:02:39,628 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,628 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461768, task timestamp: 1667461942
+2022-11-04 16:02:39,628 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,628 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461772, task timestamp: 1667461942
+2022-11-04 16:02:39,628 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,628 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461775, task timestamp: 1667461942
+2022-11-04 16:02:39,628 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,629 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461779, task timestamp: 1667461942
+2022-11-04 16:02:39,629 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,629 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461786, task timestamp: 1667461942
+2022-11-04 16:02:39,629 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,629 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461789, task timestamp: 1667461942
+2022-11-04 16:02:39,629 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,629 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461792, task timestamp: 1667461942
+2022-11-04 16:02:39,629 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,629 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461796, task timestamp: 1667461942
+2022-11-04 16:02:39,629 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,629 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461799, task timestamp: 1667461942
+2022-11-04 16:02:39,629 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,629 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461803, task timestamp: 1667461942
+2022-11-04 16:02:39,629 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,629 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461806, task timestamp: 1667461942
+2022-11-04 16:02:39,629 - POC3_datacenter - INFO - get record cup, Ignored for invalid type!
+2022-11-04 16:02:39,629 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,629 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461830, task timestamp: 1667461942
+2022-11-04 16:02:39,630 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,630 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461834, task timestamp: 1667461942
+2022-11-04 16:02:39,630 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,630 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461837, task timestamp: 1667461942
+2022-11-04 16:02:39,630 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,630 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461840, task timestamp: 1667461942
+2022-11-04 16:02:39,630 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,630 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461844, task timestamp: 1667461942
+2022-11-04 16:02:39,630 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,630 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461847, task timestamp: 1667461942
+2022-11-04 16:02:39,630 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,630 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461850, task timestamp: 1667461942
+2022-11-04 16:02:39,630 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,630 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461854, task timestamp: 1667461942
+2022-11-04 16:02:39,630 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,630 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461857, task timestamp: 1667461942
+2022-11-04 16:02:39,630 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,630 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461860, task timestamp: 1667461942
+2022-11-04 16:02:39,631 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,631 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461864, task timestamp: 1667461942
+2022-11-04 16:02:39,631 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,631 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461867, task timestamp: 1667461942
+2022-11-04 16:02:39,631 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,631 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461870, task timestamp: 1667461942
+2022-11-04 16:02:39,631 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,631 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461873, task timestamp: 1667461942
+2022-11-04 16:02:39,631 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,631 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461876, task timestamp: 1667461942
+2022-11-04 16:02:39,631 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,631 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461880, task timestamp: 1667461942
+2022-11-04 16:02:39,631 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,631 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461883, task timestamp: 1667461942
+2022-11-04 16:02:39,631 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,631 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461886, task timestamp: 1667461942
+2022-11-04 16:02:39,631 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,632 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461889, task timestamp: 1667461942
+2022-11-04 16:02:39,632 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,632 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461893, task timestamp: 1667461942
+2022-11-04 16:02:39,632 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,632 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461896, task timestamp: 1667461942
+2022-11-04 16:02:39,632 - POC3_datacenter - INFO - get record chair, Ignored for invalid type!
+2022-11-04 16:02:39,632 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,632 - POC3_datacenter - INFO - get record person, Ignored for earlier than the task, record timestamp: 1667461906, task timestamp: 1667461942
+2022-11-04 16:02:39,632 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,632 - POC3_datacenter - INFO - check record inspection id!
+2022-11-04 16:02:39,681 - POC3_datacenter - INFO - check person appeared time!
+2022-11-04 16:02:39,681 - POC3_datacenter - INFO - time earlier than rushtime!
+2022-11-04 16:02:39,681 - POC3_datacenter - INFO - get record person, Ignored for person detected before rushtime, detected time: 2022-11-03 15:52:39, rushtime: 2022-11-04 18:00:00
+2022-11-04 16:02:39,681 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,681 - POC3_datacenter - INFO - check record inspection id!
+2022-11-04 16:02:39,681 - POC3_datacenter - INFO - check person appeared time!
+2022-11-04 16:02:39,681 - POC3_datacenter - INFO - time earlier than rushtime!
+2022-11-04 16:02:39,681 - POC3_datacenter - INFO - get record person, Ignored for person detected before rushtime, detected time: 2022-11-03 15:53:27, rushtime: 2022-11-04 18:00:00
+2022-11-04 16:02:39,682 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,682 - POC3_datacenter - INFO - check record inspection id!
+2022-11-04 16:02:39,682 - POC3_datacenter - INFO - check person appeared time!
+2022-11-04 16:02:39,682 - POC3_datacenter - INFO - time earlier than rushtime!
+2022-11-04 16:02:39,682 - POC3_datacenter - INFO - get record person, Ignored for person detected before rushtime, detected time: 2022-11-03 15:53:31, rushtime: 2022-11-04 18:00:00
+2022-11-04 16:02:39,682 - POC3_datacenter - INFO - check record time!
+2022-11-04 16:02:39,682 - POC3_datacenter - INFO - check record inspection id!
+2022-11-04 16:02:39,682 - POC3_datacenter - INFO - check person appeared time!
+2022-11-04 16:02:39,682 - POC3_datacenter - INFO - time earlier than rushtime!
+2022-11-04 16:02:39,682 - POC3_datacenter - INFO - get record person, Ignored for person detected before rushtime, detected time: 2022-11-03 15:53:34, rushtime: 2022-11-04 18:00:00
+2022-11-04 16:07:36,364 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:07:36,364 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:07:36,364 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:07:36,364 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:07:36,364 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:07:36,364 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:07:36,365 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:07:36,365 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:07:36,365 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:07:36,365 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:07:36,365 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:07:36,365 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 16:07:36,365 - POC3_datacenter - INFO - already finished task: 870
+2022-11-04 16:07:36,365 - POC3_datacenter - INFO - already finished task: 870
+2022-11-04 16:07:36,366 - POC3_datacenter - INFO - already finished task: 878
+2022-11-04 16:07:36,366 - POC3_datacenter - INFO - already finished task: 878
+2022-11-04 16:07:36,366 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 16:07:36,366 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 16:07:36,366 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 16:07:36,366 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 16:07:36,366 - POC3_datacenter - INFO - Start monitoring visual records for task 880!
+2022-11-04 16:07:36,367 - POC3_datacenter - INFO - No Person detected after rushtime: 2022-11-04 18:00:00
+2022-11-04 16:07:36,367 - POC3_datacenter - INFO - reading ... 
+2022-11-04 16:07:36,367 - POC3_datacenter - INFO - switch off powner!!!
+2022-11-04 16:07:36,368 - POC3_datacenter - INFO - switch off aircondition!!!
+2022-11-04 16:07:36,368 - POC3_datacenter - INFO - task: 880 finished, visual monitoring done!
+2022-11-04 16:07:36,602 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667374449, task timestamp: 1667461942
+2022-11-04 16:07:36,602 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667374951, task timestamp: 1667461942
+2022-11-04 16:07:36,602 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375042, task timestamp: 1667461942
+2022-11-04 16:07:36,603 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375314, task timestamp: 1667461942
+2022-11-04 16:07:36,603 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375318, task timestamp: 1667461942
+2022-11-04 16:07:36,603 - POC3_datacenter - INFO - Ignored cup for invalid type!
+2022-11-04 16:07:36,603 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375475, task timestamp: 1667461942
+2022-11-04 16:07:36,603 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375479, task timestamp: 1667461942
+2022-11-04 16:07:36,603 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375538, task timestamp: 1667461942
+2022-11-04 16:07:36,603 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375614, task timestamp: 1667461942
+2022-11-04 16:07:36,603 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375619, task timestamp: 1667461942
+2022-11-04 16:07:36,604 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375682, task timestamp: 1667461942
+2022-11-04 16:07:36,604 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375687, task timestamp: 1667461942
+2022-11-04 16:07:36,604 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375769, task timestamp: 1667461942
+2022-11-04 16:07:36,604 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375922, task timestamp: 1667461942
+2022-11-04 16:07:36,604 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376019, task timestamp: 1667461942
+2022-11-04 16:07:36,604 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376028, task timestamp: 1667461942
+2022-11-04 16:07:36,604 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376037, task timestamp: 1667461942
+2022-11-04 16:07:36,604 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376049, task timestamp: 1667461942
+2022-11-04 16:07:36,604 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376068, task timestamp: 1667461942
+2022-11-04 16:07:36,604 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376089, task timestamp: 1667461942
+2022-11-04 16:07:36,605 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376104, task timestamp: 1667461942
+2022-11-04 16:07:36,605 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376235, task timestamp: 1667461942
+2022-11-04 16:07:36,605 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376242, task timestamp: 1667461942
+2022-11-04 16:07:36,605 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376246, task timestamp: 1667461942
+2022-11-04 16:07:36,605 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376289, task timestamp: 1667461942
+2022-11-04 16:07:36,605 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376296, task timestamp: 1667461942
+2022-11-04 16:07:36,605 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 16:07:36,605 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 16:07:36,605 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667460505, task timestamp: 1667461942
+2022-11-04 16:07:36,605 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667460509, task timestamp: 1667461942
+2022-11-04 16:07:36,605 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667460512, task timestamp: 1667461942
+2022-11-04 16:07:36,605 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667460515, task timestamp: 1667461942
+2022-11-04 16:07:36,605 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667460518, task timestamp: 1667461942
+2022-11-04 16:07:36,605 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 16:07:36,605 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 16:07:36,605 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 16:07:36,605 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 16:07:36,606 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 16:07:36,606 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 16:07:36,606 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 16:07:36,606 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 16:07:36,606 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 16:07:36,606 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 16:07:36,606 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667460561, task timestamp: 1667461942
+2022-11-04 16:07:36,606 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 16:07:36,606 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 16:07:36,606 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 16:07:36,606 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 16:07:36,606 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 16:07:36,606 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667460971, task timestamp: 1667461942
+2022-11-04 16:07:36,606 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461102, task timestamp: 1667461942
+2022-11-04 16:07:36,606 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461145, task timestamp: 1667461942
+2022-11-04 16:07:36,606 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461149, task timestamp: 1667461942
+2022-11-04 16:07:36,606 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461152, task timestamp: 1667461942
+2022-11-04 16:07:36,606 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461155, task timestamp: 1667461942
+2022-11-04 16:07:36,606 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461159, task timestamp: 1667461942
+2022-11-04 16:07:36,607 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461166, task timestamp: 1667461942
+2022-11-04 16:07:36,607 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461169, task timestamp: 1667461942
+2022-11-04 16:07:36,607 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461181, task timestamp: 1667461942
+2022-11-04 16:07:36,607 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461185, task timestamp: 1667461942
+2022-11-04 16:07:36,607 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461303, task timestamp: 1667461942
+2022-11-04 16:07:36,607 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461306, task timestamp: 1667461942
+2022-11-04 16:07:36,607 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461309, task timestamp: 1667461942
+2022-11-04 16:07:36,607 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461396, task timestamp: 1667461942
+2022-11-04 16:07:36,607 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461399, task timestamp: 1667461942
+2022-11-04 16:07:36,607 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461403, task timestamp: 1667461942
+2022-11-04 16:07:36,607 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461406, task timestamp: 1667461942
+2022-11-04 16:07:36,607 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461409, task timestamp: 1667461942
+2022-11-04 16:07:36,607 - POC3_datacenter - INFO - Ignored chair for invalid type!
+2022-11-04 16:07:36,607 - POC3_datacenter - INFO - Ignored chair for invalid type!
+2022-11-04 16:07:36,607 - POC3_datacenter - INFO - Ignored chair for invalid type!
+2022-11-04 16:07:36,607 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461729, task timestamp: 1667461942
+2022-11-04 16:07:36,607 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461750, task timestamp: 1667461942
+2022-11-04 16:07:36,607 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461754, task timestamp: 1667461942
+2022-11-04 16:07:36,607 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461757, task timestamp: 1667461942
+2022-11-04 16:07:36,608 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461761, task timestamp: 1667461942
+2022-11-04 16:07:36,608 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461764, task timestamp: 1667461942
+2022-11-04 16:07:36,608 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461768, task timestamp: 1667461942
+2022-11-04 16:07:36,608 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461772, task timestamp: 1667461942
+2022-11-04 16:07:36,608 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461775, task timestamp: 1667461942
+2022-11-04 16:07:36,608 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461779, task timestamp: 1667461942
+2022-11-04 16:07:36,608 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461786, task timestamp: 1667461942
+2022-11-04 16:07:36,608 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461789, task timestamp: 1667461942
+2022-11-04 16:07:36,608 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461792, task timestamp: 1667461942
+2022-11-04 16:07:36,608 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461796, task timestamp: 1667461942
+2022-11-04 16:07:36,608 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461799, task timestamp: 1667461942
+2022-11-04 16:07:36,608 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461803, task timestamp: 1667461942
+2022-11-04 16:07:36,608 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461806, task timestamp: 1667461942
+2022-11-04 16:07:36,608 - POC3_datacenter - INFO - Ignored cup for invalid type!
+2022-11-04 16:07:36,608 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461830, task timestamp: 1667461942
+2022-11-04 16:07:36,608 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461834, task timestamp: 1667461942
+2022-11-04 16:07:36,608 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461837, task timestamp: 1667461942
+2022-11-04 16:07:36,608 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461840, task timestamp: 1667461942
+2022-11-04 16:07:36,608 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461844, task timestamp: 1667461942
+2022-11-04 16:07:36,608 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461847, task timestamp: 1667461942
+2022-11-04 16:07:36,609 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461850, task timestamp: 1667461942
+2022-11-04 16:07:36,609 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461854, task timestamp: 1667461942
+2022-11-04 16:07:36,609 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461857, task timestamp: 1667461942
+2022-11-04 16:07:36,609 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461860, task timestamp: 1667461942
+2022-11-04 16:07:36,609 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461864, task timestamp: 1667461942
+2022-11-04 16:07:36,609 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461867, task timestamp: 1667461942
+2022-11-04 16:07:36,609 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461870, task timestamp: 1667461942
+2022-11-04 16:07:36,609 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461873, task timestamp: 1667461942
+2022-11-04 16:07:36,609 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461876, task timestamp: 1667461942
+2022-11-04 16:07:36,609 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461880, task timestamp: 1667461942
+2022-11-04 16:07:36,609 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461883, task timestamp: 1667461942
+2022-11-04 16:07:36,609 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461886, task timestamp: 1667461942
+2022-11-04 16:07:36,609 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461889, task timestamp: 1667461942
+2022-11-04 16:07:36,609 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461893, task timestamp: 1667461942
+2022-11-04 16:07:36,609 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461896, task timestamp: 1667461942
+2022-11-04 16:07:36,609 - POC3_datacenter - INFO - Ignored chair for invalid type!
+2022-11-04 16:07:36,609 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461906, task timestamp: 1667461942
+2022-11-04 16:07:36,652 - POC3_datacenter - INFO - check person appeared time!
+2022-11-04 16:07:36,653 - POC3_datacenter - INFO - Ignored person for person detected before rushtime, detected time: 2022-11-03 15:52:39, rushtime: 2022-11-04 18:00:00
+2022-11-04 16:07:36,653 - POC3_datacenter - INFO - check person appeared time!
+2022-11-04 16:07:36,653 - POC3_datacenter - INFO - Ignored person for person detected before rushtime, detected time: 2022-11-03 15:53:27, rushtime: 2022-11-04 18:00:00
+2022-11-04 16:07:36,653 - POC3_datacenter - INFO - check person appeared time!
+2022-11-04 16:07:36,653 - POC3_datacenter - INFO - Ignored person for person detected before rushtime, detected time: 2022-11-03 15:53:31, rushtime: 2022-11-04 18:00:00
+2022-11-04 16:07:36,653 - POC3_datacenter - INFO - check person appeared time!
+2022-11-04 16:07:36,653 - POC3_datacenter - INFO - Ignored person for person detected before rushtime, detected time: 2022-11-03 15:53:34, rushtime: 2022-11-04 18:00:00
+2022-11-04 17:12:56,589 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:12:56,589 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:12:56,589 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:12:56,589 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:12:56,590 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:12:56,590 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:12:56,590 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:12:56,590 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:12:56,590 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:12:56,591 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:12:56,591 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:12:56,591 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:12:56,591 - POC3_datacenter - INFO - already finished task: 870
+2022-11-04 17:12:56,591 - POC3_datacenter - INFO - already finished task: 870
+2022-11-04 17:12:56,591 - POC3_datacenter - INFO - already finished task: 878
+2022-11-04 17:12:56,592 - POC3_datacenter - INFO - already finished task: 878
+2022-11-04 17:12:56,592 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 17:12:56,592 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 17:12:56,592 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 17:12:56,592 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 17:12:56,592 - POC3_datacenter - INFO - Start monitoring visual records for task 880!
+2022-11-04 17:12:56,593 - POC3_datacenter - INFO - reading ... 
+2022-11-04 17:12:56,593 - POC3_datacenter - INFO - No Person detected after rushtime: 2022-11-04 14:00:00
+2022-11-04 17:12:56,593 - POC3_datacenter - INFO - switch off powner!!!
+2022-11-04 17:12:56,593 - POC3_datacenter - INFO - switch off aircondition!!!
+2022-11-04 17:12:56,593 - POC3_datacenter - INFO - task: 880 finished, visual monitoring done!
+2022-11-04 17:13:42,208 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:13:42,208 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:13:42,208 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:13:42,208 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:13:42,209 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:13:42,209 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:13:42,209 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:13:42,209 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:13:42,209 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:13:42,209 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:13:42,209 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:13:42,210 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:13:42,210 - POC3_datacenter - INFO - already finished task: 870
+2022-11-04 17:13:42,210 - POC3_datacenter - INFO - already finished task: 870
+2022-11-04 17:13:42,210 - POC3_datacenter - INFO - already finished task: 878
+2022-11-04 17:13:42,210 - POC3_datacenter - INFO - already finished task: 878
+2022-11-04 17:13:42,210 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 17:13:42,210 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 17:13:42,211 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 17:13:42,211 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 17:13:42,211 - POC3_datacenter - INFO - Start monitoring visual records for task 880!
+2022-11-04 17:13:42,211 - POC3_datacenter - INFO - reading ... 
+2022-11-04 17:13:42,211 - POC3_datacenter - INFO - No Person detected after rushtime: 2022-11-04 14:00:00
+2022-11-04 17:13:42,211 - POC3_datacenter - INFO - switch off powner!!!
+2022-11-04 17:13:42,212 - POC3_datacenter - INFO - switch off aircondition!!!
+2022-11-04 17:13:42,212 - POC3_datacenter - INFO - task: 880 finished, visual monitoring done!
+2022-11-04 17:13:42,537 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667374449, task timestamp: 1667461942
+2022-11-04 17:13:42,537 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667374951, task timestamp: 1667461942
+2022-11-04 17:13:42,537 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375042, task timestamp: 1667461942
+2022-11-04 17:13:42,537 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375314, task timestamp: 1667461942
+2022-11-04 17:13:42,537 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375318, task timestamp: 1667461942
+2022-11-04 17:13:42,537 - POC3_datacenter - INFO - Ignored cup for invalid type!
+2022-11-04 17:13:42,537 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375475, task timestamp: 1667461942
+2022-11-04 17:13:42,538 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375479, task timestamp: 1667461942
+2022-11-04 17:13:42,538 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375538, task timestamp: 1667461942
+2022-11-04 17:13:42,538 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375614, task timestamp: 1667461942
+2022-11-04 17:13:42,538 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375619, task timestamp: 1667461942
+2022-11-04 17:13:42,538 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375682, task timestamp: 1667461942
+2022-11-04 17:13:42,538 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375687, task timestamp: 1667461942
+2022-11-04 17:13:42,538 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375769, task timestamp: 1667461942
+2022-11-04 17:13:42,538 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375922, task timestamp: 1667461942
+2022-11-04 17:13:42,538 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376019, task timestamp: 1667461942
+2022-11-04 17:13:42,538 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376028, task timestamp: 1667461942
+2022-11-04 17:13:42,538 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376037, task timestamp: 1667461942
+2022-11-04 17:13:42,539 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376049, task timestamp: 1667461942
+2022-11-04 17:13:42,539 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376068, task timestamp: 1667461942
+2022-11-04 17:13:42,539 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376089, task timestamp: 1667461942
+2022-11-04 17:13:42,539 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376104, task timestamp: 1667461942
+2022-11-04 17:13:42,539 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376235, task timestamp: 1667461942
+2022-11-04 17:13:42,539 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376242, task timestamp: 1667461942
+2022-11-04 17:13:42,539 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376246, task timestamp: 1667461942
+2022-11-04 17:13:42,539 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376289, task timestamp: 1667461942
+2022-11-04 17:13:42,539 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376296, task timestamp: 1667461942
+2022-11-04 17:13:42,539 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:13:42,540 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:13:42,540 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667460505, task timestamp: 1667461942
+2022-11-04 17:13:42,540 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667460509, task timestamp: 1667461942
+2022-11-04 17:13:42,540 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667460512, task timestamp: 1667461942
+2022-11-04 17:13:42,540 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667460515, task timestamp: 1667461942
+2022-11-04 17:13:42,540 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667460518, task timestamp: 1667461942
+2022-11-04 17:13:42,540 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:13:42,540 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:13:42,540 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:13:42,540 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:13:42,540 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:13:42,541 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:13:42,541 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:13:42,541 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:13:42,541 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:13:42,541 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:13:42,541 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667460561, task timestamp: 1667461942
+2022-11-04 17:13:42,541 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:13:42,541 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:13:42,541 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:13:42,542 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:13:42,542 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:13:42,542 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667460971, task timestamp: 1667461942
+2022-11-04 17:13:42,542 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461102, task timestamp: 1667461942
+2022-11-04 17:13:42,542 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461145, task timestamp: 1667461942
+2022-11-04 17:13:42,542 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461149, task timestamp: 1667461942
+2022-11-04 17:13:42,542 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461152, task timestamp: 1667461942
+2022-11-04 17:13:42,542 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461155, task timestamp: 1667461942
+2022-11-04 17:13:42,542 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461159, task timestamp: 1667461942
+2022-11-04 17:13:42,542 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461166, task timestamp: 1667461942
+2022-11-04 17:13:42,542 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461169, task timestamp: 1667461942
+2022-11-04 17:13:42,542 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461181, task timestamp: 1667461942
+2022-11-04 17:13:42,542 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461185, task timestamp: 1667461942
+2022-11-04 17:13:42,542 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461303, task timestamp: 1667461942
+2022-11-04 17:13:42,542 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461306, task timestamp: 1667461942
+2022-11-04 17:13:42,542 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461309, task timestamp: 1667461942
+2022-11-04 17:13:42,543 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461396, task timestamp: 1667461942
+2022-11-04 17:13:42,543 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461399, task timestamp: 1667461942
+2022-11-04 17:13:42,543 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461403, task timestamp: 1667461942
+2022-11-04 17:13:42,543 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461406, task timestamp: 1667461942
+2022-11-04 17:13:42,543 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461409, task timestamp: 1667461942
+2022-11-04 17:13:42,543 - POC3_datacenter - INFO - Ignored chair for invalid type!
+2022-11-04 17:13:42,543 - POC3_datacenter - INFO - Ignored chair for invalid type!
+2022-11-04 17:13:42,543 - POC3_datacenter - INFO - Ignored chair for invalid type!
+2022-11-04 17:13:42,543 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461729, task timestamp: 1667461942
+2022-11-04 17:13:42,543 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461750, task timestamp: 1667461942
+2022-11-04 17:13:42,543 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461754, task timestamp: 1667461942
+2022-11-04 17:13:42,543 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461757, task timestamp: 1667461942
+2022-11-04 17:13:42,543 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461761, task timestamp: 1667461942
+2022-11-04 17:13:42,543 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461764, task timestamp: 1667461942
+2022-11-04 17:13:42,543 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461768, task timestamp: 1667461942
+2022-11-04 17:13:42,543 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461772, task timestamp: 1667461942
+2022-11-04 17:13:42,543 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461775, task timestamp: 1667461942
+2022-11-04 17:13:42,543 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461779, task timestamp: 1667461942
+2022-11-04 17:13:42,544 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461786, task timestamp: 1667461942
+2022-11-04 17:13:42,544 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461789, task timestamp: 1667461942
+2022-11-04 17:13:42,544 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461792, task timestamp: 1667461942
+2022-11-04 17:13:42,544 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461796, task timestamp: 1667461942
+2022-11-04 17:13:42,544 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461799, task timestamp: 1667461942
+2022-11-04 17:13:42,544 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461803, task timestamp: 1667461942
+2022-11-04 17:13:42,544 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461806, task timestamp: 1667461942
+2022-11-04 17:13:42,544 - POC3_datacenter - INFO - Ignored cup for invalid type!
+2022-11-04 17:13:42,544 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461830, task timestamp: 1667461942
+2022-11-04 17:13:42,544 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461834, task timestamp: 1667461942
+2022-11-04 17:13:42,544 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461837, task timestamp: 1667461942
+2022-11-04 17:13:42,544 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461840, task timestamp: 1667461942
+2022-11-04 17:13:42,544 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461844, task timestamp: 1667461942
+2022-11-04 17:13:42,544 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461847, task timestamp: 1667461942
+2022-11-04 17:13:42,544 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461850, task timestamp: 1667461942
+2022-11-04 17:13:42,544 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461854, task timestamp: 1667461942
+2022-11-04 17:13:42,544 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461857, task timestamp: 1667461942
+2022-11-04 17:13:42,544 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461860, task timestamp: 1667461942
+2022-11-04 17:13:42,544 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461864, task timestamp: 1667461942
+2022-11-04 17:13:42,545 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461867, task timestamp: 1667461942
+2022-11-04 17:13:42,545 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461870, task timestamp: 1667461942
+2022-11-04 17:13:42,545 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461873, task timestamp: 1667461942
+2022-11-04 17:13:42,545 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461876, task timestamp: 1667461942
+2022-11-04 17:13:42,545 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461880, task timestamp: 1667461942
+2022-11-04 17:13:42,545 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461883, task timestamp: 1667461942
+2022-11-04 17:13:42,545 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461886, task timestamp: 1667461942
+2022-11-04 17:13:42,545 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461889, task timestamp: 1667461942
+2022-11-04 17:13:42,545 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461893, task timestamp: 1667461942
+2022-11-04 17:13:42,545 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461896, task timestamp: 1667461942
+2022-11-04 17:13:42,545 - POC3_datacenter - INFO - Ignored chair for invalid type!
+2022-11-04 17:13:42,545 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461906, task timestamp: 1667461942
+2022-11-04 17:13:42,609 - POC3_datacenter - INFO - check person appeared time!
+2022-11-04 17:13:42,609 - POC3_datacenter - INFO - Ignored person for person detected before rushtime, detected time: 2022-11-03 15:52:39, rushtime: 2022-11-04 14:00:00
+2022-11-04 17:13:42,609 - POC3_datacenter - INFO - check person appeared time!
+2022-11-04 17:13:42,609 - POC3_datacenter - INFO - Ignored person for person detected before rushtime, detected time: 2022-11-03 15:53:27, rushtime: 2022-11-04 14:00:00
+2022-11-04 17:13:42,609 - POC3_datacenter - INFO - check person appeared time!
+2022-11-04 17:13:42,609 - POC3_datacenter - INFO - Ignored person for person detected before rushtime, detected time: 2022-11-03 15:53:31, rushtime: 2022-11-04 14:00:00
+2022-11-04 17:13:42,609 - POC3_datacenter - INFO - check person appeared time!
+2022-11-04 17:13:42,610 - POC3_datacenter - INFO - Ignored person for person detected before rushtime, detected time: 2022-11-03 15:53:34, rushtime: 2022-11-04 14:00:00
+2022-11-04 17:16:40,714 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:16:40,715 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:16:40,715 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:16:40,715 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:16:40,715 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:16:40,715 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:16:40,715 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:16:40,715 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:16:40,715 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:16:40,716 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:16:40,716 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:16:40,716 - POC3_datacenter - INFO - already finished task: 563
+2022-11-04 17:16:40,716 - POC3_datacenter - INFO - already finished task: 870
+2022-11-04 17:16:40,716 - POC3_datacenter - INFO - already finished task: 870
+2022-11-04 17:16:40,716 - POC3_datacenter - INFO - already finished task: 878
+2022-11-04 17:16:40,716 - POC3_datacenter - INFO - already finished task: 878
+2022-11-04 17:16:40,716 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 17:16:40,716 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 17:16:40,716 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 17:16:40,717 - POC3_datacenter - INFO - already finished task: 879
+2022-11-04 17:16:40,717 - POC3_datacenter - INFO - Start monitoring visual records for task 880!
+2022-11-04 17:16:40,717 - POC3_datacenter - INFO - reading ... 
+2022-11-04 17:16:40,717 - POC3_datacenter - INFO - No Person detected after rushtime: 2022-11-03 14:00:00
+2022-11-04 17:16:40,717 - POC3_datacenter - INFO - switch off powner!!!
+2022-11-04 17:16:40,717 - POC3_datacenter - INFO - switch off aircondition!!!
+2022-11-04 17:16:40,718 - POC3_datacenter - INFO - task: 880 finished, visual monitoring done!
+2022-11-04 17:16:41,058 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667374449, task timestamp: 1667461942
+2022-11-04 17:16:41,058 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667374951, task timestamp: 1667461942
+2022-11-04 17:16:41,058 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375042, task timestamp: 1667461942
+2022-11-04 17:16:41,058 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375314, task timestamp: 1667461942
+2022-11-04 17:16:41,058 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375318, task timestamp: 1667461942
+2022-11-04 17:16:41,058 - POC3_datacenter - INFO - Ignored cup for invalid type!
+2022-11-04 17:16:41,058 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375475, task timestamp: 1667461942
+2022-11-04 17:16:41,059 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375479, task timestamp: 1667461942
+2022-11-04 17:16:41,059 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375538, task timestamp: 1667461942
+2022-11-04 17:16:41,059 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375614, task timestamp: 1667461942
+2022-11-04 17:16:41,059 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375619, task timestamp: 1667461942
+2022-11-04 17:16:41,059 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375682, task timestamp: 1667461942
+2022-11-04 17:16:41,059 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375687, task timestamp: 1667461942
+2022-11-04 17:16:41,059 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375769, task timestamp: 1667461942
+2022-11-04 17:16:41,059 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667375922, task timestamp: 1667461942
+2022-11-04 17:16:41,059 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376019, task timestamp: 1667461942
+2022-11-04 17:16:41,059 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376028, task timestamp: 1667461942
+2022-11-04 17:16:41,059 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376037, task timestamp: 1667461942
+2022-11-04 17:16:41,059 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376049, task timestamp: 1667461942
+2022-11-04 17:16:41,059 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376068, task timestamp: 1667461942
+2022-11-04 17:16:41,060 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376089, task timestamp: 1667461942
+2022-11-04 17:16:41,060 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376104, task timestamp: 1667461942
+2022-11-04 17:16:41,060 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376235, task timestamp: 1667461942
+2022-11-04 17:16:41,060 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376242, task timestamp: 1667461942
+2022-11-04 17:16:41,060 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376246, task timestamp: 1667461942
+2022-11-04 17:16:41,060 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376289, task timestamp: 1667461942
+2022-11-04 17:16:41,060 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667376296, task timestamp: 1667461942
+2022-11-04 17:16:41,060 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:16:41,060 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:16:41,060 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667460505, task timestamp: 1667461942
+2022-11-04 17:16:41,060 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667460509, task timestamp: 1667461942
+2022-11-04 17:16:41,060 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667460512, task timestamp: 1667461942
+2022-11-04 17:16:41,060 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667460515, task timestamp: 1667461942
+2022-11-04 17:16:41,060 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667460518, task timestamp: 1667461942
+2022-11-04 17:16:41,061 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:16:41,061 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:16:41,061 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:16:41,061 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:16:41,061 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:16:41,061 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:16:41,061 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:16:41,061 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:16:41,061 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:16:41,061 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:16:41,061 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667460561, task timestamp: 1667461942
+2022-11-04 17:16:41,061 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:16:41,062 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:16:41,062 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:16:41,062 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:16:41,062 - POC3_datacenter - INFO - Ignored mouse for invalid type!
+2022-11-04 17:16:41,062 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667460971, task timestamp: 1667461942
+2022-11-04 17:16:41,062 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461102, task timestamp: 1667461942
+2022-11-04 17:16:41,062 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461145, task timestamp: 1667461942
+2022-11-04 17:16:41,062 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461149, task timestamp: 1667461942
+2022-11-04 17:16:41,062 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461152, task timestamp: 1667461942
+2022-11-04 17:16:41,062 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461155, task timestamp: 1667461942
+2022-11-04 17:16:41,062 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461159, task timestamp: 1667461942
+2022-11-04 17:16:41,062 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461166, task timestamp: 1667461942
+2022-11-04 17:16:41,062 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461169, task timestamp: 1667461942
+2022-11-04 17:16:41,063 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461181, task timestamp: 1667461942
+2022-11-04 17:16:41,063 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461185, task timestamp: 1667461942
+2022-11-04 17:16:41,063 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461303, task timestamp: 1667461942
+2022-11-04 17:16:41,063 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461306, task timestamp: 1667461942
+2022-11-04 17:16:41,063 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461309, task timestamp: 1667461942
+2022-11-04 17:16:41,063 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461396, task timestamp: 1667461942
+2022-11-04 17:16:41,063 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461399, task timestamp: 1667461942
+2022-11-04 17:16:41,063 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461403, task timestamp: 1667461942
+2022-11-04 17:16:41,063 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461406, task timestamp: 1667461942
+2022-11-04 17:16:41,063 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461409, task timestamp: 1667461942
+2022-11-04 17:16:41,063 - POC3_datacenter - INFO - Ignored chair for invalid type!
+2022-11-04 17:16:41,063 - POC3_datacenter - INFO - Ignored chair for invalid type!
+2022-11-04 17:16:41,063 - POC3_datacenter - INFO - Ignored chair for invalid type!
+2022-11-04 17:16:41,063 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461729, task timestamp: 1667461942
+2022-11-04 17:16:41,064 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461750, task timestamp: 1667461942
+2022-11-04 17:16:41,064 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461754, task timestamp: 1667461942
+2022-11-04 17:16:41,064 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461757, task timestamp: 1667461942
+2022-11-04 17:16:41,064 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461761, task timestamp: 1667461942
+2022-11-04 17:16:41,064 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461764, task timestamp: 1667461942
+2022-11-04 17:16:41,064 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461768, task timestamp: 1667461942
+2022-11-04 17:16:41,064 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461772, task timestamp: 1667461942
+2022-11-04 17:16:41,064 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461775, task timestamp: 1667461942
+2022-11-04 17:16:41,064 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461779, task timestamp: 1667461942
+2022-11-04 17:16:41,064 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461786, task timestamp: 1667461942
+2022-11-04 17:16:41,064 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461789, task timestamp: 1667461942
+2022-11-04 17:16:41,064 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461792, task timestamp: 1667461942
+2022-11-04 17:16:41,064 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461796, task timestamp: 1667461942
+2022-11-04 17:16:41,065 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461799, task timestamp: 1667461942
+2022-11-04 17:16:41,065 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461803, task timestamp: 1667461942
+2022-11-04 17:16:41,065 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461806, task timestamp: 1667461942
+2022-11-04 17:16:41,065 - POC3_datacenter - INFO - Ignored cup for invalid type!
+2022-11-04 17:16:41,065 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461830, task timestamp: 1667461942
+2022-11-04 17:16:41,065 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461834, task timestamp: 1667461942
+2022-11-04 17:16:41,065 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461837, task timestamp: 1667461942
+2022-11-04 17:16:41,065 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461840, task timestamp: 1667461942
+2022-11-04 17:16:41,065 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461844, task timestamp: 1667461942
+2022-11-04 17:16:41,065 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461847, task timestamp: 1667461942
+2022-11-04 17:16:41,065 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461850, task timestamp: 1667461942
+2022-11-04 17:16:41,065 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461854, task timestamp: 1667461942
+2022-11-04 17:16:41,065 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461857, task timestamp: 1667461942
+2022-11-04 17:16:41,065 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461860, task timestamp: 1667461942
+2022-11-04 17:16:41,066 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461864, task timestamp: 1667461942
+2022-11-04 17:16:41,066 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461867, task timestamp: 1667461942
+2022-11-04 17:16:41,066 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461870, task timestamp: 1667461942
+2022-11-04 17:16:41,066 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461873, task timestamp: 1667461942
+2022-11-04 17:16:41,066 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461876, task timestamp: 1667461942
+2022-11-04 17:16:41,066 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461880, task timestamp: 1667461942
+2022-11-04 17:16:41,066 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461883, task timestamp: 1667461942
+2022-11-04 17:16:41,066 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461886, task timestamp: 1667461942
+2022-11-04 17:16:41,066 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461889, task timestamp: 1667461942
+2022-11-04 17:16:41,066 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461893, task timestamp: 1667461942
+2022-11-04 17:16:41,066 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461896, task timestamp: 1667461942
+2022-11-04 17:16:41,066 - POC3_datacenter - INFO - Ignored chair for invalid type!
+2022-11-04 17:16:41,066 - POC3_datacenter - INFO - Ignored person  for earlier than the task, record timestamp: 1667461906, task timestamp: 1667461942
+2022-11-04 17:16:41,110 - POC3_datacenter - INFO - check person appeared time!
+2022-11-04 17:16:41,110 - POC3_datacenter - INFO - Deteced person after rushtime, detected time: 2022-11-03 15:52:39, rushtime: 2022-11-03 14:00:00
