@@ -18,7 +18,7 @@ from logger import getLogger
 logger = getLogger('POC3_datacenter')
 logger.propagate = False
 
-RushTime = datetime.datetime.now().replace( hour=18, minute=0, second=0, microsecond=0 )
+RushTime = datetime.datetime.now().replace( hour=16, minute=0, second=0, microsecond=0 )
 
 def getRobotTask(robot_id):
     url = "http://123.127.237.146:8080/api/v1/robot/{}".format(robot_id)
@@ -59,12 +59,12 @@ def switchFinger():
 def start_datacnt():
     task_subscriber = KafkaConsumer(
         bootstrap_servers=config.Kafka_Brokers,
-        group_id="poc3_24", auto_offset_reset="earliest") #"latest")
+        group_id="poc3_42", auto_offset_reset="earliest") #"latest")
     task_subscriber.subscribe([config.Task_Status_Topic])
     
     visual_subscriber = KafkaConsumer(
         bootstrap_servers=config.Kafka_Brokers,
-        group_id="poc3_23", auto_offset_reset="earliest")
+        group_id="poc3_41", auto_offset_reset="earliest")
     visual_subscriber.subscribe([config.Visual_Topic])
 
     visual_record_reader = None
@@ -102,18 +102,20 @@ def start_datacnt():
             logger.info('Start monitoring visual records for task {}!'.format(task["inspection_id"]))
             visual_record_reader_thread = Thread(target = visual_record_reader.run, args =())
             visual_record_reader_thread.start()
+            
         
         if task['status'] in [140, 150]: #TASK FINISHED OR TERMINATED
             logger.info('task: {} finished, visual monitoring done!'.format(task["inspection_id"]))
             visual_record_reader.terminate()
             visual_record_reader_thread.join()
-            break
-        if visual_record_reader and not visual_record_reader.detect_person_after_rushtime:
-          logger.info('No Person detected after rushtime: {}'.format(RushTime))
-          logger.info('switch off powner!!!')
-          # switchoffBulb()
-          logger.info('switch off aircondition!!!')
-          # switchFinger()
+
+    if visual_record_reader and not visual_record_reader.detect_person_after_rushtime:
+      logger.info('No Person detected after rushtime: {}'.format(RushTime))
+      logger.info('switch off lightpowner!!!')
+      time.sleep(2)
+      # switchoffBulb()
+      logger.info('switch off aircondition!!!')
+      # switchFinger()
 
 
 class VisualRecordReader():
@@ -134,6 +136,9 @@ class VisualRecordReader():
             try:
                 if not self._running: break
                 record = json.loads(record.value)[0]
+                if int(record["timestamp"]) == 0:
+                  logger.info("get discovery stop record!")
+                  break
                 if record["category"] != "person":
                     logger.info('get record {}, Ignored for invalid type!'.format(record["category"]))
                     continue
@@ -154,7 +159,7 @@ class VisualRecordReader():
                     continue
 
                 # if person detected
-                detected_time = datetime.datetime.fromtimestamp(record["timestamp"])
+                detected_time = datetime.datetime.fromtimestamp(int(record["timestamp"]))
                 if detected_time < RushTime:
                     logger.info('get record {}, Ignored for person detected before rushtime, detected time: {}, rushtime: {}'.format(record["category"], str(detected_time), str(RushTime)))
                 else:

@@ -37,23 +37,30 @@ def send_task_start_end_status_msg(msg):
         rospy.logerror('Kafka operation : ' + str(result))
 
 def sendDiscoveryStopRecords(robot_id):
-    stop_rec_body_wifi = {
-        'timestamp': 0, # value 0 says the inspection related with the corresponding robot was finished
-        'id': robot_id+"-wifi01"
+    # stop_rec_body_wifi = {
+    #     'timestamp': 0, # value 0 says the inspection related with the corresponding robot was finished
+    #     'id': robot_id+"-wifi01"
+    # }
+    # stop_rec_body_bt = {
+    #     'timestamp': 0, # value 0 says the inspection related with the corresponding robot was finished
+    #     'id': robot_id+"-bt01"
+    # }
+    stop_rec_body_visual = {
+        "id": robot_id, 
+        "category": "", 
+        "timestamp": 0
     }
-    stop_rec_body_bt = {
-        'timestamp': 0, # value 0 says the inspection related with the corresponding robot was finished
-        'id': robot_id+"-bt01"
-    }
+
+    
     try:
-        #wifi
-        future = status_producer.send(config.Wifi_Record_Topic, key="".encode(), value=stop_rec_body_wifi)
+        #visual
+        future = status_producer.send(config.Visual_Topic, key="".encode(), value=stop_rec_body_visual)
         result = future.get(timeout=config.Kafka_Blocking_time)
-        logger.info('Kafka operation : send discovery stop msg: {}! '.format(stop_rec_body_wifi))
+        logger.info('Kafka operation : send visual discovery stop msg: {}! '.format(stop_rec_body_wifi))
         #bt
-        future = status_producer.send(sim_config.Bt_Record_Topic, key="".encode(), value=stop_rec_body_bt)
-        result = future.get(timeout=sim_config.Kafka_Blocking_time)
-        rospy.loginfo('Kafka operation : send discovery stop msg: {}! '.format(stop_rec_body_bt))
+        # future = status_producer.send(sim_config.Bt_Record_Topic, key="".encode(), value=stop_rec_body_bt)
+        # result = future.get(timeout=sim_config.Kafka_Blocking_time)
+        # rospy.loginfo('Kafka operation : send discovery stop msg: {}! '.format(stop_rec_body_bt))
     except Exception as e:
         rospy.logerror('Kafka operation : send robot position msg error! ' +  str(e))
 
@@ -112,7 +119,8 @@ if __name__=='__main__':
     task_body["timestamp"] = int(time.time())
     task_body["status"] = 140
     send_task_start_end_status_msg(task_body)
-    #sendDiscoveryStopRecords(config.robot_id)
+    #send discovery stop record, otherwise datacenter may be blocked at waiting for next msg.
+    sendDiscoveryStopRecords(config.robot_id)
 
 
 

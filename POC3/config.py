@@ -1,7 +1,7 @@
 robot_id = 'rosbot1'
 task_type = 50
 site_id = 'bj02'
-inspection_id = 880
+inspection_id = 921
 sim_robot_duration = 5 #minitues
 
 Task_Inspection_AT_Rushtime = 50 #50
