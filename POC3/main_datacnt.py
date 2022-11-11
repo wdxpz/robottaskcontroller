@@ -74,11 +74,11 @@ def start_datacnt():
     first_error_task = True
     for task in task_subscriber:
         task = json.loads(task.value)
-        logger.info('get task: {}'.format(task["inspection_id"]))
+        #logger.info('get task: {}'.format(task["inspection_id"]))
         # just for debug, keep only one thred for task 870 record
         
         if task["inspection_id"] == 870 and first_error_task:
-            logger.info("fist error task: {}".format(task["inspection_id"]))
+            #logger.info("fist error task: {}".format(task["inspection_id"]))
             first_error_task = False
             continue
         #just for debug
@@ -134,17 +134,17 @@ class VisualRecordReader():
         logger.info("reading ... ")
         for record in self.reader:
             try:
-                if not self._running: break
+                #if not self._running: break
                 record = json.loads(record.value)[0]
                 if int(record["timestamp"]) == 0:
                   logger.info("get discovery stop record!")
                   break
                 if record["category"] != "person":
-                    logger.info('get record {}, Ignored for invalid type!'.format(record["category"]))
+                    logger.info('Ignored {} for invalid type!'.format(record["category"]))
                     continue
                 #check record time
                 if int(record["timestamp"]) < self.task_start_ts:
-                    logger.info("get record {}, Ignored for earlier than the task, record timestamp: {}, task timestamp: {}".format(record["category"], record["timestamp"], self.task_start_ts))
+                    logger.info("Ignored {}  for earlier than the task, record timestamp: {}, task timestamp: {}".format(record["category"], record["timestamp"], self.task_start_ts))
                     continue
                 #check record's inspection id is current inpsection
                 robot_id = record["id"].split("-")[0]
@@ -155,19 +155,20 @@ class VisualRecordReader():
                 robot_task_id = config.inspection_id
                 # just for debug to track task 870
                 if robot_task_id != self.inspection_id:
-                    logger.info('get record {}, Ignored for otehr task record, record task {}, current task {}'.format(record["category"], robot_task_id, self.inspection_id))
+                    logger.info('Ignored {} for otehr task record, record task {}, current task {}'.format(record["category"], robot_task_id, self.inspection_id))
                     continue
 
                 # if person detected
                 detected_time = datetime.datetime.fromtimestamp(int(record["timestamp"]))
                 if detected_time < RushTime:
-                    logger.info('get record {}, Ignored for person detected before rushtime, detected time: {}, rushtime: {}'.format(record["category"], str(detected_time), str(RushTime)))
+                    logger.info('Ignored {} for person detected before rushtime, detected time: {}, rushtime: {}'.format(record["category"], str(detected_time), str(RushTime)))
                 else:
-                    logger.info('get record {}, person detected after rushtime, detected time: {}, rushtime: {}'.format(record["category"], str(detected_time), str(RushTime)))
+                    logger.info('Deteced {} after rushtime, detected time: {}, rushtime: {}'.format(record["category"], str(detected_time), str(RushTime)))
                     self.detect_person_after_rushtime = True
                     break
             except Exception as e:
                 logger.info("Error: {}".format(e))
+                logger.info(str(record))
                 break
 
 if __name__ == "__main__":
